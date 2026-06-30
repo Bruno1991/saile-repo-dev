@@ -1,0 +1,6 @@
+{
+    "id": "saile.plugin.dummy",
+    "version": "1.0.0",
+    "capabilities": ["media.search", "media.metadata"],
+    "permissions": ["network.http"]
+}
