@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <category label="Geral">
+        <setting id="parent_pin" type="number" label="PIN de controle dos pais (4 a 6 dígitos)" default="" />
+        <setting id="default_profile" type="labelenum" label="Perfil padrão" values="Nenhum|Adulto|Kids" default="Nenhum" />
+    </category>
+    <category label="SaileTV Xtream">
+        <setting id="xtream_host" type="text" label="Host Xtream" default="" />
+        <setting id="xtream_username" type="text" label="Usuário Xtream" default="" />
+        <setting id="xtream_password" type="text" label="Senha Xtream" option="hidden" default="" />
+        <setting id="kids_category_keywords" type="text" label="Palavras para filtro Kids" default="kids,infantil,criança,desenho,cartoon" />
+    </category>
+    <category label="SaileFy YouTube">
+        <setting id="youtube_region" type="text" label="Região padrão" default="BR" />
+    </category>
+    <category label="Torrents e TMDB">
+        <setting id="rapidapi_key" type="text" label="RapidAPI Key" option="hidden" default="e6ebd923c7msh3ed1e00b9b6bed9p115761jsn32d6c1668f0e" />
+        <setting id="tmdb_api_key" type="text" label="TMDB API Key" option="hidden" default="e5df95f7e157b9709d093c1a6be7e1c5" />
+    </category>
+</settings>

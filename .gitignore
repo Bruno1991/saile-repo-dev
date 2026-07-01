@@ -1,56 +1,92 @@
-# Environments
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# SAILE Media Center - gitignore blindado
+# Regra principal: nunca versionar segredos, ambientes locais, caches, builds temporários ou bancos reais de usuário.
 
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-*.swo
+# Segredos e credenciais
+.env
+.env.*
+!.env.example
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.token
+*token*
+*secret*
+*credential*
+*credentials*
+secrets/
+private/
 
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+*.pyo
+*.pyd
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
+.venv/
+venv/
+env/
+ENV/
 
-# OS generated files
+# Kodi/runtime local
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.pid
+userdata/
+profile/
+Kodi.log
+kodi.log
+Thumbnails/
+Database/
+
+# Builds e pacotes gerados
+build/
+dist/
+*.egg-info/
+*.tmp
+*.bak
+*.swp
+*.zip.tmp
+
+# Não ignore estes arquivos finais do repositório Kodi/GitHub Pages
+!addons.xml
+!addons.xml.md5
+!index.html
+!zips/**/*.zip
+
+# SO/editores
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.code-workspace
 
-# Archives
-*.zip
-*.tar.gz
-*.rar
+# Dumps locais de desenvolvimento
+saile_dump*.md
+dump_*.md
+*_dump.md
+backup*/
+old*/
 
-# Specific repo rules
-# Allow the specific zip we generated in the repo folder, but ignore others
-!repo/plugin.video.saile/*.zip
+# Arquivos grandes não pertencentes ao addon
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.mp3
+*.flac
+*.torrent
+*.iso
+*.img
+*.apk

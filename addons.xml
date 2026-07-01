@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.saile.mc" name="Saile Media Center" version="0.1.0" provider-name="Saile">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="pt_BR">Media Center local-first com IPTV, música e catálogo indexado</summary>
+        <description lang="pt_BR">Saile Media Center reúne SaileTV, SaileFy e sTorrent em um addon Kodi local-first com SQLite, perfis, PIN, favoritos e continuar assistindo.</description>
+        <platform>all</platform>
+        <license>MIT</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
+<addon id="repository.saile" name="Saile Repository" version="1.0.0" provider-name="Saile">
+    <extension point="xbmc.addon.repository" name="Saile Repository">
+        <info compressed="false">https://bruno1991.github.io/saile-repo-dev/addons.xml</info>
+        <checksum>https://bruno1991.github.io/saile-repo-dev/addons.xml.md5</checksum>
+        <datadir zip="true">https://bruno1991.github.io/saile-repo-dev/zips/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="pt_BR">Repositório do Saile Media Center</summary>
+        <description lang="pt_BR">Instala e atualiza o Saile Media Center pelo GitHub Pages.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>
