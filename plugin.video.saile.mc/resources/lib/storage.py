@@ -136,6 +136,12 @@ def init_db():
                 UNIQUE(playlist_id, provider, media_type, external_id)
             );
 
+            CREATE TABLE IF NOT EXISTS known_devices (
+                ip TEXT PRIMARY KEY,
+                name TEXT NOT NULL,
+                last_seen INTEGER NOT NULL
+            );
+
             CREATE INDEX IF NOT EXISTS idx_favorites_profile ON favorites(profile_id, provider, media_type);
             CREATE INDEX IF NOT EXISTS idx_continue_profile ON continue_watching(profile_id, provider, media_type);
             CREATE INDEX IF NOT EXISTS idx_cache_expires ON cached_items(expires_at);
@@ -144,6 +150,40 @@ def init_db():
             CREATE INDEX IF NOT EXISTS idx_series_category ON indexed_series(category_id);
             """
         )
+
+
+def create_playlist(profile_id, title, provider="youtube"):
+    """Cria nova playlist local."""
+    now = int(time.time())
+    with connect() as db:
+        db.execute(
+            "INSERT OR IGNORE INTO local_playlists(profile_id, title, provider, created_at) VALUES(?,?,?,?)",
+            (profile_id, title, provider, now),
+        )
+
+
+def list_playlists(profile_id, provider="youtube"):
+    """Lista playlists do perfil."""
+    with connect() as db:
+        return [dict(r) for r in db.execute("SELECT * FROM local_playlists WHERE profile_id=? AND provider=? ORDER BY title", (profile_id, provider))]
+
+
+def add_to_playlist(playlist_id, provider, media_type, external_id, title, artwork="", payload=None):
+    """Adiciona item na playlist."""
+    now = int(time.time())
+    with connect() as db:
+        db.execute(
+            "INSERT INTO local_playlist_items(playlist_id, provider, media_type, external_id, title, artwork, payload_json, created_at) "
+            "VALUES(?,?,?,?,?,?,?,?) "
+            "ON CONFLICT(playlist_id, provider, media_type, external_id) DO UPDATE SET title=excluded.title, artwork=excluded.artwork, payload_json=excluded.payload_json",
+            (playlist_id, provider, media_type, external_id, title, artwork, json.dumps(payload or {}, ensure_ascii=False), now),
+        )
+
+
+def list_playlist_items(playlist_id):
+    """Lista itens de uma playlist."""
+    with connect() as db:
+        return [dict(r) for r in db.execute("SELECT * FROM local_playlist_items WHERE playlist_id=? ORDER BY created_at", (playlist_id,))]
 
 
 def ensure_default_profiles():

@@ -31,7 +31,7 @@ def add_directory(handle, base_url, label, action, icon="settings.png", params=N
     xbmcplugin.addDirectoryItem(handle, url, li, isFolder=is_folder)
 
 
-def add_playable(handle, base_url, label, action, play_url, icon="settings.png", params=None, info=None):
+def add_playable(handle, base_url, label, action, play_url, icon="settings.png", params=None, info=None, context_menu=None):
     """Adiciona item reproduzível."""
     params = params or {}
     params["play_url"] = play_url
@@ -40,6 +40,8 @@ def add_playable(handle, base_url, label, action, play_url, icon="settings.png",
     li.setArt({"icon": icon_path, "thumb": icon_path})
     li.setInfo("video", info or {"title": label})
     li.setProperty("IsPlayable", "true")
+    if context_menu:
+        li.addContextMenuItems(context_menu)
     url = build_url(base_url, action, **params)
     xbmcplugin.addDirectoryItem(handle, url, li, isFolder=False)
 
