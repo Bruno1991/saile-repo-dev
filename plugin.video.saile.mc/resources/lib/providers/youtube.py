@@ -102,9 +102,30 @@ def _normalize_item(item):
     }
 
 
+def resolve_stream(video_id):
+    """Extrai URL direta do áudio via yt-dlp (Spotify Mode)."""
+    yt_dlp = _get_yt_dlp()
+    if not yt_dlp:
+        return None
+        
+    ydl_opts = {
+        'quiet': True,
+        'format': 'bestaudio/best',
+        'force_generic_extractor': False
+    }
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            res = ydl.extract_info("https://www.youtube.com/watch?v=" + video_id, download=False)
+            if 'url' in res:
+                return res['url']
+    except Exception as e:
+        xbmc.log("[Saile] Erro ao extrair stream de áudio: %s" % e, xbmc.LOGERROR)
+    return None
+
+
 def playback_url(item):
-    """Retorna URL compatível com o addon oficial do YouTube no Kodi."""
+    """Retorna URL interna para ser resolvida pelo router."""
     video_id = item.get("id") or item.get("external_id") or ""
     if not video_id:
         return ""
-    return "plugin://plugin.video.youtube/play/?video_id=" + video_id
+    return "sailefy://" + video_id

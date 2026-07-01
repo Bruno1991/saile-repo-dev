@@ -386,6 +386,17 @@ def play(base_url, handle, params):
         notify("Item sem URL de reprodução.", "warning")
         xbmcplugin.setResolvedUrl(handle, False, xbmcgui.ListItem(label=title))
         return
+        
+    if play_url.startswith("sailefy://"):
+        video_id = play_url.replace("sailefy://", "")
+        from providers import youtube
+        resolved_url = youtube.resolve_stream(video_id)
+        if not resolved_url:
+            notify("Falha ao extrair áudio.", "error")
+            xbmcplugin.setResolvedUrl(handle, False, xbmcgui.ListItem(label=title))
+            return
+        play_url = resolved_url
+        
     li = xbmcgui.ListItem(label=title)
     li.setProperty("IsPlayable", "true")
     xbmcplugin.setResolvedUrl(handle, True, li if not hasattr(li, "setPath") else _set_path(li, play_url))
