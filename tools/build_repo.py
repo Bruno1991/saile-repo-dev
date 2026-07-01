@@ -93,8 +93,6 @@ code {{ background:#374151; padding:2px 6px; border-radius:6px; }}
 <p>Fonte Kodi/GitHub Pages: <code>{repo_url}</code></p>
 <p>Arquivos principais:</p>
 <ul>
-<li><a href="addons.xml">addons.xml</a></li>
-<li><a href="addons.xml.md5">addons.xml.md5</a></li>
 {''.join(rows)}
 </ul>
 <p>Para instalar no Kodi, instale primeiro o zip do <code>repository.saile</code> e depois instale o Saile Media Center pelo repositório.</p>
