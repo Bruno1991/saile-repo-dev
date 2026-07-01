@@ -280,7 +280,8 @@ def show_sailefy(base_url, handle, params):
 def _render_youtube_items(base_url, handle, profile_id, items):
     for item in items:
         play_url = youtube.playback_url(item)
-        ui.add_playable(handle, base_url, item["title"], "play", play_url, item.get("artwork") or "app_sailefy.png", {"profile_id": profile_id, "provider": "youtube", "media_type": "music", "external_id": item.get("id", ""), "title": item["title"]}, {"title": item["title"], "plot": item.get("plot") or item.get("channel") or ""})
+        artwork = item.get("artwork") or "app_sailefy.png"
+        ui.add_playable(handle, base_url, item["title"], "play", play_url, artwork, {"profile_id": profile_id, "provider": "youtube", "media_type": "music", "external_id": item.get("id", ""), "title": item["title"], "artwork": artwork}, {"title": item["title"], "plot": item.get("plot") or item.get("channel") or ""})
     ui.end(handle)
 
 
