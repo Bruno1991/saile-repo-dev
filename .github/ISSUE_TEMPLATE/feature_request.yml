@@ -1,0 +1,21 @@
+name: Feature request
+description: Propor função alinhada ao escopo do SAILE
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema do usuário
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Comportamento proposto
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto em compatibilidade, dados, segurança e desempenho
