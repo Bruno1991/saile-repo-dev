@@ -1,35 +1,14 @@
-# Checklist de Release Kodi
+# Checklist de release
 
-## Fonte
-
-- [ ] working tree revisada
-- [ ] segredos ausentes
-- [ ] licença presente
-- [ ] changelog atualizado
-- [ ] versão incrementada
-
-## Qualidade
-
-- [ ] sintaxe Python
-- [ ] testes automatizados
-- [ ] migrações
-- [ ] instalação limpa
-- [ ] navegação
-- [ ] playback
-- [ ] erro de rede
-
-## Pacote
-
-- [ ] pasta raiz correta no ZIP
-- [ ] `addon.xml` válido
-- [ ] assets presentes
-- [ ] dependências declaradas
-- [ ] arquivos locais excluídos
-
-## Repositório
-
-- [ ] `addons.xml` regenerado
-- [ ] checksum/hash regenerado
-- [ ] HTTPS
-- [ ] update testado
-- [ ] rollback documentado
+- [ ] versões dos addon.xml corretas
+- [ ] XML parseado
+- [ ] testes executados
+- [ ] migrações testadas
+- [ ] ZIPs inspecionados
+- [ ] nenhum `.env`, banco, log ou segredo
+- [ ] addons.xml gerado
+- [ ] checksums recalculados
+- [ ] instalação limpa validada
+- [ ] atualização a partir da versão anterior validada
+- [ ] Pages contém `.nojekyll` e URLs válidas
+- [ ] changelog e tag preparados

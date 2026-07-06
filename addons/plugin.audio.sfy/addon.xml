@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.sfy" name="sFy" version="0.1.0" provider-name="Saile">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="pt_BR">Navegação e streaming de música com resolução pelo yt-dlp.</summary>
+    <description lang="pt_BR">Busca, playlists, favoritos e histórico em uma interface de música local-first.</description>
+    <disclaimer lang="pt_BR">O usuário é responsável por cumprir os termos dos serviços e direitos aplicáveis.</disclaimer>
+    <language>pt</language>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <source>https://github.com/Bruno1991/saile-repo-dev</source>
+    <news>0.1.0 - Estrutura inicial e bootstrap do add-on.</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

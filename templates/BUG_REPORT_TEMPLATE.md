@@ -1,35 +1,17 @@
-# Relatório de Bug
+# Relatório de bug
 
-## Ambiente
+## Addon e versão
 
-- Kodi:
-- Add-on:
-- Plataforma:
-- Dispositivo:
-- Rede:
+## Kodi e plataforma
 
 ## Passos para reproduzir
 
-1. ...
+## Resultado esperado
 
-## Esperado
-
-## Observado
-
-## Frequência
-
-Sempre | Intermitente | Uma vez
+## Resultado observado
 
 ## Log sanitizado
 
-```text
-...
-```
+## Estado do banco/migração
 
-## Causa raiz
-
-## Correção
-
-## Teste de regressão
-
-## Riscos restantes
+## Regressão conhecida

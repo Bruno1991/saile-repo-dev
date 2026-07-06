@@ -1,46 +1,20 @@
-# ADR-NNN — Título da decisão
+# ADR-NNNN — Título
 
-- Status: Proposto | Aceito | Substituído | Rejeitado
-- Data: AAAA-MM-DD
-- Responsáveis:
-- Decisão substituída:
+## Status
+Proposto
 
 ## Contexto
 
-Problema, forças, restrições e evidências.
+## Problema
 
 ## Opções consideradas
 
-### Opção A
-
-Vantagens, riscos e custos.
-
-### Opção B
-
-Vantagens, riscos e custos.
-
 ## Decisão
-
-O que foi decidido e o limite da decisão.
 
 ## Consequências positivas
 
-- ...
-
 ## Consequências negativas
 
-- ...
+## Plano de migração
 
-## Plano de implementação
-
-1. ...
-
-## Plano de reversão
-
-1. ...
-
-## Evidências e fontes
-
-- documentação oficial;
-- testes;
-- métricas.
+## Evidências e referências

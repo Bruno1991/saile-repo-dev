@@ -1,0 +1,40 @@
+# Kodi Media Center language file
+msgid ""
+msgstr ""
+"Project-Id-Version: sFy\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "#31000"
+msgid "Top Brasil"
+msgstr "Top Brasil"
+
+msgctxt "#31001"
+msgid "Top Mundo"
+msgstr "Top Mundo"
+
+msgctxt "#31002"
+msgid "Categorias"
+msgstr "Categorias"
+
+msgctxt "#31003"
+msgid "Minhas playlists"
+msgstr "Minhas playlists"
+
+msgctxt "#31004"
+msgid "Favoritos"
+msgstr "Favoritos"
+
+msgctxt "#31005"
+msgid "Busca"
+msgstr "Busca"
+
+msgctxt "#31006"
+msgid "Histórico"
+msgstr "Histórico"
+
+msgctxt "#31007"
+msgid "Configurações"
+msgstr "Configurações"

@@ -1,161 +1,104 @@
-# Índice da Biblioteca de Skills
+# Índice das 100 skills
 
-**Total: 57 skills.**
-
-Cada skill está em `.agents/skills/<domínio>/<nome>/SKILL.md` e possui frontmatter com gatilhos de ativação.
-
-## Core do agente (8)
-
-- **Contrato Operacional do Agente** — `.agents/skills/core/agent-operating-contract/SKILL.md`  
-  Define como o agente investiga, modifica, valida e relata mudanças de engenharia.
-- **Definição de Pronto e Evidências** — `.agents/skills/core/definition-of-done/SKILL.md`  
-  Padroniza critérios de conclusão e impede entregas incompletas.
-- **Depuração por Causa Raiz** — `.agents/skills/core/root-cause-debugging/SKILL.md`  
-  Orienta diagnóstico reproduzível sem aplicar correções aleatórias.
-- **Disciplina de Documentação** — `.agents/skills/core/documentation-discipline/SKILL.md`  
-  Mantém arquitetura, decisões e estado do projeto sincronizados com o código.
-- **Gestão Segura de Mudanças** — `.agents/skills/core/safe-change-management/SKILL.md`  
-  Controla impacto, compatibilidade, reversão e prevenção de regressões.
-- **Higiene de Git e Segredos** — `.agents/skills/core/git-secret-hygiene/SKILL.md`  
-  Protege tokens, credenciais, bancos locais e artefatos indevidos.
-- **Leitura e Contexto do Repositório** — `.agents/skills/core/repository-context/SKILL.md`  
-  Ensina o agente a compreender um projeto existente antes de editar.
-- **Revisão de Código Orientada a Risco** — `.agents/skills/core/code-review/SKILL.md`  
-  Fornece uma rotina de revisão para Python, SQLite e Kodi.
-
-## Python (12)
-
-- **Arquitetura Python Modular** — `.agents/skills/python/python-architecture/SKILL.md`  
-  Define limites claros entre domínio, infraestrutura, persistência, providers e apresentação.
-- **Clientes HTTP Robustos** — `.agents/skills/python/python-http-clients/SKILL.md`  
-  Padroniza rede com timeout, codificação, retries limitados e validação de resposta.
-- **Concorrência, Threads e Cancelamento** — `.agents/skills/python/python-concurrency-cancellation/SKILL.md`  
-  Evita bloqueios, corridas e operações que ignoram cancelamento do usuário.
-- **Configuração e Segredos** — `.agents/skills/python/python-configuration-secrets/SKILL.md`  
-  Organiza settings, defaults, validação e proteção de credenciais.
-- **Dependências e Empacotamento Python** — `.agents/skills/python/python-packaging-dependencies/SKILL.md`  
-  Controla bibliotecas, compatibilidade e tamanho do pacote Kodi.
-- **Desempenho e Memória em Dispositivos Limitados** — `.agents/skills/python/python-performance-memory/SKILL.md`  
-  Orienta otimização para Android TV, Fire TV e hardware modesto.
-- **Erros, Exceções e Logging** — `.agents/skills/python/python-errors-logging/SKILL.md`  
-  Cria uma taxonomia de erros e logs úteis sem expor dados sensíveis.
-- **Estilo, Tipagem e Contratos Python** — `.agents/skills/python/python-style-typing/SKILL.md`  
-  Aplica legibilidade, tipos úteis e contratos explícitos sem burocracia excessiva.
-- **Filesystem Multiplataforma** — `.agents/skills/python/python-cross-platform-filesystem/SKILL.md`  
-  Garante paths seguros em Windows, Linux, Android e VFS do Kodi.
-- **Refatoração Controlada** — `.agents/skills/python/python-refactoring/SKILL.md`  
-  Melhora estrutura sem misturar mudança comportamental e reescrita ampla.
-- **Segurança Aplicada a Python** — `.agents/skills/python/python-security/SKILL.md`  
-  Previne injeção, SSRF, traversal, vazamento de segredos e execução insegura.
-- **Testes Python para Código Integrado ao Kodi** — `.agents/skills/python/python-testing/SKILL.md`  
-  Cria testes úteis isolando módulos Kodi e dependências externas.
-
-## SQLite (10)
-
-- **Conexões e Transações SQLite** — `.agents/skills/sqlite/sqlite-connections-transactions/SKILL.md`  
-  Controla ciclo de vida, atomicidade, locks e fechamento de conexões.
-- **FTS5 e JSON no SQLite** — `.agents/skills/sqlite/sqlite-fts-json/SKILL.md`  
-  Usa recursos avançados somente com detecção e fallback.
-- **Integração SQLite em Add-ons Kodi** — `.agents/skills/sqlite/sqlite-kodi-integration/SKILL.md`  
-  Aplica SQLite de forma segura dentro do ciclo de vida e filesystem do Kodi.
-- **Integridade, Backup e Recuperação** — `.agents/skills/sqlite/sqlite-integrity-backup-recovery/SKILL.md`  
-  Protege dados locais e define resposta a corrupção ou falha de migração.
-- **Migrações de Schema SQLite** — `.agents/skills/sqlite/sqlite-migrations/SKILL.md`  
-  Evolui o banco sem perder dados nem depender de recriação silenciosa.
-- **Modelagem de Schema SQLite** — `.agents/skills/sqlite/sqlite-schema-design/SKILL.md`  
-  Cria esquemas pequenos, coerentes, versionáveis e adequados ao domínio local.
-- **Padrões de Cache com SQLite** — `.agents/skills/sqlite/sqlite-cache-patterns/SKILL.md`  
-  Implementa TTL, invalidação e identidade de cache sem mascarar erros.
-- **SQL Parametrizado e Consultas Seguras** — `.agents/skills/sqlite/sqlite-parameterization/SKILL.md`  
-  Impede injeção e erros de escaping em todas as consultas.
-- **WAL e Concorrência SQLite** — `.agents/skills/sqlite/sqlite-wal-concurrency/SKILL.md`  
-  Decide quando usar Write-Ahead Logging e como evitar problemas de arquivo.
-- **Índices e Planos de Consulta** — `.agents/skills/sqlite/sqlite-indexes-query-plans/SKILL.md`  
-  Otimiza com base em consultas reais e EXPLAIN QUERY PLAN.
-
-## Kodi (21)
-
-- **Arquitetura de Add-ons Kodi** — `.agents/skills/kodi/kodi-addon-architecture/SKILL.md`  
-  Define uma arquitetura limpa para plugins de vídeo locais, modulares e multiplataforma.
-- **Blueprint de Plugin de Vídeo** — `.agents/skills/kodi/kodi-video-addon-blueprint/SKILL.md`  
-  Fornece um plano completo para construir plugin de vídeo desde zero.
-- **Cache e Banco Local no Kodi** — `.agents/skills/kodi/kodi-cache-database/SKILL.md`  
-  Combina SQLite, TTL e sincronização sem travar a interface.
-- **Compatibilidade entre Dispositivos Kodi** — `.agents/skills/kodi/kodi-device-compatibility/SKILL.md`  
-  Evita dependências e padrões que quebram em Android, Fire TV, Windows ou Linux.
-- **Compatibilidade entre Versões do Kodi** — `.agents/skills/kodi/kodi-version-compatibility/SKILL.md`  
-  Gerencia diferenças de API, settings e metadata entre versões.
-- **Desempenho de UI e Navegação Kodi** — `.agents/skills/kodi/kodi-performance-ui/SKILL.md`  
-  Mantém menus responsivos e reduz trabalho por tela.
-- **Diretórios e Listagens Kodi** — `.agents/skills/kodi/kodi-directory-listings/SKILL.md`  
-  Monta listagens corretas com addDirectoryItems, content type, ordenação e finalização.
-- **Diálogos, Progresso e Experiência do Usuário** — `.agents/skills/kodi/kodi-dialogs-progress/SKILL.md`  
-  Usa diálogos de forma não invasiva, cancelável e consistente.
-- **Empacotamento e Repositório Kodi** — `.agents/skills/kodi/kodi-repository-packaging/SKILL.md`  
-  Gera ZIPs, addons.xml, checksum e repositório de forma reproduzível e segura.
-- **ListItem, Metadata e Arte** — `.agents/skills/kodi/kodi-listitem-metadata-art/SKILL.md`  
-  Preenche itens com metadados e imagens compatíveis com skins e versões Kodi.
-- **Logs e Depuração no Kodi** — `.agents/skills/kodi/kodi-debugging-logs/SKILL.md`  
-  Cria diagnósticos úteis em dispositivos reais sem vazar dados.
-- **Manifesto addon.xml** — `.agents/skills/kodi/kodi-addon-xml/SKILL.md`  
-  Cria e valida o manifesto, dependências, extensões, metadados e assets.
-- **Pesquisa na Wiki e API Oficial do Kodi** — `.agents/skills/kodi/kodi-wiki-research/SKILL.md`  
-  Ensina o agente a verificar APIs e evitar exemplos obsoletos.
-- **Playback e setResolvedUrl** — `.agents/skills/kodi/kodi-playback-resolution/SKILL.md`  
-  Resolve streams corretamente, configura headers e trata falhas de reprodução.
-- **Providers e Integrações de Rede** — `.agents/skills/kodi/kodi-providers-networking/SKILL.md`  
-  Cria adapters de fontes externas sem acoplar API, UI e cache.
-- **Roteamento de Plugins Kodi** — `.agents/skills/kodi/kodi-plugin-routing/SKILL.md`  
-  Implementa parsing seguro de sys.argv, URLs plugin:// e dispatch explícito.
-- **Segurança, Privacidade e Conformidade Kodi** — `.agents/skills/kodi/kodi-security-legal/SKILL.md`  
-  Protege usuários e limita integrações a usos autorizados.
-- **Serviços e Tarefas em Background** — `.agents/skills/kodi/kodi-service-addons/SKILL.md`  
-  Implementa loops de serviço respeitando encerramento, energia e recursos.
-- **Settings e Localização** — `.agents/skills/kodi/kodi-settings-localization/SKILL.md`  
-  Cria configurações modernas, tipadas, localizadas e seguras.
-- **Testes e Release Kodi** — `.agents/skills/kodi/kodi-testing-release/SKILL.md`  
-  Define matriz de testes e gate de publicação.
-- **xbmcvfs e special://** — `.agents/skills/kodi/kodi-xbmcvfs-special-paths/SKILL.md`  
-  Manipula arquivos, diretórios e paths virtuais de maneira portátil.
-
-## Workflows completos (6)
-
-- **Workflow: Adicionar Funcionalidade com Segurança** — `.agents/skills/workflows/add-feature-safely/SKILL.md`  
-  Adiciona recurso preservando arquitetura, dados e rotas existentes.
-- **Workflow: Auditar Add-on Existente** — `.agents/skills/workflows/audit-existing-addon/SKILL.md`  
-  Executa auditoria técnica completa antes de continuar desenvolvimento.
-- **Workflow: Construir Plugin de Vídeo Kodi** — `.agents/skills/workflows/build-kodi-video-addon/SKILL.md`  
-  Orquestra a construção completa de um plugin de vídeo desde requisitos até ZIP instalável.
-- **Workflow: Corrigir Bug no Kodi** — `.agents/skills/workflows/fix-kodi-bug/SKILL.md`  
-  Reproduz, localiza e corrige defeitos em roteamento, UI, banco, rede ou playback.
-- **Workflow: Projetar Banco SQLite** — `.agents/skills/workflows/design-sqlite-database/SKILL.md`  
-  Vai de requisitos e consultas a schema, migração, índices e testes.
-- **Workflow: Publicar Repositório Kodi** — `.agents/skills/workflows/publish-kodi-repository/SKILL.md`  
-  Empacota e publica add-ons por processo repetível, validado e seguro.
-
-## Ordem recomendada por tarefa
-
-### Novo add-on
-
-1. Contrato Operacional do Agente.
-2. Leitura e Contexto do Repositório.
-3. Arquitetura de Add-ons Kodi.
-4. Blueprint de Plugin de Vídeo.
-5. Workflow: Construir Plugin de Vídeo Kodi.
-
-### Alterar SQLite
-
-1. Modelagem de Schema SQLite.
-2. Conexões e Transações.
-3. Migrações.
-4. Índices e Planos.
-5. Integração SQLite em Add-ons Kodi.
-
-### Corrigir playback
-
-1. Depuração por Causa Raiz.
-2. Roteamento de Plugins Kodi.
-3. Playback e setResolvedUrl.
-4. Logs e Depuração no Kodi.
-5. Workflow: Corrigir Bug no Kodi.
-
+| ID | Categoria | Skill | Missão |
+|---|---|---|---|
+| 00.01 | governance | [Proteção de escopo](.agents/skills/00-governance/scope-guard/SKILL.md) | Definir o que pertence ao sRepo, sTv e sFy antes de qualquer alteração. |
+| 00.02 | governance | [Arquitetura antes do código](.agents/skills/00-governance/architecture-first/SKILL.md) | Converter uma solicitação em componentes, fluxos e fronteiras antes da implementação. |
+| 00.03 | governance | [Plano de mudança](.agents/skills/00-governance/change-plan/SKILL.md) | Produzir um plano executável por arquivo com riscos e critérios de aceitação. |
+| 00.04 | governance | [Fronteiras do monorepo](.agents/skills/00-governance/repository-boundaries/SKILL.md) | Manter documentação, ferramentas, addons e artefatos publicados em áreas distintas. |
+| 00.05 | governance | [ADRs e decisões](.agents/skills/00-governance/decision-records/SKILL.md) | Registrar decisões arquiteturais duráveis com contexto e consequências. |
+| 00.06 | governance | [Rastreabilidade do roadmap](.agents/skills/00-governance/requirements-traceability/SKILL.md) | Mapear cada bloco do roadmap a módulos, dados, testes e fases. |
+| 00.07 | governance | [Definição de pronto](.agents/skills/00-governance/definition-of-done/SKILL.md) | Impedir entregas incompletas definindo evidências mínimas por tipo de trabalho. |
+| 00.08 | governance | [Governança de dependências](.agents/skills/00-governance/dependency-governance/SKILL.md) | Controlar bibliotecas, licenças, tamanho e compatibilidade com Kodi. |
+| 00.09 | governance | [Contrato de saída do agente](.agents/skills/00-governance/agent-output-contract/SKILL.md) | Padronizar respostas do agente com caminhos, arquivos completos e validações. |
+| 00.10 | governance | [Constituição local-first](.agents/skills/00-governance/local-first-constitution/SKILL.md) | Garantir que o sistema rode no dispositivo do usuário sem backend próprio obrigatório. |
+| 01.01 | python | [Layout Python modular](.agents/skills/01-python/project-layout/SKILL.md) | Organizar módulos por domínio, infraestrutura, aplicação e apresentação. |
+| 01.02 | python | [Tipagem e contratos](.agents/skills/01-python/typing-contracts/SKILL.md) | Usar tipos para tornar payloads externos e respostas internas verificáveis. |
+| 01.03 | python | [Modelos de domínio](.agents/skills/01-python/domain-models/SKILL.md) | Representar canal, filme, série, episódio, faixa e playlist com modelos estáveis. |
+| 01.04 | python | [Taxonomia de exceções](.agents/skills/01-python/exception-taxonomy/SKILL.md) | Distinguir erro de configuração, rede, provider, banco, reprodução e cancelamento. |
+| 01.05 | python | [Logging sanitizado](.agents/skills/01-python/logging-sanitization/SKILL.md) | Criar logs úteis sem expor credenciais ou dados temporários. |
+| 01.06 | python | [Cliente HTTP resiliente](.agents/skills/01-python/http-client/SKILL.md) | Centralizar timeout, headers, erros, retries limitados e parsing JSON. |
+| 01.07 | python | [URLs e query strings seguras](.agents/skills/01-python/url-query-safety/SKILL.md) | Montar endpoints sem corromper encoding e sem vazar parâmetros sensíveis. |
+| 01.08 | python | [Normalização de JSON externo](.agents/skills/01-python/json-normalization/SKILL.md) | Converter respostas inconsistentes em contratos internos previsíveis. |
+| 01.09 | python | [Concorrência segura no Kodi](.agents/skills/01-python/concurrency-kodi/SKILL.md) | Executar I/O concorrente sem chamar APIs de UI fora da thread apropriada. |
+| 01.10 | python | [Progresso e cancelamento](.agents/skills/01-python/progress-cancellation/SKILL.md) | Tornar sincronizações e buscas longas visíveis e canceláveis. |
+| 02.01 | sqlite | [Ciclo de vida da conexão](.agents/skills/02-sqlite/connection-lifecycle/SKILL.md) | Abrir, configurar e fechar conexões SQLite de forma previsível no Kodi. |
+| 02.02 | sqlite | [Design de schema](.agents/skills/02-sqlite/schema-design/SKILL.md) | Modelar catálogos, favoritos, progresso, playlists e cache sem duplicação desnecessária. |
+| 02.03 | sqlite | [Versionamento de schema](.agents/skills/02-sqlite/schema-versioning/SKILL.md) | Controlar versão do banco independentemente da versão do addon. |
+| 02.04 | sqlite | [Migrações transacionais](.agents/skills/02-sqlite/migrations/SKILL.md) | Alterar bancos existentes sem perda silenciosa de dados. |
+| 02.05 | sqlite | [Transações e consistência](.agents/skills/02-sqlite/transactions/SKILL.md) | Agrupar escritas relacionadas e evitar catálogos parcialmente atualizados. |
+| 02.06 | sqlite | [PRAGMAs seguros](.agents/skills/02-sqlite/pragmas/SKILL.md) | Escolher foreign_keys, journal mode, synchronous, busy_timeout e cache de forma compatível. |
+| 02.07 | sqlite | [Índices e query plan](.agents/skills/02-sqlite/indexes-query-plan/SKILL.md) | Criar índices baseados em consultas reais e verificar seu uso. |
+| 02.08 | sqlite | [UPSERT e sincronização em lote](.agents/skills/02-sqlite/upsert-bulk-sync/SKILL.md) | Atualizar catálogos Xtream e metadados sem apagar favoritos ou progresso. |
+| 02.09 | sqlite | [Favoritos e progresso](.agents/skills/02-sqlite/favorites-progress/SKILL.md) | Persistir ações do usuário separadas do catálogo atualizável. |
+| 02.10 | sqlite | [Busca local e FTS](.agents/skills/02-sqlite/fts-search/SKILL.md) | Oferecer busca rápida com fallback quando FTS5 não estiver disponível. |
+| 03.01 | kodi-core | [Manifesto addon.xml](.agents/skills/03-kodi-core/addon-xml/SKILL.md) | Criar manifestos válidos para sTv, sFy e sRepo com IDs, versões e extensões corretas. |
+| 03.02 | kodi-core | [Configurações do addon](.agents/skills/03-kodi-core/settings-xml/SKILL.md) | Definir settings.xml com labels localizadas, campos secretos e defaults seguros. |
+| 03.03 | kodi-core | [Localização](.agents/skills/03-kodi-core/localization/SKILL.md) | Manter strings em resource.language e evitar textos soltos em código. |
+| 03.04 | kodi-core | [Roteamento de plugin](.agents/skills/03-kodi-core/router/SKILL.md) | Interpretar ações e parâmetros com whitelist e fallback para home. |
+| 03.05 | kodi-core | [Diretórios e ListItems](.agents/skills/03-kodi-core/directory-items/SKILL.md) | Construir pastas e itens com metadados, arte e propriedades corretas. |
+| 03.06 | kodi-core | [Conteúdo e ordenação](.agents/skills/03-kodi-core/content-sorting/SKILL.md) | Informar tipo de conteúdo e métodos de ordenação adequados ao Kodi. |
+| 03.07 | kodi-core | [Caminhos special://](.agents/skills/03-kodi-core/special-paths/SKILL.md) | Usar caminhos portáveis para perfil, temp, home e addon. |
+| 03.08 | kodi-core | [Integração de logs Kodi](.agents/skills/03-kodi-core/kodi-logging/SKILL.md) | Encapsular xbmc.log com prefixo, níveis e sanitização. |
+| 03.09 | kodi-core | [Serviço opcional](.agents/skills/03-kodi-core/service-addon/SKILL.md) | Decidir quando tarefas em segundo plano justificam service.py sem manter daemon desnecessário. |
+| 03.10 | kodi-core | [Compatibilidade Kodi](.agents/skills/03-kodi-core/compatibility/SKILL.md) | Manter APIs usadas dentro da versão alvo e detectar diferenças sem gambiarras. |
+| 04.01 | kodi-ui | [UI independente de skin](.agents/skills/04-kodi-ui-playback/skin-independent-ui/SKILL.md) | Criar experiência consistente usando recursos públicos do Kodi. |
+| 04.02 | kodi-ui | [Artwork e fallbacks](.agents/skills/04-kodi-ui-playback/artwork/SKILL.md) | Selecionar thumb, icon, poster, fanart e fallback sem imagens quebradas. |
+| 04.03 | kodi-ui | [Menus de contexto](.agents/skills/04-kodi-ui-playback/context-menus/SKILL.md) | Adicionar favorito, remover, marcar visto e atualizar sem poluir navegação. |
+| 04.04 | kodi-ui | [Diálogos de busca](.agents/skills/04-kodi-ui-playback/search-dialogs/SKILL.md) | Coletar termos, validar cancelamento e renderizar resultados locais/remotos. |
+| 04.05 | kodi-ui | [Diálogos de progresso](.agents/skills/04-kodi-ui-playback/progress-dialogs/SKILL.md) | Apresentar sincronização de catálogo e metadata com cancelamento seguro. |
+| 04.06 | kodi-ui | [Reprodução resolvida](.agents/skills/04-kodi-ui-playback/resolved-playback/SKILL.md) | Entregar ao Kodi uma URL reproduzível com ListItem e MIME apropriados. |
+| 04.07 | kodi-ui | [Reprodução de áudio](.agents/skills/04-kodi-ui-playback/audio-playback/SKILL.md) | Configurar itens sFy como música com duração, artista, álbum e capa. |
+| 04.08 | kodi-ui | [Reprodução de vídeo](.agents/skills/04-kodi-ui-playback/video-playback/SKILL.md) | Configurar live, filmes e episódios com propriedades adequadas. |
+| 04.09 | kodi-ui | [Continuar assistindo](.agents/skills/04-kodi-ui-playback/continue-watching/SKILL.md) | Capturar e restaurar progresso sem sobrescrever estado concluído incorretamente. |
+| 04.10 | kodi-ui | [Desempenho de renderização](.agents/skills/04-kodi-ui-playback/performance-rendering/SKILL.md) | Evitar travamentos ao listar catálogos grandes. |
+| 05.01 | stv | [Configuração Xtream](.agents/skills/05-stv-xtream/xtream-configuration/SKILL.md) | Ler e validar host, login e senha do sTv sem expor credenciais. |
+| 05.02 | stv | [Cliente Xtream](.agents/skills/05-stv-xtream/xtream-client/SKILL.md) | Centralizar chamadas player_api.php e respostas do provider. |
+| 05.03 | stv | [Sincronização de catálogo](.agents/skills/05-stv-xtream/xtream-catalog-sync/SKILL.md) | Atualizar categorias, live, VOD e séries em etapas transacionais. |
+| 05.04 | stv | [TV ao vivo](.agents/skills/05-stv-xtream/live-tv/SKILL.md) | Listar canais por categoria e construir stream live válido. |
+| 05.05 | stv | [Filmes VOD](.agents/skills/05-stv-xtream/vod/SKILL.md) | Listar filmes, enriquecer metadados e reproduzir extensão informada pelo provider. |
+| 05.06 | stv | [Séries, temporadas e episódios](.agents/skills/05-stv-xtream/series/SKILL.md) | Transformar payloads Xtream em hierarquia navegável e estável. |
+| 05.07 | stv | [Busca sTv](.agents/skills/05-stv-xtream/stv-search/SKILL.md) | Pesquisar canais, filmes e séries localmente com filtros por domínio. |
+| 05.08 | stv | [Favoritos sTv](.agents/skills/05-stv-xtream/stv-favorites/SKILL.md) | Gerenciar favoritos de canais, filmes e séries sem depender do catálogo atual. |
+| 05.09 | stv | [Progresso sTv](.agents/skills/05-stv-xtream/stv-continue-watching/SKILL.md) | Manter continuar assistindo para VOD e episódios, nunca para live simples. |
+| 05.10 | stv | [Resiliência do provider](.agents/skills/05-stv-xtream/stv-provider-resilience/SKILL.md) | Distinguir indisponibilidade temporária, credencial inválida e payload quebrado. |
+| 06.01 | sfy | [Integração Python do yt-dlp](.agents/skills/06-sfy-music/yt-dlp-embedding/SKILL.md) | Usar `yt_dlp.YoutubeDL` por API Python com opções mínimas e logger adaptado. |
+| 06.02 | sfy | [Resolução de stream musical](.agents/skills/06-sfy-music/stream-resolution/SKILL.md) | Selecionar URL temporária de áudio adequada para o player Kodi. |
+| 06.03 | sfy | [Busca musical](.agents/skills/06-sfy-music/sfy-search/SKILL.md) | Pesquisar faixas, artistas, álbuns e playlists com resultados normalizados. |
+| 06.04 | sfy | [Tops Brasil e Mundo](.agents/skills/06-sfy-music/charts/SKILL.md) | Representar rankings como fontes configuráveis e cacheáveis, não hardcode espalhado. |
+| 06.05 | sfy | [Categorias musicais](.agents/skills/06-sfy-music/categories/SKILL.md) | Mapear gêneros e moods a consultas ou playlists de origem documentada. |
+| 06.06 | sfy | [Minhas playlists](.agents/skills/06-sfy-music/playlists/SKILL.md) | Criar playlists locais compostas por referências normalizadas de faixa. |
+| 06.07 | sfy | [Favoritos e histórico sFy](.agents/skills/06-sfy-music/favorites-history/SKILL.md) | Persistir músicas favoritas e reproduções recentes com limites de retenção. |
+| 06.08 | sfy | [Metadados musicais](.agents/skills/06-sfy-music/music-metadata/SKILL.md) | Preencher título, artista, álbum, duração, thumb e origem sem inventar dados. |
+| 06.09 | sfy | [Navegação inspirada em Spotify](.agents/skills/06-sfy-music/spotify-like-navigation/SKILL.md) | Criar home com tops, categorias, playlists, favoritos e busca usando componentes Kodi. |
+| 06.10 | sfy | [Cache e resiliência sFy](.agents/skills/06-sfy-music/sfy-cache-resilience/SKILL.md) | Cachear resultados e metadados sem armazenar URLs temporárias expiradas. |
+| 07.01 | metadata | [Autenticação TMDB](.agents/skills/07-metadata-search/tmdb-auth/SKILL.md) | Carregar token de desenvolvimento com segurança e definir estratégia de runtime local. |
+| 07.02 | metadata | [Cliente TMDB](.agents/skills/07-metadata-search/tmdb-client/SKILL.md) | Centralizar autenticação, idioma, região, timeout, cache e erros. |
+| 07.03 | metadata | [Correspondência de filmes](.agents/skills/07-metadata-search/movie-matching/SKILL.md) | Encontrar filme por título e ano com score de confiança. |
+| 07.04 | metadata | [Correspondência de séries](.agents/skills/07-metadata-search/tv-matching/SKILL.md) | Encontrar série por nome, ano e tipo preservando temporadas do provider. |
+| 07.05 | metadata | [Imagens HD](.agents/skills/07-metadata-search/images-hd/SKILL.md) | Construir URLs de poster/backdrop usando configuração e tamanhos compatíveis. |
+| 07.06 | metadata | [Cache de metadados](.agents/skills/07-metadata-search/metadata-cache/SKILL.md) | Reduzir chamadas TMDB com TTL, versão e negative cache. |
+| 07.07 | metadata | [Normalização de busca](.agents/skills/07-metadata-search/search-normalization/SKILL.md) | Remover ruído de nomes sem destruir títulos legítimos. |
+| 07.08 | metadata | [Busca unificada](.agents/skills/07-metadata-search/unified-search/SKILL.md) | Orquestrar resultados sTv e sFy sem misturar tipos ou bancos. |
+| 07.09 | metadata | [Fallbacks de metadados](.agents/skills/07-metadata-search/metadata-fallbacks/SKILL.md) | Priorizar provider, TMDB e assets locais de forma determinística. |
+| 07.10 | metadata | [Privacidade de metadados](.agents/skills/07-metadata-search/metadata-privacy/SKILL.md) | Minimizar dados enviados em buscas externas e impedir vazamento de credenciais. |
+| 08.01 | srepo | [Addon de repositório sRepo](.agents/skills/08-srepo-delivery/repository-addon/SKILL.md) | Configurar `repository.srepo` para apontar ao índice publicado no GitHub Pages. |
+| 08.02 | srepo | [Layout de distribuição](.agents/skills/08-srepo-delivery/repo-layout/SKILL.md) | Organizar fonte, zips, site e ferramentas sem confundir diretório publicado. |
+| 08.03 | srepo | [Empacotamento ZIP](.agents/skills/08-srepo-delivery/zip-packaging/SKILL.md) | Gerar ZIPs reproduzíveis com raiz correta e conteúdo mínimo. |
+| 08.04 | srepo | [Geração de addons.xml](.agents/skills/08-srepo-delivery/addons-xml/SKILL.md) | Combinar manifests publicados em um índice XML válido e determinístico. |
+| 08.05 | srepo | [Checksums do repositório](.agents/skills/08-srepo-delivery/checksums/SKILL.md) | Gerar checksum do índice e hashes dos artefatos para verificação. |
+| 08.06 | srepo | [Versionamento e releases](.agents/skills/08-srepo-delivery/versioning/SKILL.md) | Aplicar SemVer e impedir divergência entre código, manifest, ZIP e changelog. |
+| 08.07 | srepo | [Publicação GitHub Pages](.agents/skills/08-srepo-delivery/github-pages/SKILL.md) | Publicar site estático do repositório sem executar Python no servidor. |
+| 08.08 | srepo | [CI/CD no GitHub Actions](.agents/skills/08-srepo-delivery/github-actions/SKILL.md) | Validar, empacotar e publicar com permissões mínimas e artefatos auditáveis. |
+| 08.09 | srepo | [Rollback de release](.agents/skills/08-srepo-delivery/rollback/SKILL.md) | Reverter release quebrada mantendo clientes em versão funcional. |
+| 08.10 | srepo | [Auditoria de release](.agents/skills/08-srepo-delivery/release-audit/SKILL.md) | Comprovar que nenhum segredo, banco ou lixo entrou nos ZIPs e Pages. |
+| 09.01 | quality | [.gitignore blindado](.agents/skills/09-quality-security/gitignore-hardening/SKILL.md) | Excluir segredos, bancos, caches, IDEs, builds e arquivos pessoais sem ocultar fonte necessária. |
+| 09.02 | quality | [Política de .env e segredos](.agents/skills/09-quality-security/env-secrets/SKILL.md) | Usar `.env` apenas em desenvolvimento e GitHub Secrets em automação. |
+| 09.03 | quality | [Testes unitários](.agents/skills/09-quality-security/unit-tests/SKILL.md) | Testar normalizadores, roteamento, matching, SQL e seleção de formatos sem Kodi real. |
+| 09.04 | quality | [Testes de contrato](.agents/skills/09-quality-security/contract-tests/SKILL.md) | Validar adaptadores contra fixtures de payload Xtream, yt-dlp e TMDB. |
+| 09.05 | quality | [Testes SQLite](.agents/skills/09-quality-security/sqlite-tests/SKILL.md) | Verificar migrações, constraints, índices, UPSERT e preservação de favoritos. |
+| 09.06 | quality | [Stubs do Kodi](.agents/skills/09-quality-security/kodi-stubs/SKILL.md) | Permitir testes fora do Kodi sem contaminar produção com mocks. |
+| 09.07 | quality | [Matriz de teste manual](.agents/skills/09-quality-security/manual-test-matrix/SKILL.md) | Validar sTv, sFy e sRepo em instalação limpa e atualização. |
+| 09.08 | quality | [Orçamento de desempenho](.agents/skills/09-quality-security/performance-budget/SKILL.md) | Definir limites para home, listagem, busca, sync e abertura do banco. |
+| 09.09 | quality | [Revisão de segurança](.agents/skills/09-quality-security/security-review/SKILL.md) | Revisar entrada, URLs, arquivos, logs, dependências e publicação. |
+| 09.10 | quality | [Diagnóstico de incidentes](.agents/skills/09-quality-security/incident-diagnostics/SKILL.md) | Coletar evidências úteis sem pedir ou expor credenciais do usuário. |

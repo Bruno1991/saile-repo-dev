@@ -1,0 +1,1551 @@
+{
+  "schema_version": 2,
+  "project": "saile-repo-dev",
+  "addon_ids": [
+    "repository.srepo",
+    "plugin.video.stv",
+    "plugin.audio.sfy"
+  ],
+  "excluded_local_paths": [
+    ".env",
+    ".vscode/"
+  ],
+  "file_count_excluding_manifest": 307,
+  "files": [
+    {
+      "path": ".agents/skills/00-governance/agent-output-contract/SKILL.md",
+      "bytes": 3256,
+      "sha256": "7abd9976509226bf18fb73fe50a74bca8056c96b2ecc3f838b6a0097950edbe5"
+    },
+    {
+      "path": ".agents/skills/00-governance/architecture-first/SKILL.md",
+      "bytes": 3315,
+      "sha256": "c0d4a2ae5492465178f95539e2b0d6ac850c118104b12cff18146a44442d3dbd"
+    },
+    {
+      "path": ".agents/skills/00-governance/change-plan/SKILL.md",
+      "bytes": 3225,
+      "sha256": "f6ea7a277c392786c4062b689da267b828243179e9c6006c58ee1ce327a08337"
+    },
+    {
+      "path": ".agents/skills/00-governance/decision-records/SKILL.md",
+      "bytes": 3182,
+      "sha256": "8f8ada14265d5fd3d0f7c78ed33599e334e4ac014795ff12a1d5d764f925a70d"
+    },
+    {
+      "path": ".agents/skills/00-governance/definition-of-done/SKILL.md",
+      "bytes": 3192,
+      "sha256": "84d6eae79d831b8e1fb7150838e1ac5db718658219cd36d2d830a608b99ec486"
+    },
+    {
+      "path": ".agents/skills/00-governance/dependency-governance/SKILL.md",
+      "bytes": 3236,
+      "sha256": "1f7a4bf77cf5647731f7d27b341fb2f8ca4dba9dfd4b051a7befb7d1dc9ac696"
+    },
+    {
+      "path": ".agents/skills/00-governance/local-first-constitution/SKILL.md",
+      "bytes": 3259,
+      "sha256": "9fdb868e728aabc53171c1b20de6a75872acd68a6f49dbc666bc46a57b326ae9"
+    },
+    {
+      "path": ".agents/skills/00-governance/repository-boundaries/SKILL.md",
+      "bytes": 3291,
+      "sha256": "059cfa74599cd3603aa7ce2cc747e4b80855bd58f9efaba02e32f798acbe10cf"
+    },
+    {
+      "path": ".agents/skills/00-governance/requirements-traceability/SKILL.md",
+      "bytes": 3186,
+      "sha256": "be725eaefe152b2cf7cf7de9b57e72d2b0b07314721627d7ecd13b0326371cff"
+    },
+    {
+      "path": ".agents/skills/00-governance/scope-guard/SKILL.md",
+      "bytes": 3260,
+      "sha256": "a3734b04cb0e7c13ec734ab22552ce6705c9191fbad37717323f849e9b0080a9"
+    },
+    {
+      "path": ".agents/skills/01-python/concurrency-kodi/SKILL.md",
+      "bytes": 3184,
+      "sha256": "2ae747daa9dd3301a3d9d72f5f87057dbf368bfb92a95df50d051ffd5b3d067d"
+    },
+    {
+      "path": ".agents/skills/01-python/domain-models/SKILL.md",
+      "bytes": 3235,
+      "sha256": "5e5d5bcecdf4c3730a1f7327224e7953d045423541c3d5c696cf20522359569e"
+    },
+    {
+      "path": ".agents/skills/01-python/exception-taxonomy/SKILL.md",
+      "bytes": 3254,
+      "sha256": "6c53233857a4cbeb95bd77248884f4ba735f4f4fd6ceee292e8381fe792b78c2"
+    },
+    {
+      "path": ".agents/skills/01-python/http-client/SKILL.md",
+      "bytes": 3175,
+      "sha256": "136f2ec2023c63e333cd4bd52361786282d57d1fc4587203a3d83840daac85ac"
+    },
+    {
+      "path": ".agents/skills/01-python/json-normalization/SKILL.md",
+      "bytes": 3231,
+      "sha256": "2e6b8b10f716bb1b6e9ebe7c85d4e038a83a5dff583b543407d2d0273ad6d903"
+    },
+    {
+      "path": ".agents/skills/01-python/logging-sanitization/SKILL.md",
+      "bytes": 3189,
+      "sha256": "67a38394b32563a2df74e6fac5771223fb1d4ef3de775ea4a25001758ab52f33"
+    },
+    {
+      "path": ".agents/skills/01-python/progress-cancellation/SKILL.md",
+      "bytes": 3199,
+      "sha256": "fd00fc827b26f262310613dfe8219cacae7f51ebb6a4ec25a9c5f8c4393166fa"
+    },
+    {
+      "path": ".agents/skills/01-python/project-layout/SKILL.md",
+      "bytes": 3218,
+      "sha256": "7d9690aa2890f56b6388c922425a7d21e8f85e600314a76f6596cfa3c59a04fa"
+    },
+    {
+      "path": ".agents/skills/01-python/typing-contracts/SKILL.md",
+      "bytes": 3248,
+      "sha256": "80bdb9eed686fde9a6935aa700a849d76fc55910b7009a07424574498e6247a4"
+    },
+    {
+      "path": ".agents/skills/01-python/url-query-safety/SKILL.md",
+      "bytes": 3162,
+      "sha256": "2b6abe54215cd1c7c47624dfef7aec880a40ec266f1b271a675ad3226800e042"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/connection-lifecycle/SKILL.md",
+      "bytes": 3235,
+      "sha256": "7eea1934b886d5734bcc5cdfbe80c85f92f6f9688afe441a751caf7e5967b99c"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/favorites-progress/SKILL.md",
+      "bytes": 3244,
+      "sha256": "df629314d5d9b924fd460985f5b43c9c7ee871c9f44030b32ecf4e2c83e21ff6"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/fts-search/SKILL.md",
+      "bytes": 3167,
+      "sha256": "ae7adaf1111c7b4756c473ffa5c8335a27a3fde7d79d6ee48dee987efade6a6b"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/indexes-query-plan/SKILL.md",
+      "bytes": 3239,
+      "sha256": "bdf7e3caaaa63053418cb1223c0cf81958380ec38a2af0a96557b3caad61fc7c"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/migrations/SKILL.md",
+      "bytes": 3226,
+      "sha256": "1c7b8e0985f7a42be02a79d8d91e8a0640a34b615ca4dea64316d59adbd6548a"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/pragmas/SKILL.md",
+      "bytes": 3227,
+      "sha256": "13a9d6a76f805c08e5d342fae383800756919d6b3524af1651d73a6f1513e4cd"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/schema-design/SKILL.md",
+      "bytes": 3216,
+      "sha256": "1a8b8719cfe3abe35f9f62cbe16054e1ef8ddec632695c1670311999f3a77a96"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/schema-versioning/SKILL.md",
+      "bytes": 3182,
+      "sha256": "fa188a8e28fbcdf28bf1f138ad94ce0c877c8a28a370c4a9365cbf2a03075a6f"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/transactions/SKILL.md",
+      "bytes": 3246,
+      "sha256": "c5f64ea7ab8f53307eea5cbc40e05ed580b7158216b937ab31045be54dadb50a"
+    },
+    {
+      "path": ".agents/skills/02-sqlite/upsert-bulk-sync/SKILL.md",
+      "bytes": 3267,
+      "sha256": "b95fe2ae545ab72689f018158ae6e3b6141aa960d2c5cf6131dd77b3ca07e426"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/addon-xml/SKILL.md",
+      "bytes": 3179,
+      "sha256": "78571a1db026622b6088e555864ae53ba34e27177149309654fde4cd737e76ed"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/compatibility/SKILL.md",
+      "bytes": 3232,
+      "sha256": "420fccc7d9bf1ceef32e4e9879ad1081a40a7348e53f2935a9dc5b74c403ab9b"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/content-sorting/SKILL.md",
+      "bytes": 3224,
+      "sha256": "b96654775f96eb19db77e1e276f20927fced1f0f93542a5480e33112a204ba76"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/directory-items/SKILL.md",
+      "bytes": 3144,
+      "sha256": "62d2953a4ce05007084a28b50377316005df964f691253790029818d1710031a"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/kodi-logging/SKILL.md",
+      "bytes": 3143,
+      "sha256": "e9aa314ef03a0931b29f30ed28ff00ebf1bd16fc069de3bacf86d091e128acca"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/localization/SKILL.md",
+      "bytes": 3136,
+      "sha256": "36e1fd3465c5b42a1aca81f8e06c24a545990942cc35656a8bb769a16d23bf1d"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/router/SKILL.md",
+      "bytes": 3140,
+      "sha256": "5aa8ec11b468c8d4aee6f824fe076a5aa8993e149d27a8727d44f091d5485305"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/service-addon/SKILL.md",
+      "bytes": 3188,
+      "sha256": "ac6e072e53e897dc858f3b5b855a7c61eb833e944a944c35791f4c99ccab1bc9"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/settings-xml/SKILL.md",
+      "bytes": 3219,
+      "sha256": "fd8d46c9c7220ffea637fadb814ab6a57310f2727ec27fa404d0ff966ff9b5ed"
+    },
+    {
+      "path": ".agents/skills/03-kodi-core/special-paths/SKILL.md",
+      "bytes": 3156,
+      "sha256": "d4fee82ad7071f91f54475a2ec82704201af14f59b3d12ba1377b5a0e746d8f5"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/artwork/SKILL.md",
+      "bytes": 3972,
+      "sha256": "b257ccbd918972a64ec5b4f762ee6b1e98e8c228e3c32262aedecafb53d236bf"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/audio-playback/SKILL.md",
+      "bytes": 3184,
+      "sha256": "61dcc75f3d1d1ea45b9eacc06efceb627de9a51f591708806be900eac87a1a2d"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/context-menus/SKILL.md",
+      "bytes": 3171,
+      "sha256": "6c880c8ae68c28594d39e2a058854762ab2f4505a4c11346632f3970b59c54a8"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/continue-watching/SKILL.md",
+      "bytes": 3184,
+      "sha256": "46018d25e03f866858816daeca4bb004d97a5ef1d817ebe231d602483dc18bf0"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/performance-rendering/SKILL.md",
+      "bytes": 3127,
+      "sha256": "96ca73db4dcf8e1a07e539afafebe6b53ada55098434c53efd8a950493d8ff8c"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/progress-dialogs/SKILL.md",
+      "bytes": 3141,
+      "sha256": "34a21b6a34c7e3d941c05822d3f442374c5a654867d8734c147cb5c9cb87cd39"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/resolved-playback/SKILL.md",
+      "bytes": 3118,
+      "sha256": "cb571be59a79a5bb3826c1e0bff228aa86113c94746fce11a1f2a56200343d80"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/search-dialogs/SKILL.md",
+      "bytes": 3162,
+      "sha256": "38ada153d37dbce014a2508d0065bb7c570667deaa51acc712183fc3366b8bc6"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/skin-independent-ui/SKILL.md",
+      "bytes": 3177,
+      "sha256": "f56aa17e4aca674b483a8cd6cadaf9769bcf4cc37c6e3362cb55287eb0ed6b6e"
+    },
+    {
+      "path": ".agents/skills/04-kodi-ui-playback/video-playback/SKILL.md",
+      "bytes": 3202,
+      "sha256": "46f8e1c59e47160ce4bc9300fdc44b8cd7144a217143dfee52198be4dd9761cb"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/live-tv/SKILL.md",
+      "bytes": 3030,
+      "sha256": "dee8c6d8cff9d086f46fe98012f49b3131ef24bdd4dc884056e4a1f7c8214ba1"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/series/SKILL.md",
+      "bytes": 3103,
+      "sha256": "5c1f51c4401ef92b7fa37d2ba2f01db7713e9601b012c1bc8b7100e0996071c4"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/stv-continue-watching/SKILL.md",
+      "bytes": 3060,
+      "sha256": "5cc780b96ba94e8bd6f5e51164cff16f1005cc1a8f60e10b3624c6b36965eb9d"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/stv-favorites/SKILL.md",
+      "bytes": 3101,
+      "sha256": "622854b2d6b8e8a85a84defde12369a04abb2775c9d75a4121bd698ca65a6e95"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/stv-provider-resilience/SKILL.md",
+      "bytes": 3164,
+      "sha256": "20b22b4faa1023992c0ea8a7c74e29b183791a56b29dfd2718cf68440f59e4bb"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/stv-search/SKILL.md",
+      "bytes": 3057,
+      "sha256": "ecf5ab09ce61de9418077d27b1f47ca2531fb23b8d8533d0d11ab97446792e94"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/vod/SKILL.md",
+      "bytes": 3077,
+      "sha256": "6e171fe204fa08ae2e4f8d8b2d63f74fdc9a1f897560cb30acf2e6ae8408ab23"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/xtream-catalog-sync/SKILL.md",
+      "bytes": 3166,
+      "sha256": "7259a002a5a9f9d3e23a481f513ac746a4ee0fde6837f8cae912a3871f0faa8c"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/xtream-client/SKILL.md",
+      "bytes": 3046,
+      "sha256": "2a5605a1282533f49e89f0c6bd7797890585ea66e1da329312c59800f9279aeb"
+    },
+    {
+      "path": ".agents/skills/05-stv-xtream/xtream-configuration/SKILL.md",
+      "bytes": 3101,
+      "sha256": "b5edac1a2cd65db739131b40bb2065224849e5d15528d9d84010e7578f0c7578"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/categories/SKILL.md",
+      "bytes": 3152,
+      "sha256": "27892dbc4bd829a2ad42db4d680ed2ede1d65881e0c160569eb90ae765c78c5b"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/charts/SKILL.md",
+      "bytes": 3198,
+      "sha256": "1d3efa748d327944da08d6a88489f2a8a98d3dd8810c0275b7b31b1175396f6a"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/favorites-history/SKILL.md",
+      "bytes": 3227,
+      "sha256": "5e4dd64a28ac93aee4c5da5919c82db85a272d2d6e4f711ec5ed39f42564704e"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/music-metadata/SKILL.md",
+      "bytes": 3189,
+      "sha256": "cdbdb2562de3e648086cc2de7a6fca5ea256c99d4e72717969a1a144f8199bd6"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/playlists/SKILL.md",
+      "bytes": 3135,
+      "sha256": "1fe2b92e7bd28a83542fa291cf984cf1da5a2a1b4af9b772d050f93d16a00529"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/sfy-cache-resilience/SKILL.md",
+      "bytes": 3217,
+      "sha256": "7d3bda07ca14fc7335daabe1102873f602b6486937e30a51dcc1df8fb7abcfcb"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/sfy-search/SKILL.md",
+      "bytes": 3137,
+      "sha256": "632c41892261bc909320e9436ace87a22f38549c9e547d254f3128630a08b710"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/spotify-like-navigation/SKILL.md",
+      "bytes": 3247,
+      "sha256": "c587b040968950385d68317fe48a02054580bad23d19fd7f1ddf835727e22b88"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/stream-resolution/SKILL.md",
+      "bytes": 3219,
+      "sha256": "bd599e76644746f2a224b3111b88c5ccf8cb4638bfa1d9e7563ff3b68022bbcb"
+    },
+    {
+      "path": ".agents/skills/06-sfy-music/yt-dlp-embedding/SKILL.md",
+      "bytes": 3236,
+      "sha256": "e304b35fc991e72ec2ab1dc14c5134b5a12460b1496210683d084f5e021e0b20"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/images-hd/SKILL.md",
+      "bytes": 3080,
+      "sha256": "9a7c8c4293c3e5c9dd01d8ecdc092359ed2b98c90393fad062c998bbdfa4d510"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/metadata-cache/SKILL.md",
+      "bytes": 3145,
+      "sha256": "785f739d2809f21fd0b408d5e8043745d7832740d77795137a9eff063be5c313"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/metadata-fallbacks/SKILL.md",
+      "bytes": 3187,
+      "sha256": "be8728fbbfbb991141ee58761b876971a424ae51853c28f1aed34a66f6c61973"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/metadata-privacy/SKILL.md",
+      "bytes": 3178,
+      "sha256": "46412298625d4c61ad11e365cc01c1f0c9d161d2f7e6691a8672232471ce81e2"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/movie-matching/SKILL.md",
+      "bytes": 3127,
+      "sha256": "2fec9ef91ef39ac704a4f20fc42b0e5553409203ba7de576e45ad8aa0fd17ca2"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/search-normalization/SKILL.md",
+      "bytes": 3147,
+      "sha256": "9189a310ef1dd1a06f7a16b6034c9eee2c4dcf6f2210a36d46ea8978685717da"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/tmdb-auth/SKILL.md",
+      "bytes": 3159,
+      "sha256": "cba26bb0cc87662a56722c3832d44642e6c69b6b941457fd4dc79a95caf7ef0c"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/tmdb-client/SKILL.md",
+      "bytes": 3118,
+      "sha256": "e40f01c9b14ebe33f3a55f1c2e5eb5c0a4ae9e75bbc70c0b3b916333b146143a"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/tv-matching/SKILL.md",
+      "bytes": 3172,
+      "sha256": "e83c10f46e40f1ff4af92224ee04f5e64581b50a1956f02a9aedbae845461989"
+    },
+    {
+      "path": ".agents/skills/07-metadata-search/unified-search/SKILL.md",
+      "bytes": 3143,
+      "sha256": "9a5be1bab08c3c9cd752723c8d84f968c55b24d6991b140e3157e520dee0e250"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/addons-xml/SKILL.md",
+      "bytes": 3128,
+      "sha256": "cc6cabdea987aaaa55f7a5c17e48bda9546480a9ad0964dd0b142ddc44b15068"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/checksums/SKILL.md",
+      "bytes": 3191,
+      "sha256": "145e78ceb2dbb268deea03fd8787256d43019f0ab1093e2b45cf5860d43baf14"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/github-actions/SKILL.md",
+      "bytes": 3149,
+      "sha256": "66731db12229ff3c34a4020af4c83629de099e00fd25f409352bb56ef5b53d48"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/github-pages/SKILL.md",
+      "bytes": 3158,
+      "sha256": "b4c8e34c22f1a9081dfaa70fa64d25449fb00757a9d6fec8bcbc0306a7f5941c"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/release-audit/SKILL.md",
+      "bytes": 3146,
+      "sha256": "9c297362b29a87ce2cfc4e4ef5ab28d0674ae9098abb18e00b7047deae8c875f"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/repo-layout/SKILL.md",
+      "bytes": 3147,
+      "sha256": "126877608ee94da48381d4f7ccdd4413fba69bb98851d369194fb521493dbb1e"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/repository-addon/SKILL.md",
+      "bytes": 3150,
+      "sha256": "55f59717a8eddba948cd1d4b96df4a6b5d3d6492e2df40e16fb15ab23fae2cf7"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/rollback/SKILL.md",
+      "bytes": 3157,
+      "sha256": "0f5805d254003d2a3c9bebb2710d942fe86ca3e39f618e484eb8f1977af61f4a"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/versioning/SKILL.md",
+      "bytes": 3150,
+      "sha256": "e0ed39982d2fb414a9a63dd54e44f14331c9c8d22e46234368736cbc8815e62a"
+    },
+    {
+      "path": ".agents/skills/08-srepo-delivery/zip-packaging/SKILL.md",
+      "bytes": 3102,
+      "sha256": "7ea291b97d3c260bab3288acc99143e581a66795d163672399535a80118dec5c"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/contract-tests/SKILL.md",
+      "bytes": 3191,
+      "sha256": "10f6af76284e5945bf0bdb8adae8a6be0cb495128e428f82055717a1457b5fdf"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/env-secrets/SKILL.md",
+      "bytes": 3181,
+      "sha256": "2c2d5a72bc103b96bd96c83468c17295075ad6ded980b534d01ee8add998a3fe"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/gitignore-hardening/SKILL.md",
+      "bytes": 3231,
+      "sha256": "06412abe3f95276d30cf4eb6542377f62004191c416a7f8ee2fc3cd1bf371cff"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/incident-diagnostics/SKILL.md",
+      "bytes": 3210,
+      "sha256": "36dd8aeab2880aa7e9b6467faadf59ae1cbc4a249fc9f734154e4d9044c6c06f"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/kodi-stubs/SKILL.md",
+      "bytes": 3124,
+      "sha256": "88a5c38d43065ffc5e7b28c65b79288afd15cae88ad32f66477383a237248670"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/manual-test-matrix/SKILL.md",
+      "bytes": 3133,
+      "sha256": "5473cb809bb017584aa4665bf5feead13350b68a28c609d5fd55dc106f3df183"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/performance-budget/SKILL.md",
+      "bytes": 3129,
+      "sha256": "ad48f7575197b4de75323741b12f0097c7685a2286cd671bec35b052ab134e74"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/security-review/SKILL.md",
+      "bytes": 3165,
+      "sha256": "c7459c982f5bcc54d2f00ef5944c18c9f2e86e4125b2bcd49c95b522d2e19c00"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/sqlite-tests/SKILL.md",
+      "bytes": 3163,
+      "sha256": "bfa3e8d1183e32e86988629db26b3765f5846ad2b38999ee8f7c3c45cc08434d"
+    },
+    {
+      "path": ".agents/skills/09-quality-security/unit-tests/SKILL.md",
+      "bytes": 3140,
+      "sha256": "af370f0779a1b60d09967cc4d7ffba010e55a35286546149af5f7b367081bacc"
+    },
+    {
+      "path": ".env.example",
+      "bytes": 219,
+      "sha256": "b16ad8c44861001fe480ef1ff7d66ecd7759f52552d4f5274e512c151cfe056f"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "bytes": 560,
+      "sha256": "0edd8f8e172922c4c0b3ed1619af73d2460b0d3505d530710e32890bbfd226d8"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "bytes": 389,
+      "sha256": "27f079e499781816d7bd9187e3b5c66f24406a8e0c9c72da3cb7c93b6038b917"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 770,
+      "sha256": "80fc8878f93b11f8d7362182608874d451be8101279a09bf83e2972bd9af3ba6"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 1078,
+      "sha256": "7f09abadb027cf720eeb56c30b98a252e211552330a397191353d9d70f111e2d"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 522,
+      "sha256": "2dd45b6c26af13dc77d4f3ba774b3973bbc5a2ae44f9861f2ee4a5770e012767"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2067,
+      "sha256": "eb77c5d411a44434772a2fc150aedbda3fa2d35b66f2976131cdb1b780c13136"
+    },
+    {
+      "path": "COMPATIBILITY_MATRIX.md",
+      "bytes": 1418,
+      "sha256": "4d2c7b66272e1eca1b9515261cd4242d2c85de27640c94622f93d9815bb62a1d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "Makefile",
+      "bytes": 488,
+      "sha256": "74066bf643a3c55d3995016201d5004f3c59105f4790efd72860d0fa94aaad79"
+    },
+    {
+      "path": "OFFICIAL_REFERENCE_MAP.md",
+      "bytes": 1841,
+      "sha256": "98b2149fb4119f42ce8ce716d1f146b085bd18431b9e87abe725d469e397ce64"
+    },
+    {
+      "path": "PACKAGE_INVENTORY.md",
+      "bytes": 2307,
+      "sha256": "caebf93cff84c0d707e1b4e3c4b3644773ecf0b3c222b39fbc8c603d45793a2f"
+    },
+    {
+      "path": "PROJECT_CONSTITUTION.md",
+      "bytes": 1986,
+      "sha256": "f30419a6d848e92213bba1daa4cee79e21ef59f3f4b3c7977f2d36d53f95cf59"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3874,
+      "sha256": "4c9739e61b60f6a2b1969d2d24c56e0c172b25205a6a46b689ba56989e10fcc5"
+    },
+    {
+      "path": "REPOSITORY_BLUEPRINT.md",
+      "bytes": 3868,
+      "sha256": "33ec5671d18b9b15f584036b897cf680b89d9c66d697d4e1af74ee567ba8fdb5"
+    },
+    {
+      "path": "ROADMAP_ARCHITECTURE.md",
+      "bytes": 4471,
+      "sha256": "ff7b21d60a1af553fb6cf821c2b790db8cdd5df27ca6a389892e17fb197a9c90"
+    },
+    {
+      "path": "ROADMAP_TRACEABILITY_MATRIX.md",
+      "bytes": 1486,
+      "sha256": "225fb831ddc2f405051c37f924c9ec90d01e91ecebfb28ec36a059ff2b5b7194"
+    },
+    {
+      "path": "SECURITY_AND_ENV_POLICY.md",
+      "bytes": 1808,
+      "sha256": "7f6368b85a76b4a816a54577e0da6f653317c935c0b2e55e5a8a4aaed89bd7db"
+    },
+    {
+      "path": "SKILLS_INDEX.md",
+      "bytes": 17811,
+      "sha256": "7293b67bd15ee3341cc57aa53f1451db4d662ad9a9a8d00ef178e5c47593c513"
+    },
+    {
+      "path": "TREE_FINAL.txt",
+      "bytes": 20264,
+      "sha256": "9e5dce4626ca66c22d84f0e9985d344da1b55009e0227079ff4729bf40ed98c7"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/addon.xml",
+      "bytes": 1065,
+      "sha256": "7043a2d6fcbdc1c24c48bcd78ed2fe207416befda291aa0b58ec60f73acbeb86"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/changelog-0.1.0.txt",
+      "bytes": 42,
+      "sha256": "996dcf559bddbb3c43d7b87c4ea48bdef6765b78b8b3580290e1dd7b73c50aa8"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/default.py",
+      "bytes": 374,
+      "sha256": "f81b2ff65c6c2a90da6bba2eb616587f2caef60c505c2f02d09366fabd7f7443"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/fanart.jpg",
+      "bytes": 121936,
+      "sha256": "465e5a4b0e39ecce2042672a7bae0772e2c564f64004b1ab6fd3e1bcc11cb807"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/icon.png",
+      "bytes": 8181,
+      "sha256": "0e88062311345351fe50cd736ad18b6924303d5fe63ded004373f87d1d664070"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/language/resource.language.pt_br/strings.po",
+      "bytes": 667,
+      "sha256": "27baa89f52e7ef99259468087de476972242e69b927a457f4f5585dd1b0ea46c"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/__init__.py",
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/app/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/app/services.py",
+      "bytes": 85,
+      "sha256": "2314688efec0893ed933e276af4de0fd5d88a662db980342713974eb688ab61a"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/bootstrap.py",
+      "bytes": 1272,
+      "sha256": "a547071c2f918b181ca1fecafc2663f9d06d0b8e1a05ed5f596cc4b7a74d01ad"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/domain/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/domain/models.py",
+      "bytes": 259,
+      "sha256": "1b15a711c657aca22fdaa69d610e8764793127f56559dfb061a29df2bb49d661"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/infrastructure/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/persistence/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/persistence/database.py",
+      "bytes": 2423,
+      "sha256": "4f7423729851032589dce1c79a68cf968e82603025fa56b403274f1fd4821f38"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/providers/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/providers/ytdlp/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/providers/ytdlp/resolver.py",
+      "bytes": 1955,
+      "sha256": "a0d623f72455d27fa65284c61e6ae0fcb90ffe4d9422b33f7038fac4879e862b"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/routing.py",
+      "bytes": 870,
+      "sha256": "065dc3c1686d8f27484c04063d0f754220ffe4cd2fff3be76638c43eb493a7aa"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/ui/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/sfy/ui/directory.py",
+      "bytes": 562,
+      "sha256": "0e681ab6e208588d54e69094bb2e2aa9ca54c9fb4b242144dac2c970b8af9a8c"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/vendor/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/lib/vendor/README.md",
+      "bytes": 311,
+      "sha256": "130704528f38b6b15b7801a1193baefc80e4e3ac5fa5ee3b1276fcb964af4221"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/albums.png",
+      "bytes": 9175,
+      "sha256": "5ff665559a06fcdf3081c65f4ac6e2e8d47fc502d9c1d253f17fb3da2dde99e1"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/artists.png",
+      "bytes": 7839,
+      "sha256": "d81828e583826539d5e2f565bc71d5c728a9c12b511141b2080f5db1c779c169"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/categories.png",
+      "bytes": 9464,
+      "sha256": "61875879f6f4883a15f58512a4e24940ffa6ce960a8baaaf532f3737cea90cdf"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/error.png",
+      "bytes": 8984,
+      "sha256": "06571ed449230e7e1871f4bcf6d91189f6840e048a9c97456e5aec6bd70a2dc8"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/favorites.png",
+      "bytes": 8510,
+      "sha256": "f91705ff42ebdd80088acf714655b422cf9cff4674f607e059a652539385d607"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/history.png",
+      "bytes": 8525,
+      "sha256": "5751d4b51d893e7d09c147c62d3377e9f6bdb6cd7bf3fc0e42ceec27234378a9"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/placeholder_album.png",
+      "bytes": 10560,
+      "sha256": "1f9e4a3128db24d12580ec49e8e4ab1284310b54da0e534e92c93f6a5055617f"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/placeholder_artist.png",
+      "bytes": 9691,
+      "sha256": "aa48b58d5ebe5bffcf4cafbb2d4d6409861ff05d757e94cea300c032ffb346f1"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/placeholder_fanart.jpg",
+      "bytes": 122231,
+      "sha256": "6eb617a52527c3a179068fcaa67f9484f55692743578b843f2b2217d6133e571"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/playlists.png",
+      "bytes": 8771,
+      "sha256": "409e67f8b17f49663a3c6c3f76086b326d67b78a5b67495a43370394adea9486"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/refresh.png",
+      "bytes": 8283,
+      "sha256": "fc270928a32fcc885fc7c494c0e3375509600bdefe63aabf9ef7a55800a8289d"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/search.png",
+      "bytes": 8426,
+      "sha256": "082684bbc7fc33b851f747d815e8127581db1cd15fea349dbb29db1c9f764541"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/settings.png",
+      "bytes": 11692,
+      "sha256": "a6e0c601bc7dd68b97a211eaa782e3aba2d545fdd2601e0f9b293e16d846694c"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/singles.png",
+      "bytes": 9828,
+      "sha256": "0aeabcd685770afe6008b9d53f3f8fd26ec38205cb03f11b0c5fd21b1f4070d1"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/top_brazil.png",
+      "bytes": 9318,
+      "sha256": "5473f0b62d084eb4a153f61a05313387902826a59d321b4adeb8d9cf7fe30d62"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/media/top_world.png",
+      "bytes": 10343,
+      "sha256": "f942e55174622b03fe785eda4608cda654d690890d2f697d7c05fbc4c2c054ab"
+    },
+    {
+      "path": "addons/plugin.audio.sfy/resources/settings.xml",
+      "bytes": 907,
+      "sha256": "a8e60c848f43fd2989c5db4b977d201ce259465d22176437e4007ddc5e7fdb99"
+    },
+    {
+      "path": "addons/plugin.video.stv/addon.xml",
+      "bytes": 1031,
+      "sha256": "9304d04192529cd5308f3763fecd8bc4a010f4bb7e43aea5b3979c4944db1d76"
+    },
+    {
+      "path": "addons/plugin.video.stv/changelog-0.1.0.txt",
+      "bytes": 42,
+      "sha256": "5aba562de3d1edd0c7bf811552169e3ee47ae34728286fee2d858d4601cacc3a"
+    },
+    {
+      "path": "addons/plugin.video.stv/default.py",
+      "bytes": 280,
+      "sha256": "59606db17a256619364a833bf8a4609719829d540a4e107e5bd0a0794ce2c57d"
+    },
+    {
+      "path": "addons/plugin.video.stv/fanart.jpg",
+      "bytes": 110421,
+      "sha256": "10e07f53f90d47f67723323ebeabfc876d2c59268fe6d70a7fbaab75d02d8c94"
+    },
+    {
+      "path": "addons/plugin.video.stv/icon.png",
+      "bytes": 6867,
+      "sha256": "b0576d9d89bf9154aa199a8d4d1939ce88f9781d89245f1d87cb1a3f5f5f729b"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/language/resource.language.pt_br/strings.po",
+      "bytes": 697,
+      "sha256": "276537ccf6e6eaad4e0673895f438f2486aabdaf476cd9603a5e215d8a27e5e9"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/__init__.py",
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/app/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/app/services.py",
+      "bytes": 149,
+      "sha256": "f2dc41b622315eed696871274684d1719717e820b47e7787c63895c346f8d06f"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/bootstrap.py",
+      "bytes": 1466,
+      "sha256": "7836a995165df2dde1ecbb48fe2ff03de50340839be77bce9c2226b25598cb92"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/domain/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/domain/models.py",
+      "bytes": 273,
+      "sha256": "c63b7e3fb27e5312bed05b85dcfb77f21783137ac785ef1f15051c1653777db2"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/infrastructure/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/infrastructure/http.py",
+      "bytes": 838,
+      "sha256": "f22aaca1f3b573c43498c693ae1ba987055d10b9890f694fbfc966f14e67a389"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/metadata/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/metadata/tmdb/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/metadata/tmdb/client.py",
+      "bytes": 1180,
+      "sha256": "14a31e0dfdb5850f4c6cb581667cfd68200b76a8b48abb417db27f8b0c6b0391"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/persistence/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/persistence/database.py",
+      "bytes": 2506,
+      "sha256": "aa0f7dee59754a8af602e5cc6d7ef46cee6b74c23878559e65bbdcead379193c"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/providers/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/providers/xtream/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/providers/xtream/client.py",
+      "bytes": 1561,
+      "sha256": "d9ed7a2bff6e7d13a7822b441980ae3d39cf37a4397da20c40bfe4347a641740"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/routing.py",
+      "bytes": 870,
+      "sha256": "e4d4a9594a1dbd79a9025f0ae13bdf379813f9a99c0942cd1f7964b71d0f3dfa"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/ui/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/lib/stv/ui/directory.py",
+      "bytes": 562,
+      "sha256": "0e681ab6e208588d54e69094bb2e2aa9ca54c9fb4b242144dac2c970b8af9a8c"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/continue_watching.png",
+      "bytes": 10263,
+      "sha256": "12c2bcd07557f79b53a79b661c18e4fb30e8080634443c43f6407b6e718b0f64"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/error.png",
+      "bytes": 9010,
+      "sha256": "128bb0b6f12601656b5ec23feabe7400e945500b6625d214c61a15cee53c5ee5"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/favorites.png",
+      "bytes": 8529,
+      "sha256": "6c0ff39aac01e15130b4c5dbb5fa69fc52f457e58430b83cf3ef57656eaa5ffd"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/indexed_channels.png",
+      "bytes": 10004,
+      "sha256": "fa3634495a18803c9d2034d4920ce97c5087e557cc2cdcf7ce7d04209aaf4a0b"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/indexed_movies.png",
+      "bytes": 9471,
+      "sha256": "612e5ba5d9ca223ea78765f0adc25b5237ae8688c637259847f07e4398ab0b83"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/indexed_series.png",
+      "bytes": 9907,
+      "sha256": "e4edca88c1320bd309e4c0db37d1508f7a7e963a729b11ceabe293dec3fb4030"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/live_tv.png",
+      "bytes": 8104,
+      "sha256": "04257835135c2518e8f3a47d6a7097e6e48507a14756713f8708cef6b310ff0b"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/placeholder_fanart.jpg",
+      "bytes": 111610,
+      "sha256": "66c95f8a42bd6c53eaae065ccf954f83a6fdea9481a6e4cb1714c4ac245c6d99"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/placeholder_poster.png",
+      "bytes": 14281,
+      "sha256": "c598a5cbd125323023e05a7d7cde7955c7c1d0e71b7753990123ba0cdd323e1d"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/provider.png",
+      "bytes": 10180,
+      "sha256": "e4864946bfbdd0211dd2661d50634e26a462f83c381321eaefb3f030d07a081f"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/refresh.png",
+      "bytes": 8327,
+      "sha256": "f3b98aad44463e09f6f8928980df791e00831b3995feed2e98b561fb42b69403"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/search.png",
+      "bytes": 8459,
+      "sha256": "757471376e3498721f0be594c3eab37abb9edb0b657fb56ebc628fc4e507ee1e"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/series.png",
+      "bytes": 7968,
+      "sha256": "0abff74ecca2869c1318f480d7eb7eaddb0b800c16ddd26a03e77b0569e92eeb"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/settings.png",
+      "bytes": 11701,
+      "sha256": "7639c0909cf17e439be727a821ccb5a82291abd9270cc76d652fa191fad16602"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/sync.png",
+      "bytes": 10645,
+      "sha256": "90c55978058f053b310069bb227d70c987de5d9c262ea1ce87d5ee50efb3477f"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/media/vod.png",
+      "bytes": 8993,
+      "sha256": "9d21737f46532385b52150b374d25c6f0e2f2410b6390ec58f9aaa792f50b2d9"
+    },
+    {
+      "path": "addons/plugin.video.stv/resources/settings.xml",
+      "bytes": 1918,
+      "sha256": "24ebbfed007530ab8a0f4f3767923b6ee1b2c9603e20b4b7233d20fc4c2174a0"
+    },
+    {
+      "path": "addons/repository.srepo/addon.xml",
+      "bytes": 1000,
+      "sha256": "908195ccb1aa7f1fbec2d2a839a8ab55000dff72a2f8f56ad699d7d3917f28ba"
+    },
+    {
+      "path": "addons/repository.srepo/changelog-1.0.0.txt",
+      "bytes": 49,
+      "sha256": "ca005e92babf12da9cd5c5fb956312497a4efecbc96652ab3c3bfa2b2b0b0d0c"
+    },
+    {
+      "path": "addons/repository.srepo/fanart.jpg",
+      "bytes": 124871,
+      "sha256": "3ed28572b8b32b0ab4038d7912e65e53072fc40a0b50bd61c4a5a78587e2e270"
+    },
+    {
+      "path": "addons/repository.srepo/icon.png",
+      "bytes": 8509,
+      "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
+    },
+    {
+      "path": "artwork/README.md",
+      "bytes": 1137,
+      "sha256": "260e68e8d682c3812ae7376dd1d9809b38559b0c0d2aa60afaed55b2188bb1f2"
+    },
+    {
+      "path": "artwork/artwork-manifest.json",
+      "bytes": 9997,
+      "sha256": "9ea1cdcf3fd3663b69e5c420a0b5e8624ea497ecafe745ffc1c0f488e636a409"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/fanart.jpg",
+      "bytes": 121936,
+      "sha256": "465e5a4b0e39ecce2042672a7bae0772e2c564f64004b1ab6fd3e1bcc11cb807"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/icon.png",
+      "bytes": 8181,
+      "sha256": "0e88062311345351fe50cd736ad18b6924303d5fe63ded004373f87d1d664070"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/albums.png",
+      "bytes": 9175,
+      "sha256": "5ff665559a06fcdf3081c65f4ac6e2e8d47fc502d9c1d253f17fb3da2dde99e1"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/artists.png",
+      "bytes": 7839,
+      "sha256": "d81828e583826539d5e2f565bc71d5c728a9c12b511141b2080f5db1c779c169"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/categories.png",
+      "bytes": 9464,
+      "sha256": "61875879f6f4883a15f58512a4e24940ffa6ce960a8baaaf532f3737cea90cdf"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/error.png",
+      "bytes": 8984,
+      "sha256": "06571ed449230e7e1871f4bcf6d91189f6840e048a9c97456e5aec6bd70a2dc8"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/favorites.png",
+      "bytes": 8510,
+      "sha256": "f91705ff42ebdd80088acf714655b422cf9cff4674f607e059a652539385d607"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/history.png",
+      "bytes": 8525,
+      "sha256": "5751d4b51d893e7d09c147c62d3377e9f6bdb6cd7bf3fc0e42ceec27234378a9"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/placeholder_album.png",
+      "bytes": 10560,
+      "sha256": "1f9e4a3128db24d12580ec49e8e4ab1284310b54da0e534e92c93f6a5055617f"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/placeholder_artist.png",
+      "bytes": 9691,
+      "sha256": "aa48b58d5ebe5bffcf4cafbb2d4d6409861ff05d757e94cea300c032ffb346f1"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/placeholder_fanart.jpg",
+      "bytes": 122231,
+      "sha256": "6eb617a52527c3a179068fcaa67f9484f55692743578b843f2b2217d6133e571"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/playlists.png",
+      "bytes": 8771,
+      "sha256": "409e67f8b17f49663a3c6c3f76086b326d67b78a5b67495a43370394adea9486"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/refresh.png",
+      "bytes": 8283,
+      "sha256": "fc270928a32fcc885fc7c494c0e3375509600bdefe63aabf9ef7a55800a8289d"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/search.png",
+      "bytes": 8426,
+      "sha256": "082684bbc7fc33b851f747d815e8127581db1cd15fea349dbb29db1c9f764541"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/settings.png",
+      "bytes": 11692,
+      "sha256": "a6e0c601bc7dd68b97a211eaa782e3aba2d545fdd2601e0f9b293e16d846694c"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/singles.png",
+      "bytes": 9828,
+      "sha256": "0aeabcd685770afe6008b9d53f3f8fd26ec38205cb03f11b0c5fd21b1f4070d1"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/top_brazil.png",
+      "bytes": 9318,
+      "sha256": "5473f0b62d084eb4a153f61a05313387902826a59d321b4adeb8d9cf7fe30d62"
+    },
+    {
+      "path": "artwork/generic/plugin.audio.sfy/resources/media/top_world.png",
+      "bytes": 10343,
+      "sha256": "f942e55174622b03fe785eda4608cda654d690890d2f697d7c05fbc4c2c054ab"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/fanart.jpg",
+      "bytes": 110421,
+      "sha256": "10e07f53f90d47f67723323ebeabfc876d2c59268fe6d70a7fbaab75d02d8c94"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/icon.png",
+      "bytes": 6867,
+      "sha256": "b0576d9d89bf9154aa199a8d4d1939ce88f9781d89245f1d87cb1a3f5f5f729b"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/continue_watching.png",
+      "bytes": 10263,
+      "sha256": "12c2bcd07557f79b53a79b661c18e4fb30e8080634443c43f6407b6e718b0f64"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/error.png",
+      "bytes": 9010,
+      "sha256": "128bb0b6f12601656b5ec23feabe7400e945500b6625d214c61a15cee53c5ee5"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/favorites.png",
+      "bytes": 8529,
+      "sha256": "6c0ff39aac01e15130b4c5dbb5fa69fc52f457e58430b83cf3ef57656eaa5ffd"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/indexed_channels.png",
+      "bytes": 10004,
+      "sha256": "fa3634495a18803c9d2034d4920ce97c5087e557cc2cdcf7ce7d04209aaf4a0b"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/indexed_movies.png",
+      "bytes": 9471,
+      "sha256": "612e5ba5d9ca223ea78765f0adc25b5237ae8688c637259847f07e4398ab0b83"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/indexed_series.png",
+      "bytes": 9907,
+      "sha256": "e4edca88c1320bd309e4c0db37d1508f7a7e963a729b11ceabe293dec3fb4030"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/live_tv.png",
+      "bytes": 8104,
+      "sha256": "04257835135c2518e8f3a47d6a7097e6e48507a14756713f8708cef6b310ff0b"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/placeholder_fanart.jpg",
+      "bytes": 111610,
+      "sha256": "66c95f8a42bd6c53eaae065ccf954f83a6fdea9481a6e4cb1714c4ac245c6d99"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/placeholder_poster.png",
+      "bytes": 14281,
+      "sha256": "c598a5cbd125323023e05a7d7cde7955c7c1d0e71b7753990123ba0cdd323e1d"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/provider.png",
+      "bytes": 10180,
+      "sha256": "e4864946bfbdd0211dd2661d50634e26a462f83c381321eaefb3f030d07a081f"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/refresh.png",
+      "bytes": 8327,
+      "sha256": "f3b98aad44463e09f6f8928980df791e00831b3995feed2e98b561fb42b69403"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/search.png",
+      "bytes": 8459,
+      "sha256": "757471376e3498721f0be594c3eab37abb9edb0b657fb56ebc628fc4e507ee1e"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/series.png",
+      "bytes": 7968,
+      "sha256": "0abff74ecca2869c1318f480d7eb7eaddb0b800c16ddd26a03e77b0569e92eeb"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/settings.png",
+      "bytes": 11701,
+      "sha256": "7639c0909cf17e439be727a821ccb5a82291abd9270cc76d652fa191fad16602"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/sync.png",
+      "bytes": 10645,
+      "sha256": "90c55978058f053b310069bb227d70c987de5d9c262ea1ce87d5ee50efb3477f"
+    },
+    {
+      "path": "artwork/generic/plugin.video.stv/resources/media/vod.png",
+      "bytes": 8993,
+      "sha256": "9d21737f46532385b52150b374d25c6f0e2f2410b6390ec58f9aaa792f50b2d9"
+    },
+    {
+      "path": "artwork/generic/repository.srepo/fanart.jpg",
+      "bytes": 124871,
+      "sha256": "3ed28572b8b32b0ab4038d7912e65e53072fc40a0b50bd61c4a5a78587e2e270"
+    },
+    {
+      "path": "artwork/generic/repository.srepo/icon.png",
+      "bytes": 8509,
+      "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
+    },
+    {
+      "path": "docs/architecture/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/architecture/REPOSITORY_LAYOUT.md",
+      "bytes": 1213,
+      "sha256": "b039b2dec73206da59ef574ad172df0e7f796ba83a0c72e31bb874fa040856c5"
+    },
+    {
+      "path": "docs/decisions/0001-three-addon-boundaries.md",
+      "bytes": 392,
+      "sha256": "c481e71c7e7c60f8b4884de7ef50d3130cd652cfd5c2dbb5e40299278f5539b3"
+    },
+    {
+      "path": "docs/decisions/0002-local-first-no-backend.md",
+      "bytes": 404,
+      "sha256": "691bb8ac459f1780dced5dfd712f6acf4f34ae80b2d10b37b0bca3b7f0702c07"
+    },
+    {
+      "path": "docs/decisions/0003-separate-sqlite-databases.md",
+      "bytes": 298,
+      "sha256": "aa0b682cfad096c644ee7b34587e96b5532f511226112151b5976379c58e8e6d"
+    },
+    {
+      "path": "docs/decisions/0004-ytdlp-resolver-not-downloader.md",
+      "bytes": 364,
+      "sha256": "d17f93eff30cf571237b8faf18c85509d92d97f7155f547b4c4b2c0aa908a446"
+    },
+    {
+      "path": "docs/decisions/0005-github-pages-static-repository.md",
+      "bytes": 317,
+      "sha256": "03c110ffbed4fbb9b81dae2a0589128f943d7fe410a392e8534deb33656ec4ce"
+    },
+    {
+      "path": "docs/decisions/0006-manual-lan-sync-deferred.md",
+      "bytes": 346,
+      "sha256": "777aaba2f83f611c162fa6f9d1c327de9764ed79b35328e490b9ee48d8ceee8b"
+    },
+    {
+      "path": "docs/operations/ADOPTION_GUIDE.md",
+      "bytes": 1358,
+      "sha256": "e6b131a2691853af93b36396242d11ee46c4e28b13ed4413fe1c07f1bc9b9449"
+    },
+    {
+      "path": "docs/operations/FIRST_RUN.md",
+      "bytes": 423,
+      "sha256": "4c1528fe0dff47b0bdd9fd6bb47e9dd7e20d120b332b0c3df790d39234efabe9"
+    },
+    {
+      "path": "docs/operations/INSTALL_IN_ROOT.md",
+      "bytes": 536,
+      "sha256": "98eb81ae3d3d91472581d10cfbbd39ff6179ec446f8972c9946c79e3f6a972d8"
+    },
+    {
+      "path": "docs/roadmap/ROADMAP_ORIGINAL.png",
+      "bytes": 508626,
+      "sha256": "05d874c5a01cea56f96ce07e2b1241dcc7ac7f664317e4dfabdbe736e0b82f0f"
+    },
+    {
+      "path": "docs/ui/ARTWORK_CATALOG.md",
+      "bytes": 7937,
+      "sha256": "e78af64a81f1ab503aaccd1f53a188757337f4ca1f2fbc565db18ea56fd4d682"
+    },
+    {
+      "path": "examples/kodi_router_pattern.py",
+      "bytes": 547,
+      "sha256": "e82987415151406c0a2930309288dea21bbe9417f9778d6751462a5fcb6ad37a"
+    },
+    {
+      "path": "examples/sqlite_transaction_pattern.py",
+      "bytes": 628,
+      "sha256": "1b2bb615e4bbac7b740c1446c2a01463177e8f88ee7f6e944d8c53e52bc9a837"
+    },
+    {
+      "path": "examples/xtream_url_pattern.py",
+      "bytes": 436,
+      "sha256": "65a753412a0e64190c06e89579916237fc4225e25757d5332943a4ac8434d78b"
+    },
+    {
+      "path": "examples/ytdlp_resolution_pattern.py",
+      "bytes": 965,
+      "sha256": "0aa3c51258466b33ccdf25f1427270ef6a4c42177a4ca0892de9a46c53f134ee"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 246,
+      "sha256": "361908bf02a06d0b9e179419093ecc5f8f5359e8847ab36072dfffa24b5534e7"
+    },
+    {
+      "path": "schemas/LAN_SYNC_CONTRACT.md",
+      "bytes": 990,
+      "sha256": "bcec3b39de04782ce0d41f33a13c3fad9cf9e3c04a08345a0eff6fd143919690"
+    },
+    {
+      "path": "schemas/sfy_reference.sql",
+      "bytes": 1858,
+      "sha256": "ff554927e9231d7a087269220740e12de6542a2f05c363efaeb1d67d38bbf838"
+    },
+    {
+      "path": "schemas/stv_reference.sql",
+      "bytes": 2121,
+      "sha256": "457ad8ee6514fb299104ea9b78428c8fb82a6c8a63232a766389637ed0bc5f40"
+    },
+    {
+      "path": "site/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "site/SHA256SUMS",
+      "bytes": 345,
+      "sha256": "be9643045141592d1272728cc49e5ddb5f293a331e6db663a24bd5106bdeb735"
+    },
+    {
+      "path": "site/addons.xml",
+      "bytes": 3115,
+      "sha256": "ad264197945c0d4c52b1b284c0e998e202b77cb64cc47329b77532656158ee07"
+    },
+    {
+      "path": "site/addons.xml.md5",
+      "bytes": 33,
+      "sha256": "c5f07d3d76755c2c2ee43dbfbef4c6214f99571e97a128e0515a7eca77ce79f1"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 754,
+      "sha256": "fda48c5df82618288a0da6cd86e5501f834018d0fb55d7b82102cc504218f331"
+    },
+    {
+      "path": "site/repository.srepo-1.0.0.zip",
+      "bytes": 100921,
+      "sha256": "5e76e4634d01ce4be323f297975b89e6dd577f9ffb59743f7dde9ed949120dab"
+    },
+    {
+      "path": "site/zips/plugin.audio.sfy/changelog-0.1.0.txt",
+      "bytes": 42,
+      "sha256": "996dcf559bddbb3c43d7b87c4ea48bdef6765b78b8b3580290e1dd7b73c50aa8"
+    },
+    {
+      "path": "site/zips/plugin.audio.sfy/fanart.jpg",
+      "bytes": 121936,
+      "sha256": "465e5a4b0e39ecce2042672a7bae0772e2c564f64004b1ab6fd3e1bcc11cb807"
+    },
+    {
+      "path": "site/zips/plugin.audio.sfy/icon.png",
+      "bytes": 8181,
+      "sha256": "0e88062311345351fe50cd736ad18b6924303d5fe63ded004373f87d1d664070"
+    },
+    {
+      "path": "site/zips/plugin.audio.sfy/plugin.audio.sfy-0.1.0.zip",
+      "bytes": 327134,
+      "sha256": "544eb95e1c0496c101b30a2dc5fa6b827e10a8d67bdf10ddee41b81429186323"
+    },
+    {
+      "path": "site/zips/plugin.audio.sfy/plugin.audio.sfy-0.1.0.zip.sha256",
+      "bytes": 65,
+      "sha256": "87f823f6df28befe5f7faf06c506fd388aa9fb1e40c2611dab812773f8076dd6"
+    },
+    {
+      "path": "site/zips/plugin.video.stv/changelog-0.1.0.txt",
+      "bytes": 42,
+      "sha256": "5aba562de3d1edd0c7bf811552169e3ee47ae34728286fee2d858d4601cacc3a"
+    },
+    {
+      "path": "site/zips/plugin.video.stv/fanart.jpg",
+      "bytes": 110421,
+      "sha256": "10e07f53f90d47f67723323ebeabfc876d2c59268fe6d70a7fbaab75d02d8c94"
+    },
+    {
+      "path": "site/zips/plugin.video.stv/icon.png",
+      "bytes": 6867,
+      "sha256": "b0576d9d89bf9154aa199a8d4d1939ce88f9781d89245f1d87cb1a3f5f5f729b"
+    },
+    {
+      "path": "site/zips/plugin.video.stv/plugin.video.stv-0.1.0.zip",
+      "bytes": 306738,
+      "sha256": "6724e70423239c1a6f9b459774be4c8b5895d0577d63215981aa612c2dc39c37"
+    },
+    {
+      "path": "site/zips/plugin.video.stv/plugin.video.stv-0.1.0.zip.sha256",
+      "bytes": 65,
+      "sha256": "7f9e5a731b00a750deb44b5e38eb6567985073f4d4534c04da7b7cc71b24d3ba"
+    },
+    {
+      "path": "site/zips/repository.srepo/changelog-1.0.0.txt",
+      "bytes": 49,
+      "sha256": "ca005e92babf12da9cd5c5fb956312497a4efecbc96652ab3c3bfa2b2b0b0d0c"
+    },
+    {
+      "path": "site/zips/repository.srepo/fanart.jpg",
+      "bytes": 124871,
+      "sha256": "3ed28572b8b32b0ab4038d7912e65e53072fc40a0b50bd61c4a5a78587e2e270"
+    },
+    {
+      "path": "site/zips/repository.srepo/icon.png",
+      "bytes": 8509,
+      "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
+    },
+    {
+      "path": "site/zips/repository.srepo/repository.srepo-1.0.0.zip",
+      "bytes": 100921,
+      "sha256": "5e76e4634d01ce4be323f297975b89e6dd577f9ffb59743f7dde9ed949120dab"
+    },
+    {
+      "path": "site/zips/repository.srepo/repository.srepo-1.0.0.zip.sha256",
+      "bytes": 65,
+      "sha256": "a2ad6e72a33bcf5350a0af4e767873c2ae25ece220e82cdc334d348c3e3ceb3c"
+    },
+    {
+      "path": "skills-manifest.json",
+      "bytes": 30479,
+      "sha256": "97b34fa9f80d67e0107120fb5b96cb96e273abd96a715ede62c3d7b1b952d240"
+    },
+    {
+      "path": "templates/ADR_TEMPLATE.md",
+      "bytes": 221,
+      "sha256": "9859f4906999aa683ead35c9bd6e5482315961ec7fccd2e052a305e7edc5ab61"
+    },
+    {
+      "path": "templates/BUG_REPORT_TEMPLATE.md",
+      "bytes": 211,
+      "sha256": "3d57865dfd6cbccd8257f3b6442ef0393ce04822c163a232c16c09c7789f5964"
+    },
+    {
+      "path": "templates/CHANGE_PLAN_TEMPLATE.md",
+      "bytes": 212,
+      "sha256": "65c6c6c22217406bc6c6ea12486301e2dc241f07d40bda6bf2e12e93b28b74c3"
+    },
+    {
+      "path": "templates/RELEASE_CHECKLIST.md",
+      "bytes": 426,
+      "sha256": "8d73a2365ed9391565f72a9d857fcb6955d8a63e29f998e168ca248d69b98434"
+    },
+    {
+      "path": "templates/RFC_TEMPLATE.md",
+      "bytes": 246,
+      "sha256": "db610e64dceca39b70ded5ea9b364f48348592c144d4d2fc93a5fbcfa0165d02"
+    },
+    {
+      "path": "tests/fixtures/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/repository/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/sfy/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/stv/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/test_databases.py",
+      "bytes": 890,
+      "sha256": "57cfac48b4cf8a39d559456a0b06c37791bc3a18427b4a5909751516e67662e7"
+    },
+    {
+      "path": "tests/test_routing.py",
+      "bytes": 1035,
+      "sha256": "74052153bba887d754526bf966e9a000d3eb786d983f81f7c90c390b716fe5c0"
+    },
+    {
+      "path": "tools/bootstrap_artwork.py",
+      "bytes": 747,
+      "sha256": "324db823c450e18440410f22df156a1bb32adb386a127b0568d074811d8aad75"
+    },
+    {
+      "path": "tools/build_repo.py",
+      "bytes": 4477,
+      "sha256": "63a2baeedb066425d3b8c4174c6af199a9eed2a631dd4a7c1fc5f74155e8ac40"
+    },
+    {
+      "path": "tools/clean_build.py",
+      "bytes": 266,
+      "sha256": "289c874e7702c1eabbb7eda4ad0e13d7af6c7edb904a690b993f9f64e94c1bb2"
+    },
+    {
+      "path": "tools/print_tree.py",
+      "bytes": 685,
+      "sha256": "efa78a6cfa01e2a21b6e5dab86edd099c3d5ecd8f10720e7767b7cbdf6a46b83"
+    },
+    {
+      "path": "tools/secret_scan.py",
+      "bytes": 1456,
+      "sha256": "747e9aa1e3264a7012d4b6c366ea9467d3384bc53bc4d22f15f7c1613c0d2c54"
+    },
+    {
+      "path": "tools/validate_addons.py",
+      "bytes": 2417,
+      "sha256": "ad221d31d1140d66bd680051c0e5466f8b1f14e5d8d0b3624ce10b9c33c524a6"
+    },
+    {
+      "path": "tools/vendor_ytdlp.py",
+      "bytes": 960,
+      "sha256": "5ef0c7d211867643247604a5ed8298750385e9fc1e58719148c07ce5d6f9c1b3"
+    }
+  ]
+}

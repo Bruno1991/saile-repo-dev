@@ -1,51 +1,89 @@
-# Saile Media Center
+# sRepo — monorepo organizado
 
-Saile Media Center é um addon Kodi local-first com três apps internos:
+Este pacote já está estruturado para ser extraído diretamente na raiz de `saile-repo-dev`.
+Ele não inclui nem altera `.env` ou `.vscode/`. Os três add-ons vivem em `addons/`, as
+skills em `.agents/skills/`, as artes genéricas em `artwork/generic/` e o GitHub Pages é
+gerado em `site/` por `tools/build_repo.py`.
 
-1. SaileTV: IPTV via Xtream Codes API, com canais ao vivo, VOD, séries, busca, favoritos e cache SQLite.
-2. SaileFy: música via YouTube Data API, com busca, favoritos, top Brasil, top mundo, categorias e playlists locais.
-3. sTorrent: índice genérico JSON configurável para filmes, séries, animes e doramas, com lançamentos, categorias, favoritos, continuar assistindo e metadados quando a API escolhida fornecer esses campos.
+> Estado atual: scaffold estrutural instalável, com menus iniciais, validação, testes e build
+> do repositório. As regras de negócio completas de Xtream, TMDB e sFy continuam sendo
+> implementadas pelo agente seguindo a biblioteca de skills.
 
-Este pacote segue o roadmap visual fornecido e foi organizado para rodar 100% no dispositivo do usuário dentro do Kodi. Não há servidor próprio obrigatório. As únicas chamadas externas são para APIs configuradas pelo usuário.
+## Comandos iniciais
 
-## O que está pronto para teste
+```powershell
+python tools/bootstrap_artwork.py
+python tools/validate_addons.py
+python -m unittest discover -s tests -p "test_*.py" -v
+python tools/build_repo.py
+```
 
-- Addon Kodi `plugin.video.saile.mc` com menus reais, rotas, perfis, PIN, favoritos, continuar assistindo e SQLite local.
-- Provider Xtream funcional para categorias, canais ao vivo, VOD e séries quando o usuário configurar host, login e senha.
-- Provider YouTube Data API funcional para busca/listagem quando o usuário configurar uma API key. A reprodução usa URL compatível com o addon oficial do YouTube no Kodi quando instalado.
-- Provider sTorrent genérico por API JSON configurável. O addon não embute fonte pirata nem endpoint ilegal; ele consome apenas a API que o usuário configurar e só reproduz `stream_url` direto ou magnet/URL resolvível pelo ambiente Kodi do usuário.
-- Repositório Kodi `repository.saile` pronto para empacotar e publicar via GitHub Pages.
-- `index.html`, `addons.xml`, `addons.xml.md5` e zips gerados em `zips/`.
-- Documentação para Antigravity, biblioteca de skills, guia de regras, master spec e gitignore blindado.
+---
 
-## Estrutura principal
+# Mega Biblioteca de Skills — sRepo / sTv / sFy
+
+Este pacote é a base operacional para um agente de programação responsável por um monorepo Kodi local-first com três add-ons:
+
+- `repository.srepo`: repositório Kodi e distribuição pelo GitHub Pages.
+- `plugin.video.stv`: IPTV pessoal via API Xtream, com TV ao vivo, VOD, séries, favoritos, busca e continuar assistindo.
+- `plugin.audio.sfy`: streaming de música usando a API Python do yt-dlp, com navegação inspirada em serviços de música, tops, categorias, playlists, favoritos e busca.
+
+A pasta `.agents/skills` contém **100 skills executáveis como instruções de engenharia**. Ela não é o local do código de produção. O agente deve criar os add-ons em `addons/` conforme o blueprint deste pacote.
+
+## Ordem de leitura do agente
+
+1. `AGENTS.md`
+2. `PROJECT_CONSTITUTION.md`
+3. `ROADMAP_ARCHITECTURE.md`
+4. `REPOSITORY_BLUEPRINT.md`
+5. `SECURITY_AND_ENV_POLICY.md`
+6. `SKILLS_INDEX.md`
+7. `docs/ui/ARTWORK_CATALOG.md` quando a tarefa envolver interface ou scaffolding
+8. A skill específica da tarefa
+
+## Princípios centrais
+
+- Tudo roda no dispositivo do usuário; não existe backend próprio obrigatório.
+- sTv e sFy são add-ons separados e não importam código de produção um do outro.
+- Cada add-on possui banco SQLite próprio.
+- GitHub Pages publica apenas arquivos estáticos já gerados.
+- `.env` nunca entra em ZIP, commit ou Pages.
+- GitHub token nunca é usado pelo runtime dos add-ons.
+- URLs de stream do yt-dlp são resolvidas no momento da reprodução e não persistidas como permanentes.
+- TMDB enriquece metadados; não fornece mídia.
+- Sincronização LAN, caso retomada, é manual, opcional e fase posterior; não bloqueia a V1.
+
+## Conteúdo
+
+- 100 skills em `.agents/skills/`.
+- Arquitetura traduzida do roadmap.
+- Blueprint de monorepo.
+- Política de segredos e `.gitignore` blindado.
+- ADRs iniciais.
+- Templates para RFC, ADR, plano de mudança e release.
+- Schemas SQLite de referência.
+- Exemplos técnicos de padrões Kodi, SQLite, Xtream e yt-dlp.
+- Mapa de referências oficiais.
+- Pacote com 38 artes genéricas temporárias para ícones, fanarts e fallbacks.
+- Manifesto de artwork com origem e destino exato de cada arquivo.
+
+## Artes genéricas incluídas
+
+O diretório `artwork/generic/` contém assets temporários para os três add-ons. Eles existem para permitir scaffolding, testes visuais e geração dos primeiros ZIPs sem imagens quebradas.
 
 ```text
-plugin.video.saile.mc/       Addon principal do Kodi
-repository.saile/            Addon de repositório para instalação/atualização
-tools/build_repo.py          Gera zips, addons.xml, addons.xml.md5 e index.html
-tools/preflight_no_secrets.py Verifica vazamento de segredos antes do commit
-docs/                        Documentação de engenharia para Antigravity
-zips/                        Pacotes finais para GitHub Pages
+artwork/generic/
+├── repository.srepo/
+│   ├── icon.png
+│   └── fanart.jpg
+├── plugin.video.stv/
+│   ├── icon.png
+│   ├── fanart.jpg
+│   └── resources/media/
+└── plugin.audio.sfy/
+    ├── icon.png
+    ├── fanart.jpg
+    └── resources/media/
 ```
 
-## Teste local no Kodi
-
-1. Copie a pasta `plugin.video.saile.mc` para a pasta de addons do Kodi, ou instale o zip gerado em `zips/plugin.video.saile.mc/`.
-2. Abra o Kodi e vá em Add-ons.
-3. Abra Saile Media Center.
-4. Entre em Configurações e informe os dados do Xtream, YouTube e/ou API JSON que deseja testar.
-5. Use o perfil Adulto para todos os apps. Use Kids para bloquear SaileFy e sTorrent.
-
-## Build do repositório GitHub Pages
-
-Na raiz deste projeto:
-
-```bash
-python tools/preflight_no_secrets.py
-python tools/build_repo.py --repo-url https://bruno1991.github.io/saile-repo-dev/
-```
-
-Depois envie para o repositório `https://github.com/Bruno1991/saile-repo-dev` e habilite GitHub Pages no branch principal apontando para a raiz do repositório.
-
-Nunca suba `.env`, tokens, bancos `.db`, logs, dumps ou arquivos de mídia.
+As artes devem ser copiadas para os caminhos reais indicados em `artwork/artwork-manifest.json`. Elas são deliberadamente identificadas como genéricas e podem ser substituídas depois, mantendo nomes, formatos e proporções compatíveis. Consulte `docs/ui/ARTWORK_CATALOG.md`.

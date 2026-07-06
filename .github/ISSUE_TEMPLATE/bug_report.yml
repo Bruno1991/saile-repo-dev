@@ -1,28 +1,24 @@
 name: Bug report
-description: Relatar comportamento reproduzível do SAILE
+description: Relate um problema reproduzível
 title: "[BUG] "
-labels: ["bug"]
+labels:
+  - bug
 body:
   - type: textarea
-    id: description
+    id: problem
     attributes:
-      label: Descrição
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Passos para reproduzir
+      label: Problema
+      description: Descreva o comportamento observado e o esperado.
     validations:
       required: true
   - type: input
-    id: environment
+    id: kodi
     attributes:
-      label: Kodi, sistema e dispositivo
+      label: Versão do Kodi e plataforma
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
       label: Logs sanitizados
-      description: Remova usuário, senha, tokens e URLs autenticadas.
+      description: Remova host, usuário, senha, tokens e URLs temporárias.

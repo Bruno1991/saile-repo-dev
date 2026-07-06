@@ -1,0 +1,486 @@
+saile-repo-dev-organizado/
+├── .agents/
+│   └── skills/
+│       ├── 00-governance/
+│       │   ├── agent-output-contract/
+│       │   │   └── SKILL.md
+│       │   ├── architecture-first/
+│       │   │   └── SKILL.md
+│       │   ├── change-plan/
+│       │   │   └── SKILL.md
+│       │   ├── decision-records/
+│       │   │   └── SKILL.md
+│       │   ├── definition-of-done/
+│       │   │   └── SKILL.md
+│       │   ├── dependency-governance/
+│       │   │   └── SKILL.md
+│       │   ├── local-first-constitution/
+│       │   │   └── SKILL.md
+│       │   ├── repository-boundaries/
+│       │   │   └── SKILL.md
+│       │   ├── requirements-traceability/
+│       │   │   └── SKILL.md
+│       │   └── scope-guard/
+│       │       └── SKILL.md
+│       ├── 01-python/
+│       │   ├── concurrency-kodi/
+│       │   │   └── SKILL.md
+│       │   ├── domain-models/
+│       │   │   └── SKILL.md
+│       │   ├── exception-taxonomy/
+│       │   │   └── SKILL.md
+│       │   ├── http-client/
+│       │   │   └── SKILL.md
+│       │   ├── json-normalization/
+│       │   │   └── SKILL.md
+│       │   ├── logging-sanitization/
+│       │   │   └── SKILL.md
+│       │   ├── progress-cancellation/
+│       │   │   └── SKILL.md
+│       │   ├── project-layout/
+│       │   │   └── SKILL.md
+│       │   ├── typing-contracts/
+│       │   │   └── SKILL.md
+│       │   └── url-query-safety/
+│       │       └── SKILL.md
+│       ├── 02-sqlite/
+│       │   ├── connection-lifecycle/
+│       │   │   └── SKILL.md
+│       │   ├── favorites-progress/
+│       │   │   └── SKILL.md
+│       │   ├── fts-search/
+│       │   │   └── SKILL.md
+│       │   ├── indexes-query-plan/
+│       │   │   └── SKILL.md
+│       │   ├── migrations/
+│       │   │   └── SKILL.md
+│       │   ├── pragmas/
+│       │   │   └── SKILL.md
+│       │   ├── schema-design/
+│       │   │   └── SKILL.md
+│       │   ├── schema-versioning/
+│       │   │   └── SKILL.md
+│       │   ├── transactions/
+│       │   │   └── SKILL.md
+│       │   └── upsert-bulk-sync/
+│       │       └── SKILL.md
+│       ├── 03-kodi-core/
+│       │   ├── addon-xml/
+│       │   │   └── SKILL.md
+│       │   ├── compatibility/
+│       │   │   └── SKILL.md
+│       │   ├── content-sorting/
+│       │   │   └── SKILL.md
+│       │   ├── directory-items/
+│       │   │   └── SKILL.md
+│       │   ├── kodi-logging/
+│       │   │   └── SKILL.md
+│       │   ├── localization/
+│       │   │   └── SKILL.md
+│       │   ├── router/
+│       │   │   └── SKILL.md
+│       │   ├── service-addon/
+│       │   │   └── SKILL.md
+│       │   ├── settings-xml/
+│       │   │   └── SKILL.md
+│       │   └── special-paths/
+│       │       └── SKILL.md
+│       ├── 04-kodi-ui-playback/
+│       │   ├── artwork/
+│       │   │   └── SKILL.md
+│       │   ├── audio-playback/
+│       │   │   └── SKILL.md
+│       │   ├── context-menus/
+│       │   │   └── SKILL.md
+│       │   ├── continue-watching/
+│       │   │   └── SKILL.md
+│       │   ├── performance-rendering/
+│       │   │   └── SKILL.md
+│       │   ├── progress-dialogs/
+│       │   │   └── SKILL.md
+│       │   ├── resolved-playback/
+│       │   │   └── SKILL.md
+│       │   ├── search-dialogs/
+│       │   │   └── SKILL.md
+│       │   ├── skin-independent-ui/
+│       │   │   └── SKILL.md
+│       │   └── video-playback/
+│       │       └── SKILL.md
+│       ├── 05-stv-xtream/
+│       │   ├── live-tv/
+│       │   │   └── SKILL.md
+│       │   ├── series/
+│       │   │   └── SKILL.md
+│       │   ├── stv-continue-watching/
+│       │   │   └── SKILL.md
+│       │   ├── stv-favorites/
+│       │   │   └── SKILL.md
+│       │   ├── stv-provider-resilience/
+│       │   │   └── SKILL.md
+│       │   ├── stv-search/
+│       │   │   └── SKILL.md
+│       │   ├── vod/
+│       │   │   └── SKILL.md
+│       │   ├── xtream-catalog-sync/
+│       │   │   └── SKILL.md
+│       │   ├── xtream-client/
+│       │   │   └── SKILL.md
+│       │   └── xtream-configuration/
+│       │       └── SKILL.md
+│       ├── 06-sfy-music/
+│       │   ├── categories/
+│       │   │   └── SKILL.md
+│       │   ├── charts/
+│       │   │   └── SKILL.md
+│       │   ├── favorites-history/
+│       │   │   └── SKILL.md
+│       │   ├── music-metadata/
+│       │   │   └── SKILL.md
+│       │   ├── playlists/
+│       │   │   └── SKILL.md
+│       │   ├── sfy-cache-resilience/
+│       │   │   └── SKILL.md
+│       │   ├── sfy-search/
+│       │   │   └── SKILL.md
+│       │   ├── spotify-like-navigation/
+│       │   │   └── SKILL.md
+│       │   ├── stream-resolution/
+│       │   │   └── SKILL.md
+│       │   └── yt-dlp-embedding/
+│       │       └── SKILL.md
+│       ├── 07-metadata-search/
+│       │   ├── images-hd/
+│       │   │   └── SKILL.md
+│       │   ├── metadata-cache/
+│       │   │   └── SKILL.md
+│       │   ├── metadata-fallbacks/
+│       │   │   └── SKILL.md
+│       │   ├── metadata-privacy/
+│       │   │   └── SKILL.md
+│       │   ├── movie-matching/
+│       │   │   └── SKILL.md
+│       │   ├── search-normalization/
+│       │   │   └── SKILL.md
+│       │   ├── tmdb-auth/
+│       │   │   └── SKILL.md
+│       │   ├── tmdb-client/
+│       │   │   └── SKILL.md
+│       │   ├── tv-matching/
+│       │   │   └── SKILL.md
+│       │   └── unified-search/
+│       │       └── SKILL.md
+│       ├── 08-srepo-delivery/
+│       │   ├── addons-xml/
+│       │   │   └── SKILL.md
+│       │   ├── checksums/
+│       │   │   └── SKILL.md
+│       │   ├── github-actions/
+│       │   │   └── SKILL.md
+│       │   ├── github-pages/
+│       │   │   └── SKILL.md
+│       │   ├── release-audit/
+│       │   │   └── SKILL.md
+│       │   ├── repo-layout/
+│       │   │   └── SKILL.md
+│       │   ├── repository-addon/
+│       │   │   └── SKILL.md
+│       │   ├── rollback/
+│       │   │   └── SKILL.md
+│       │   ├── versioning/
+│       │   │   └── SKILL.md
+│       │   └── zip-packaging/
+│       │       └── SKILL.md
+│       └── 09-quality-security/
+│           ├── contract-tests/
+│           │   └── SKILL.md
+│           ├── env-secrets/
+│           │   └── SKILL.md
+│           ├── gitignore-hardening/
+│           │   └── SKILL.md
+│           ├── incident-diagnostics/
+│           │   └── SKILL.md
+│           ├── kodi-stubs/
+│           │   └── SKILL.md
+│           ├── manual-test-matrix/
+│           │   └── SKILL.md
+│           ├── performance-budget/
+│           │   └── SKILL.md
+│           ├── security-review/
+│           │   └── SKILL.md
+│           ├── sqlite-tests/
+│           │   └── SKILL.md
+│           └── unit-tests/
+│               └── SKILL.md
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   └── bug_report.yml
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   └── pages.yml
+│   └── pull_request_template.md
+├── addons/
+│   ├── plugin.audio.sfy/
+│   │   ├── resources/
+│   │   │   ├── language/
+│   │   │   │   └── resource.language.pt_br/
+│   │   │   │       └── strings.po
+│   │   │   ├── lib/
+│   │   │   │   ├── sfy/
+│   │   │   │   │   ├── app/
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── services.py
+│   │   │   │   │   ├── domain/
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── models.py
+│   │   │   │   │   ├── infrastructure/
+│   │   │   │   │   │   └── __init__.py
+│   │   │   │   │   ├── persistence/
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── database.py
+│   │   │   │   │   ├── providers/
+│   │   │   │   │   │   ├── ytdlp/
+│   │   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   │   └── resolver.py
+│   │   │   │   │   │   └── __init__.py
+│   │   │   │   │   ├── ui/
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── directory.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── bootstrap.py
+│   │   │   │   │   └── routing.py
+│   │   │   │   └── vendor/
+│   │   │   │       ├── .gitkeep
+│   │   │   │       └── README.md
+│   │   │   ├── media/
+│   │   │   │   ├── albums.png
+│   │   │   │   ├── artists.png
+│   │   │   │   ├── categories.png
+│   │   │   │   ├── error.png
+│   │   │   │   ├── favorites.png
+│   │   │   │   ├── history.png
+│   │   │   │   ├── placeholder_album.png
+│   │   │   │   ├── placeholder_artist.png
+│   │   │   │   ├── placeholder_fanart.jpg
+│   │   │   │   ├── playlists.png
+│   │   │   │   ├── refresh.png
+│   │   │   │   ├── search.png
+│   │   │   │   ├── settings.png
+│   │   │   │   ├── singles.png
+│   │   │   │   ├── top_brazil.png
+│   │   │   │   └── top_world.png
+│   │   │   └── settings.xml
+│   │   ├── addon.xml
+│   │   ├── changelog-0.1.0.txt
+│   │   ├── default.py
+│   │   ├── fanart.jpg
+│   │   └── icon.png
+│   ├── plugin.video.stv/
+│   │   ├── resources/
+│   │   │   ├── language/
+│   │   │   │   └── resource.language.pt_br/
+│   │   │   │       └── strings.po
+│   │   │   ├── lib/
+│   │   │   │   └── stv/
+│   │   │   │       ├── app/
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── services.py
+│   │   │   │       ├── domain/
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── models.py
+│   │   │   │       ├── infrastructure/
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── http.py
+│   │   │   │       ├── metadata/
+│   │   │   │       │   ├── tmdb/
+│   │   │   │       │   │   ├── __init__.py
+│   │   │   │       │   │   └── client.py
+│   │   │   │       │   └── __init__.py
+│   │   │   │       ├── persistence/
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── database.py
+│   │   │   │       ├── providers/
+│   │   │   │       │   ├── xtream/
+│   │   │   │       │   │   ├── __init__.py
+│   │   │   │       │   │   └── client.py
+│   │   │   │       │   └── __init__.py
+│   │   │   │       ├── ui/
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── directory.py
+│   │   │   │       ├── __init__.py
+│   │   │   │       ├── bootstrap.py
+│   │   │   │       └── routing.py
+│   │   │   ├── media/
+│   │   │   │   ├── continue_watching.png
+│   │   │   │   ├── error.png
+│   │   │   │   ├── favorites.png
+│   │   │   │   ├── indexed_channels.png
+│   │   │   │   ├── indexed_movies.png
+│   │   │   │   ├── indexed_series.png
+│   │   │   │   ├── live_tv.png
+│   │   │   │   ├── placeholder_fanart.jpg
+│   │   │   │   ├── placeholder_poster.png
+│   │   │   │   ├── provider.png
+│   │   │   │   ├── refresh.png
+│   │   │   │   ├── search.png
+│   │   │   │   ├── series.png
+│   │   │   │   ├── settings.png
+│   │   │   │   ├── sync.png
+│   │   │   │   └── vod.png
+│   │   │   └── settings.xml
+│   │   ├── addon.xml
+│   │   ├── changelog-0.1.0.txt
+│   │   ├── default.py
+│   │   ├── fanart.jpg
+│   │   └── icon.png
+│   └── repository.srepo/
+│       ├── addon.xml
+│       ├── changelog-1.0.0.txt
+│       ├── fanart.jpg
+│       └── icon.png
+├── artwork/
+│   ├── generic/
+│   │   ├── plugin.audio.sfy/
+│   │   │   ├── resources/
+│   │   │   │   └── media/
+│   │   │   │       ├── albums.png
+│   │   │   │       ├── artists.png
+│   │   │   │       ├── categories.png
+│   │   │   │       ├── error.png
+│   │   │   │       ├── favorites.png
+│   │   │   │       ├── history.png
+│   │   │   │       ├── placeholder_album.png
+│   │   │   │       ├── placeholder_artist.png
+│   │   │   │       ├── placeholder_fanart.jpg
+│   │   │   │       ├── playlists.png
+│   │   │   │       ├── refresh.png
+│   │   │   │       ├── search.png
+│   │   │   │       ├── settings.png
+│   │   │   │       ├── singles.png
+│   │   │   │       ├── top_brazil.png
+│   │   │   │       └── top_world.png
+│   │   │   ├── fanart.jpg
+│   │   │   └── icon.png
+│   │   ├── plugin.video.stv/
+│   │   │   ├── resources/
+│   │   │   │   └── media/
+│   │   │   │       ├── continue_watching.png
+│   │   │   │       ├── error.png
+│   │   │   │       ├── favorites.png
+│   │   │   │       ├── indexed_channels.png
+│   │   │   │       ├── indexed_movies.png
+│   │   │   │       ├── indexed_series.png
+│   │   │   │       ├── live_tv.png
+│   │   │   │       ├── placeholder_fanart.jpg
+│   │   │   │       ├── placeholder_poster.png
+│   │   │   │       ├── provider.png
+│   │   │   │       ├── refresh.png
+│   │   │   │       ├── search.png
+│   │   │   │       ├── series.png
+│   │   │   │       ├── settings.png
+│   │   │   │       ├── sync.png
+│   │   │   │       └── vod.png
+│   │   │   ├── fanart.jpg
+│   │   │   └── icon.png
+│   │   └── repository.srepo/
+│   │       ├── fanart.jpg
+│   │       └── icon.png
+│   ├── artwork-manifest.json
+│   └── README.md
+├── docs/
+│   ├── architecture/
+│   │   ├── .gitkeep
+│   │   └── REPOSITORY_LAYOUT.md
+│   ├── decisions/
+│   │   ├── 0001-three-addon-boundaries.md
+│   │   ├── 0002-local-first-no-backend.md
+│   │   ├── 0003-separate-sqlite-databases.md
+│   │   ├── 0004-ytdlp-resolver-not-downloader.md
+│   │   ├── 0005-github-pages-static-repository.md
+│   │   └── 0006-manual-lan-sync-deferred.md
+│   ├── operations/
+│   │   ├── ADOPTION_GUIDE.md
+│   │   ├── FIRST_RUN.md
+│   │   └── INSTALL_IN_ROOT.md
+│   ├── roadmap/
+│   │   └── ROADMAP_ORIGINAL.png
+│   └── ui/
+│       └── ARTWORK_CATALOG.md
+├── examples/
+│   ├── kodi_router_pattern.py
+│   ├── sqlite_transaction_pattern.py
+│   ├── xtream_url_pattern.py
+│   └── ytdlp_resolution_pattern.py
+├── schemas/
+│   ├── LAN_SYNC_CONTRACT.md
+│   ├── sfy_reference.sql
+│   └── stv_reference.sql
+├── site/
+│   ├── zips/
+│   │   ├── plugin.audio.sfy/
+│   │   │   ├── changelog-0.1.0.txt
+│   │   │   ├── fanart.jpg
+│   │   │   ├── icon.png
+│   │   │   ├── plugin.audio.sfy-0.1.0.zip
+│   │   │   └── plugin.audio.sfy-0.1.0.zip.sha256
+│   │   ├── plugin.video.stv/
+│   │   │   ├── changelog-0.1.0.txt
+│   │   │   ├── fanart.jpg
+│   │   │   ├── icon.png
+│   │   │   ├── plugin.video.stv-0.1.0.zip
+│   │   │   └── plugin.video.stv-0.1.0.zip.sha256
+│   │   └── repository.srepo/
+│   │       ├── changelog-1.0.0.txt
+│   │       ├── fanart.jpg
+│   │       ├── icon.png
+│   │       ├── repository.srepo-1.0.0.zip
+│   │       └── repository.srepo-1.0.0.zip.sha256
+│   ├── .nojekyll
+│   ├── addons.xml
+│   ├── addons.xml.md5
+│   ├── index.html
+│   ├── repository.srepo-1.0.0.zip
+│   └── SHA256SUMS
+├── templates/
+│   ├── ADR_TEMPLATE.md
+│   ├── BUG_REPORT_TEMPLATE.md
+│   ├── CHANGE_PLAN_TEMPLATE.md
+│   ├── RELEASE_CHECKLIST.md
+│   └── RFC_TEMPLATE.md
+├── tests/
+│   ├── fixtures/
+│   │   └── .gitkeep
+│   ├── repository/
+│   │   └── .gitkeep
+│   ├── sfy/
+│   │   └── .gitkeep
+│   ├── stv/
+│   │   └── .gitkeep
+│   ├── test_databases.py
+│   └── test_routing.py
+├── tools/
+│   ├── bootstrap_artwork.py
+│   ├── build_repo.py
+│   ├── clean_build.py
+│   ├── print_tree.py
+│   ├── secret_scan.py
+│   ├── validate_addons.py
+│   └── vendor_ytdlp.py
+├── .env.example
+├── .gitignore
+├── AGENTS.md
+├── COMPATIBILITY_MATRIX.md
+├── LICENSE
+├── Makefile
+├── OFFICIAL_REFERENCE_MAP.md
+├── PACKAGE_INVENTORY.md
+├── PROJECT_CONSTITUTION.md
+├── pyproject.toml
+├── README.md
+├── REPOSITORY_BLUEPRINT.md
+├── ROADMAP_ARCHITECTURE.md
+├── ROADMAP_TRACEABILITY_MATRIX.md
+├── SECURITY_AND_ENV_POLICY.md
+├── skills-manifest.json
+├── SKILLS_INDEX.md
+├── STRUCTURE_MANIFEST.json
+└── TREE_FINAL.txt

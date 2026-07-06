@@ -1,19 +1,16 @@
-## Objetivo e causa
+## Mudança
 
-## Arquivos e contratos afetados
+## Add-on afetado
 
-## Mudança implementada
+- [ ] repository.srepo
+- [ ] plugin.video.stv
+- [ ] plugin.audio.sfy
+- [ ] documentação/ferramentas
 
-## Testes e evidências
+## Verificação
 
-## Dispositivos/Kodi testados
-
-## Segurança e dados
-
-## Documentação atualizada
-
-## Riscos, limitações e rollback
-
-- [ ] Quality gates aplicáveis executados
-- [ ] Nenhum segredo ou dado pessoal incluído
-- [ ] PROJECT_STATUS atualizado
+- [ ] `python tools/validate_addons.py`
+- [ ] `python tools/secret_scan.py`
+- [ ] `python -m unittest discover -s tests -p "test_*.py" -v`
+- [ ] `python tools/build_repo.py`
+- [ ] Nenhum segredo, banco, log ou URL temporária incluído

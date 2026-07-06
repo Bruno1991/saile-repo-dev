@@ -1,51 +1,49 @@
-# AGENTS.md — Protocolo Raiz do SAILE
+# AGENTS.md — Contrato operacional do agente
 
-Este arquivo é vinculante para qualquer agente que opere no repositório.
+## Identidade do sistema
 
-## Inicialização obrigatória
+O agente trabalha em um monorepo chamado **sRepo**, responsável por `repository.srepo`, `plugin.video.stv` e `plugin.audio.sfy`.
 
-Antes de alterar qualquer arquivo:
+## Regra de localização
 
-1. leia `AGENT_CONSTITUTION.md`;
-2. leia `SAILE_MASTER_SPEC.md`;
-3. leia `PROJECT_STATUS.md`;
-4. identifique a tarefa, o domínio e os contratos afetados;
-5. carregue as skills adequadas por meio de `SKILLS_INDEX.md`;
-6. leia `docs/00-governance/DOCUMENT_UPDATE_MATRIX.md`;
-7. produza um plano de mudança curto e verificável.
+- `.agents/` contém apenas skills, políticas e instruções.
+- Código de produção vive em `addons/<addon-id>/`.
+- Ferramentas de build vivem em `tools/`.
+- Saída gerada vive em `dist/` ou `site/` e nunca é editada manualmente.
+- Artes temporárias de origem vivem em `artwork/generic/`; o código usa cópias dentro de `addons/<addon-id>/`.
 
-## Regras de localização
+## Fluxo obrigatório por tarefa
 
-- `.agents/`: skills e instruções; nunca código de produção;
-- `docs/`: verdade técnica específica do SAILE;
-- `plugin.video.saile.mc/`: add-on de produção;
-- `repository.saile/`: add-on de repositório;
-- `tests/`: testes e fixtures sem segredos;
-- `tools/`: build, validação e manutenção;
-- `github/` ou `zips/`: artefatos gerados, conforme a arquitetura vigente.
+1. Ler a constituição e a skill correspondente.
+2. Inspecionar os arquivos reais antes de propor alteração.
+3. Produzir plano por arquivo.
+4. Implementar a menor mudança coerente.
+5. Executar validações apropriadas.
+6. Atualizar documentação/ADR quando a arquitetura mudar.
+7. Informar caminhos completos, arquivos criados, modificados e removidos.
+8. Ao criar o scaffolding de um add-on, copiar os assets definidos em `artwork/artwork-manifest.json` e validar que abrem corretamente.
 
-## Regras de mudança
+## Formato de entrega
 
-- preserve IDs, rotas, schema, nomes de settings e contratos públicos;
-- não reescreva módulos inteiros sem necessidade demonstrada;
-- nunca use tokens encontrados em `.env` sem autorização explícita;
-- nunca publique `.env`, credenciais Xtream, chaves de API, cookies ou URLs autenticadas;
-- não invente comportamento do Kodi; consulte a documentação da versão-alvo;
-- não execute chamadas de rede na camada de UI;
-- toda alteração de schema exige migração, teste e atualização documental;
-- toda correção de bug exige teste de regressão quando tecnicamente possível;
-- todo release exige validação do ZIP, XML, versão, hashes e changelog.
+Toda entrega deve conter:
 
-## Entrega obrigatória
+- diretório de trabalho;
+- caminhos exatos;
+- arquivos completos quando solicitado;
+- comandos em ordem;
+- resultado real dos testes;
+- riscos ou itens não verificados;
+- instrução de rollback quando aplicável.
 
-Ao concluir, informe:
+## Proibições
 
-- arquivos criados, modificados e removidos;
-- motivo técnico;
-- contratos preservados;
-- testes e validadores executados;
-- resultados observados;
-- riscos, limitações e testes não executados;
-- atualização realizada em `PROJECT_STATUS.md`.
-
-A palavra “concluído” só pode ser usada quando os quality gates aplicáveis tiverem evidência.
+- Não criar o addon dentro de `.agents`.
+- Não inventar testes executados.
+- Não apagar banco para resolver migração.
+- Não adicionar microserviço ou backend obrigatório.
+- Não registrar senha Xtream, cookie, token TMDB, PAT GitHub ou URL assinada.
+- Não usar emojis como assets de UI.
+- Não publicar add-on sem `icon.png` e `fanart.jpg`; na ausência de arte final, usar os assets genéricos do pacote.
+- Não referenciar diretamente `artwork/generic/` no runtime; copiar para o diretório real do add-on.
+- Não misturar chamadas remotas dentro de renderização de cada item.
+- Não empacotar `.env`, `.git`, `__pycache__`, `.db`, logs ou ferramentas locais.
