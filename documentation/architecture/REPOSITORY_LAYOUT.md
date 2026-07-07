@@ -14,7 +14,7 @@ saile-repo-dev/
 ├── docs/
 ├── examples/
 ├── schemas/
-├── site/                  # gerado
+├── docs/                  # gerado
 ├── templates/
 ├── tests/
 └── tools/

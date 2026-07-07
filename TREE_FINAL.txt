@@ -441,7 +441,7 @@ saile_repo_v2/
 │   ├── LAN_SYNC_CONTRACT.md
 │   ├── sfy_reference.sql
 │   └── stv_reference.sql
-├── site/
+├── docs/
 │   ├── zips/
 │   │   ├── plugin.audio.sfy/
 │   │   │   ├── changelog-0.2.0.txt

@@ -1393,157 +1393,157 @@
       "sha256": "457ad8ee6514fb299104ea9b78428c8fb82a6c8a63232a766389637ed0bc5f40"
     },
     {
-      "path": "site/.nojekyll",
+      "path": "docs/.nojekyll",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "site/SHA256SUMS",
+      "path": "docs/SHA256SUMS",
       "bytes": 601,
       "sha256": "e6a6e1099dfc39d49f80f51a972e07a124f24764d102b4da04cf49ad7d04e60b"
     },
     {
-      "path": "site/addons.xml",
+      "path": "docs/addons.xml",
       "bytes": 5195,
       "sha256": "605ccc0f194c1038bfbd8716fbc376699d39c0125b1c8577670833336362da3a"
     },
     {
-      "path": "site/addons.xml.md5",
+      "path": "docs/addons.xml.md5",
       "bytes": 33,
       "sha256": "bbf1e4a4d18e3cf1e7c2b0fae371de0cecd2dc9653f02ebd2101fecb260b2a86"
     },
     {
-      "path": "site/index.html",
+      "path": "docs/index.html",
       "bytes": 980,
       "sha256": "05311056c21f97121940f14ead89a87939c5f8a6b611d477164f65454296e0a8"
     },
     {
-      "path": "site/repository.srepo-1.1.0.zip",
+      "path": "docs/repository.srepo-1.1.0.zip",
       "bytes": 101235,
       "sha256": "f16d83c6210537126e43c53ae0eb4b3d9978ecaa195e7ed084aefd40a716c082"
     },
     {
-      "path": "site/zips/plugin.audio.sfy/changelog-0.2.0.txt",
+      "path": "docs/zips/plugin.audio.sfy/changelog-0.2.0.txt",
       "bytes": 248,
       "sha256": "0ead170effcf4d91816f356d9fdb54fdc3e7cdd96ac4ebf5a29ead7a796fe209"
     },
     {
-      "path": "site/zips/plugin.audio.sfy/fanart.jpg",
+      "path": "docs/zips/plugin.audio.sfy/fanart.jpg",
       "bytes": 121936,
       "sha256": "465e5a4b0e39ecce2042672a7bae0772e2c564f64004b1ab6fd3e1bcc11cb807"
     },
     {
-      "path": "site/zips/plugin.audio.sfy/icon.png",
+      "path": "docs/zips/plugin.audio.sfy/icon.png",
       "bytes": 8181,
       "sha256": "0e88062311345351fe50cd736ad18b6924303d5fe63ded004373f87d1d664070"
     },
     {
-      "path": "site/zips/plugin.audio.sfy/plugin.audio.sfy-0.2.0.zip",
+      "path": "docs/zips/plugin.audio.sfy/plugin.audio.sfy-0.2.0.zip",
       "bytes": 108052,
       "sha256": "4e346f0e735c41f49fb4761e3c49195e4cb300ebe1726fc3e9f405c88a0d2e8a"
     },
     {
-      "path": "site/zips/plugin.audio.sfy/plugin.audio.sfy-0.2.0.zip.sha256",
+      "path": "docs/zips/plugin.audio.sfy/plugin.audio.sfy-0.2.0.zip.sha256",
       "bytes": 65,
       "sha256": "ef8299a260fe88ac67cf14ef2f2447479b370e38485728d850b22ccf663676a8"
     },
     {
-      "path": "site/zips/plugin.video.stv/changelog-0.2.0.txt",
+      "path": "docs/zips/plugin.video.stv/changelog-0.2.0.txt",
       "bytes": 243,
       "sha256": "2e547d6dc6de7db65d988ec71cd7e2de02000a4c1b4a69ea52e148194c60b065"
     },
     {
-      "path": "site/zips/plugin.video.stv/fanart.jpg",
+      "path": "docs/zips/plugin.video.stv/fanart.jpg",
       "bytes": 110421,
       "sha256": "10e07f53f90d47f67723323ebeabfc876d2c59268fe6d70a7fbaab75d02d8c94"
     },
     {
-      "path": "site/zips/plugin.video.stv/icon.png",
+      "path": "docs/zips/plugin.video.stv/icon.png",
       "bytes": 6867,
       "sha256": "b0576d9d89bf9154aa199a8d4d1939ce88f9781d89245f1d87cb1a3f5f5f729b"
     },
     {
-      "path": "site/zips/plugin.video.stv/plugin.video.stv-0.2.0.zip",
+      "path": "docs/zips/plugin.video.stv/plugin.video.stv-0.2.0.zip",
       "bytes": 95408,
       "sha256": "d7129265556eb8b6c274f756d9e1f98dae0f7cdb6d73bead9b8330bf8866f943"
     },
     {
-      "path": "site/zips/plugin.video.stv/plugin.video.stv-0.2.0.zip.sha256",
+      "path": "docs/zips/plugin.video.stv/plugin.video.stv-0.2.0.zip.sha256",
       "bytes": 65,
       "sha256": "2f7ed3765f69bc5bd01a112ed033b0f62ab3fc90c89d362fc4e3ae5013adadce"
     },
     {
-      "path": "site/zips/repository.srepo/changelog-1.1.0.txt",
+      "path": "docs/zips/repository.srepo/changelog-1.1.0.txt",
       "bytes": 142,
       "sha256": "b802fbcb746736ec434db60f3cc92c5ac10dc7fb2f3c6f3eed957c52401ebf87"
     },
     {
-      "path": "site/zips/repository.srepo/fanart.jpg",
+      "path": "docs/zips/repository.srepo/fanart.jpg",
       "bytes": 124871,
       "sha256": "3ed28572b8b32b0ab4038d7912e65e53072fc40a0b50bd61c4a5a78587e2e270"
     },
     {
-      "path": "site/zips/repository.srepo/icon.png",
+      "path": "docs/zips/repository.srepo/icon.png",
       "bytes": 8509,
       "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
     },
     {
-      "path": "site/zips/repository.srepo/repository.srepo-1.1.0.zip",
+      "path": "docs/zips/repository.srepo/repository.srepo-1.1.0.zip",
       "bytes": 101235,
       "sha256": "f16d83c6210537126e43c53ae0eb4b3d9978ecaa195e7ed084aefd40a716c082"
     },
     {
-      "path": "site/zips/repository.srepo/repository.srepo-1.1.0.zip.sha256",
+      "path": "docs/zips/repository.srepo/repository.srepo-1.1.0.zip.sha256",
       "bytes": 65,
       "sha256": "9515ce36cd82fb06e2551dbd66c4d61a5693dc024ee7b27eb341e63784f7a43c"
     },
     {
-      "path": "site/zips/resource.images.saile/changelog-1.0.0.txt",
+      "path": "docs/zips/resource.images.saile/changelog-1.0.0.txt",
       "bytes": 149,
       "sha256": "d5d02110627811519217aff5d447bab8369e15e61cf34fb6f20634aaa4a62422"
     },
     {
-      "path": "site/zips/resource.images.saile/fanart.jpg",
+      "path": "docs/zips/resource.images.saile/fanart.jpg",
       "bytes": 124871,
       "sha256": "3ed28572b8b32b0ab4038d7912e65e53072fc40a0b50bd61c4a5a78587e2e270"
     },
     {
-      "path": "site/zips/resource.images.saile/icon.png",
+      "path": "docs/zips/resource.images.saile/icon.png",
       "bytes": 8509,
       "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
     },
     {
-      "path": "site/zips/resource.images.saile/resource.images.saile-1.0.0.zip",
+      "path": "docs/zips/resource.images.saile/resource.images.saile-1.0.0.zip",
       "bytes": 169775,
       "sha256": "f94ccff1402e7f1d72cca842661051b93bbf846d4f756e72885ff8925d8cf694"
     },
     {
-      "path": "site/zips/resource.images.saile/resource.images.saile-1.0.0.zip.sha256",
+      "path": "docs/zips/resource.images.saile/resource.images.saile-1.0.0.zip.sha256",
       "bytes": 65,
       "sha256": "f2921dd1c3248e7567d81722c7f1fde013940df85f4514f5d9c1bbe8d545758a"
     },
     {
-      "path": "site/zips/script.module.saile.core/changelog-1.0.0.txt",
+      "path": "docs/zips/script.module.saile.core/changelog-1.0.0.txt",
       "bytes": 186,
       "sha256": "9e2dfc61efb2340748d8f0553351f0215a19006eea05a0007e8249c7a26291a1"
     },
     {
-      "path": "site/zips/script.module.saile.core/fanart.jpg",
+      "path": "docs/zips/script.module.saile.core/fanart.jpg",
       "bytes": 124871,
       "sha256": "3ed28572b8b32b0ab4038d7912e65e53072fc40a0b50bd61c4a5a78587e2e270"
     },
     {
-      "path": "site/zips/script.module.saile.core/icon.png",
+      "path": "docs/zips/script.module.saile.core/icon.png",
       "bytes": 8509,
       "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
     },
     {
-      "path": "site/zips/script.module.saile.core/script.module.saile.core-1.0.0.zip",
+      "path": "docs/zips/script.module.saile.core/script.module.saile.core-1.0.0.zip",
       "bytes": 103963,
       "sha256": "569b40fbf878ce0b9b195bb5240bc6dc7f7a8babaed0b8f16ddd76ce23f24440"
     },
     {
-      "path": "site/zips/script.module.saile.core/script.module.saile.core-1.0.0.zip.sha256",
+      "path": "docs/zips/script.module.saile.core/script.module.saile.core-1.0.0.zip.sha256",
       "bytes": 65,
       "sha256": "dc7452f7e24285bf1a1838f000912868842b19342e2044c1627db8868cb5ba25"
     },

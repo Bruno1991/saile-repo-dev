@@ -11,4 +11,4 @@ python -m unittest discover -s tests -p "test_*.py" -v
 python tools/build_repo.py
 ```
 
-A migração é necessária uma única vez ao atualizar a estrutura anterior. O build gera cinco ZIPs e o índice estático em `site/`.
+A migração é necessária uma única vez ao atualizar a estrutura anterior. O build gera cinco ZIPs e o índice estático em `docs/`.

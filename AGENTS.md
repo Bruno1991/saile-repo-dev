@@ -33,7 +33,7 @@ Itens condicionais ou futuros não devem ser criados sem ADR e prova técnica:
 - `.agents/` contém instruções; nunca código de produção.
 - `addons/` contém os add-ons instaláveis.
 - `tools/` contém build, migração e validação.
-- `site/` é gerado e nunca editado manualmente.
+- `docs/` é gerado e nunca editado manualmente.
 - `.env` é somente desenvolvimento/administração e nunca entra no runtime ou ZIP.
 - sTv e sFy não importam código interno um do outro.
 - O core compartilhado não contém Xtream, TMDB, playlists, yt-dlp ou regras de UI específicas.

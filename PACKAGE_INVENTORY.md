@@ -6,7 +6,7 @@
 - Skills: **105**
 - Documentos Markdown: **163**
 - Artes fixas compartilhadas: **9**
-- ZIPs Kodi gerados em `site/zips/`: **5**
+- ZIPs Kodi gerados em `docs/zips/`: **5**
 - Arquivos totais no pacote (antes do manifesto final): **330**
 
 ## Add-ons

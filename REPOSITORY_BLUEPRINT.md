@@ -22,7 +22,7 @@ saile-repo-dev/
 ├── schemas/
 ├── tests/
 ├── tools/
-├── site/                                # gerado pelo build
+├── docs/                                # gerado pelo build
 ├── .env.example
 ├── .gitignore
 ├── AGENTS.md
