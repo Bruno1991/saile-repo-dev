@@ -80,10 +80,19 @@ def build_index(packages: list[tuple[str, str, Path]]) -> str:
         </a>'''
 
     hero_button = f'<a href="{html.escape(str(repo_zip))}" class="hero-btn">Download Repository v{html.escape(str(repo_version))}</a>' if repo_zip else ""
+    
+    # Generate hidden raw links for Kodi parsing
+    kodi_links = []
+    if repo_zip:
+        kodi_links.append(f'<a href="{html.escape(str(repo_zip))}">{html.escape(str(repo_zip))}</a><br>')
+    for _, _, href in other_addons:
+        kodi_links.append(f'<a href="{html.escape(href)}">{html.escape(href.split("/")[-1])}</a><br>')
+    kodi_links_html = "\n        ".join(kodi_links)
+
     template_path = ROOT / "tools" / "site_template" / "index.html"
     if template_path.exists():
         template_content = template_path.read_text(encoding="utf-8")
-        html_content = template_content.replace("{{HERO_BUTTON}}", hero_button).replace("{{ADDON_CARDS}}", cards_html)
+        html_content = template_content.replace("{{HERO_BUTTON}}", hero_button).replace("{{ADDON_CARDS}}", cards_html).replace("{{KODI_LINKS}}", kodi_links_html)
         return html_content
     return ""
 
