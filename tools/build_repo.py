@@ -94,7 +94,7 @@ def build_index(packages: list[tuple[str, str, Path]]) -> str:
         <header>
             <h1>sRepo</h1>
             <p class="subtitle">Repositório estático Kodi para o ecossistema SAILE</p>
-            {"<a href=\"" + html.escape(str(repo_zip)) + "\" class=\"hero-btn\">Download Repository v" + html.escape(str(repo_version)) + "</a>" if repo_zip else ""}
+            {f'<a href="{html.escape(str(repo_zip))}" class="hero-btn">Download Repository v{html.escape(str(repo_version))}</a>' if repo_zip else ""}
         </header>
         
         <div class="grid">
