@@ -79,36 +79,13 @@ def build_index(packages: list[tuple[str, str, Path]]) -> str:
             <span class="version">v{html.escape(version)}</span>
         </a>'''
 
-    return f"""<!doctype html>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SAILE Ecosystem - sRepo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <canvas id="bg-canvas"></canvas>
-    <div class="container">
-        <header>
-            <h1>sRepo</h1>
-            <p class="subtitle">Repositório estático Kodi para o ecossistema SAILE</p>
-            {f'<a href="{html.escape(str(repo_zip))}" class="hero-btn">Download Repository v{html.escape(str(repo_version))}</a>' if repo_zip else ""}
-        </header>
-        
-        <div class="grid">
-            {cards_html}
-        </div>
-        
-        <div class="footer-links">
-            <a href="SHA256SUMS">Ver SHA256SUMS</a>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
-</html>"""
+    hero_button = f'<a href="{html.escape(str(repo_zip))}" class="hero-btn">Download Repository v{html.escape(str(repo_version))}</a>' if repo_zip else ""
+    template_path = ROOT / "tools" / "site_template" / "index.html"
+    if template_path.exists():
+        template_content = template_path.read_text(encoding="utf-8")
+        html_content = template_content.replace("{{HERO_BUTTON}}", hero_button).replace("{{ADDON_CARDS}}", cards_html)
+        return html_content
+    return ""
 
 
 def main() -> int:
