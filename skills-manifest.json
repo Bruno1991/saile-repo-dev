@@ -853,7 +853,7 @@
   ],
   "artwork_pack": {
     "manifest": "artwork/artwork-manifest.json",
-    "catalog": "docs/ui/ARTWORK_CATALOG.md",
+    "catalog": "documentation/ui/ARTWORK_CATALOG.md",
     "shared_addon": "resource.images.saile",
     "fixed_shared_assets": 9,
     "temporary": true

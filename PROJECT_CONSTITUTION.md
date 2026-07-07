@@ -16,7 +16,7 @@ Nenhum plugin importa código interno do outro. Dependências comuns são explí
 
 ## Artigo 3 — Navegação contratual
 
-A ordem dos atalhos definida em `docs/ui/NAVIGATION_CONTRACT.md` é requisito funcional coberto por teste. Provedores, ordenação alfabética e configurações não podem reorganizar os atalhos fixos.
+A ordem dos atalhos definida em `documentation/ui/NAVIGATION_CONTRACT.md` é requisito funcional coberto por teste. Provedores, ordenação alfabética e configurações não podem reorganizar os atalhos fixos.
 
 ## Artigo 4 — Persistência
 

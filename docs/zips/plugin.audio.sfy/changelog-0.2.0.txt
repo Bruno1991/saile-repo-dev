@@ -1,0 +1,5 @@
+0.2.0
+- Home fixa: Buscar, Minhas Playlists e Sincronizar Dados.
+- Favoritos foram substituídos pelo conceito de playlists locais.
+- Artes de menu migradas para resource.images.saile.
+- Infraestrutura comum consumida por script.module.saile.core.

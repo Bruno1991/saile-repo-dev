@@ -36,11 +36,6 @@ cookies.txt
 dist/
 build/
 site/
-*.zip
-*.sha256
-SHA256SUMS
-addons.xml
-addons.xml.md5
 
 # IDE/SO
 .vscode/

@@ -385,7 +385,7 @@ saile_repo_v2/
 │   │       └── icon.png
 │   ├── artwork-manifest.json
 │   └── README.md
-├── docs/
+├── documentation/
 │   ├── architecture/
 │   │   ├── .gitkeep
 │   │   ├── CACHE_POLICY.md

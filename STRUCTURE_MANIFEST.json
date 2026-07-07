@@ -1158,197 +1158,197 @@
       "sha256": "58adc4ab9d78cc1d58f34a630aa6b9de87bd1acb7658bb6fcc84605f88e7116f"
     },
     {
-      "path": "docs/architecture/.gitkeep",
+      "path": "documentation/architecture/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "docs/architecture/CACHE_POLICY.md",
+      "path": "documentation/architecture/CACHE_POLICY.md",
       "bytes": 469,
       "sha256": "3873ff249123aa603ef0f255fd597242daea3022a1285ab6ebbd328bd4580f79"
     },
     {
-      "path": "docs/architecture/CAPABILITY_DETECTION.md",
+      "path": "documentation/architecture/CAPABILITY_DETECTION.md",
       "bytes": 437,
       "sha256": "f48307904ba0af11ea62ee852e14a8a34a99566826cd450b680b926d44adc9d9"
     },
     {
-      "path": "docs/architecture/DATABASE_MIGRATIONS.md",
+      "path": "documentation/architecture/DATABASE_MIGRATIONS.md",
       "bytes": 480,
       "sha256": "a538b53f22cbff463c17a8f8a2d9d6dce6cc24d7f1f31c82d65ea4d58d7e73f9"
     },
     {
-      "path": "docs/architecture/ECOSYSTEM_MODULES.md",
+      "path": "documentation/architecture/ECOSYSTEM_MODULES.md",
       "bytes": 1380,
       "sha256": "5180288ac70f04c71b71a29a87e6888cae231116f793ca703629103debd65407"
     },
     {
-      "path": "docs/architecture/ERROR_CODES.md",
+      "path": "documentation/architecture/ERROR_CODES.md",
       "bytes": 678,
       "sha256": "70ccb3ee8fef49c1b8428cdfbe1df5cff7a455fd4dbd964ebb82eeff0cb673b0"
     },
     {
-      "path": "docs/architecture/PLAYBACK_PROTOCOL_STRATEGY.md",
+      "path": "documentation/architecture/PLAYBACK_PROTOCOL_STRATEGY.md",
       "bytes": 521,
       "sha256": "57645876f78f4347cd9a4066850cabde69dacb9c75ebbfadbf6ceb8515b19917"
     },
     {
-      "path": "docs/architecture/PROVIDER_CONTRACTS.md",
+      "path": "documentation/architecture/PROVIDER_CONTRACTS.md",
       "bytes": 729,
       "sha256": "a6e85ef50a51190f4798c1914170784d4d6ae7b52afb2c22125fa27eed913a83"
     },
     {
-      "path": "docs/architecture/REPOSITORY_LAYOUT.md",
+      "path": "documentation/architecture/REPOSITORY_LAYOUT.md",
       "bytes": 660,
       "sha256": "87346ea2feee2d87feeaee46c75a9e37a743c1e9edf9a71631b95a75e70390cd"
     },
     {
-      "path": "docs/architecture/STORAGE_POLICY.md",
+      "path": "documentation/architecture/STORAGE_POLICY.md",
       "bytes": 417,
       "sha256": "82c1883ceae10becff5e424db4e7d6a0a66b481579afc5b9e7fcb25fd166f6ab"
     },
     {
-      "path": "docs/architecture/YTDLP_PROOF_OF_CONCEPT.md",
+      "path": "documentation/architecture/YTDLP_PROOF_OF_CONCEPT.md",
       "bytes": 798,
       "sha256": "37665e420151fed6a083ab508081a1eec70504e1850b5da2097b5149fc423c82"
     },
     {
-      "path": "docs/decisions/0001-three-addon-boundaries.md",
+      "path": "documentation/decisions/0001-three-addon-boundaries.md",
       "bytes": 426,
       "sha256": "392be11cd59a5c9007a86ec447b42956055bc9a1bbf54aa1ba752072e2f24de9"
     },
     {
-      "path": "docs/decisions/0002-local-first-no-backend.md",
+      "path": "documentation/decisions/0002-local-first-no-backend.md",
       "bytes": 404,
       "sha256": "691bb8ac459f1780dced5dfd712f6acf4f34ae80b2d10b37b0bca3b7f0702c07"
     },
     {
-      "path": "docs/decisions/0003-separate-sqlite-databases.md",
+      "path": "documentation/decisions/0003-separate-sqlite-databases.md",
       "bytes": 298,
       "sha256": "aa0b682cfad096c644ee7b34587e96b5532f511226112151b5976379c58e8e6d"
     },
     {
-      "path": "docs/decisions/0004-ytdlp-resolver-not-downloader.md",
+      "path": "documentation/decisions/0004-ytdlp-resolver-not-downloader.md",
       "bytes": 364,
       "sha256": "d17f93eff30cf571237b8faf18c85509d92d97f7155f547b4c4b2c0aa908a446"
     },
     {
-      "path": "docs/decisions/0005-github-pages-static-repository.md",
+      "path": "documentation/decisions/0005-github-pages-static-repository.md",
       "bytes": 317,
       "sha256": "03c110ffbed4fbb9b81dae2a0589128f943d7fe410a392e8534deb33656ec4ce"
     },
     {
-      "path": "docs/decisions/0006-manual-lan-sync-deferred.md",
+      "path": "documentation/decisions/0006-manual-lan-sync-deferred.md",
       "bytes": 324,
       "sha256": "67cc168a830c7b890e71b6107282db0ccb1227a087fb43ceeabeb13e961d4a44"
     },
     {
-      "path": "docs/decisions/0007-shared-artwork-resource.md",
+      "path": "documentation/decisions/0007-shared-artwork-resource.md",
       "bytes": 387,
       "sha256": "43825b6f8285efb3f0036296109327d08eafa73b98651cd7eb5a00908d7349ef"
     },
     {
-      "path": "docs/decisions/0008-shared-core-module.md",
+      "path": "documentation/decisions/0008-shared-core-module.md",
       "bytes": 322,
       "sha256": "f6721977967d029395b9473dd18f8fc08948d27dbe476c2957caae62cf536470"
     },
     {
-      "path": "docs/decisions/0009-ytdlp-module-after-poc.md",
+      "path": "documentation/decisions/0009-ytdlp-module-after-poc.md",
       "bytes": 315,
       "sha256": "8413dd71cd66a6861e080d4203e697ac20ed6d34324ae3efc1bb3e69c3e500da"
     },
     {
-      "path": "docs/decisions/0010-navigation-contract.md",
+      "path": "documentation/decisions/0010-navigation-contract.md",
       "bytes": 342,
       "sha256": "35aa7129a9441df9a52a3977551a9b1128565dcc1efb138058b86e97db97d0df"
     },
     {
-      "path": "docs/decisions/0011-manual-lan-sync.md",
+      "path": "documentation/decisions/0011-manual-lan-sync.md",
       "bytes": 352,
       "sha256": "10bf39ed93742ac8f8ac8a51c5396b2382de85c0450c6be2465208b4e4c4026b"
     },
     {
-      "path": "docs/decisions/0012-defer-service-pvr-beta.md",
+      "path": "documentation/decisions/0012-defer-service-pvr-beta.md",
       "bytes": 283,
       "sha256": "88fb615e085774adbd2ff1629083602a0d8d74c8c6b7c675974969831a927551"
     },
     {
-      "path": "docs/legal/ACCEPTABLE_USE.md",
+      "path": "documentation/legal/ACCEPTABLE_USE.md",
       "bytes": 244,
       "sha256": "74e31e2f15c9362314d98030e359a645d7e1812600f2cd383b2b31eb235d1cd5"
     },
     {
-      "path": "docs/legal/CONTENT_RESPONSIBILITY.md",
+      "path": "documentation/legal/CONTENT_RESPONSIBILITY.md",
       "bytes": 222,
       "sha256": "606d585c4b7feb0bc63a30101599c9b555b0b807125e727e417622e7fc2f59f1"
     },
     {
-      "path": "docs/legal/PRIVACY.md",
+      "path": "documentation/legal/PRIVACY.md",
       "bytes": 233,
       "sha256": "37ff5644d331bbdc077ac2c6d6e8a9b63ab19999e0e2c2156c26ab9a707533ab"
     },
     {
-      "path": "docs/legal/THIRD_PARTY_NOTICES.md",
+      "path": "documentation/legal/THIRD_PARTY_NOTICES.md",
       "bytes": 221,
       "sha256": "6602d23cb40298a74b1ea4a05128b0782b7c609781cdb62eefef9ab8ceb15955"
     },
     {
-      "path": "docs/legal/THIRD_PARTY_SERVICES.md",
+      "path": "documentation/legal/THIRD_PARTY_SERVICES.md",
       "bytes": 234,
       "sha256": "4a10cff68a5279af52ec5fca32f55d8f1aedc5379bc5a619da519bb91393a035"
     },
     {
-      "path": "docs/operations/ADOPTION_GUIDE.md",
+      "path": "documentation/operations/ADOPTION_GUIDE.md",
       "bytes": 685,
       "sha256": "cabbad00c6ce5e62e0b0ef54eafc791f8c9a0f5be58a92c84dbb929585e171a5"
     },
     {
-      "path": "docs/operations/AGENT_START_PROMPT.md",
+      "path": "documentation/operations/AGENT_START_PROMPT.md",
       "bytes": 658,
       "sha256": "49e8ba7df05a82d8ee2fb755c2e7aeb79a9b460350f3147a95664661d6c10450"
     },
     {
-      "path": "docs/operations/DIAGNOSTICS_AND_MAINTENANCE.md",
+      "path": "documentation/operations/DIAGNOSTICS_AND_MAINTENANCE.md",
       "bytes": 509,
       "sha256": "a14d6729e5f0c75d6da5d775facb198785e7f7684947f7b2cdb42716673da053"
     },
     {
-      "path": "docs/operations/FIRST_RUN.md",
+      "path": "documentation/operations/FIRST_RUN.md",
       "bytes": 431,
       "sha256": "6dd5c0cc004e91b8fbf6c0b6f590582491535d70bbbd7878375b020dbfe28072"
     },
     {
-      "path": "docs/operations/INSTALL_IN_ROOT.md",
+      "path": "documentation/operations/INSTALL_IN_ROOT.md",
       "bytes": 307,
       "sha256": "583aa22ba75808da57f7ddcd82b7556122be86f0b1fc0291d3f4e8831dc63871"
     },
     {
-      "path": "docs/operations/MIGRATION_V2.md",
+      "path": "documentation/operations/MIGRATION_V2.md",
       "bytes": 509,
       "sha256": "ca6967fe96ebce3c4ee40a66c79d3e6bfd548cc7d2d1e850915e4bb0a740fba1"
     },
     {
-      "path": "docs/operations/RELEASE_AND_ROLLBACK.md",
+      "path": "documentation/operations/RELEASE_AND_ROLLBACK.md",
       "bytes": 467,
       "sha256": "2951d4f2c7abdae129c4eb708c3e7e5d24143bbb3036cd3bac41746fa719ed1a"
     },
     {
-      "path": "docs/roadmap/ROADMAP_ORIGINAL.png",
+      "path": "documentation/roadmap/ROADMAP_ORIGINAL.png",
       "bytes": 508626,
       "sha256": "05d874c5a01cea56f96ce07e2b1241dcc7ac7f664317e4dfabdbe736e0b82f0f"
     },
     {
-      "path": "docs/sync/LAN_SYNC_MANUAL.md",
+      "path": "documentation/sync/LAN_SYNC_MANUAL.md",
       "bytes": 1205,
       "sha256": "33c7f45816bd82f547af7b169cc950a3894c7e7dc235b6ae0aaac76d5e547bff"
     },
     {
-      "path": "docs/ui/ARTWORK_CATALOG.md",
+      "path": "documentation/ui/ARTWORK_CATALOG.md",
       "bytes": 1600,
       "sha256": "479c56ab4d9c56061a1d43e2c09cd051ea496020b56c333d95782dbd8fb90ed9"
     },
     {
-      "path": "docs/ui/NAVIGATION_CONTRACT.md",
+      "path": "documentation/ui/NAVIGATION_CONTRACT.md",
       "bytes": 1263,
       "sha256": "5abef8e3f80e3537730b69c0c11ce2baf2f593e1df0a59898e07d43fb6548c22"
     },

@@ -18,7 +18,7 @@ saile-repo-dev/
 │   └── plugin.audio.sfy/
 │       └── resources/lib/sfy/
 ├── artwork/generic/                     # fontes temporárias para bootstrap
-├── docs/
+├── documentation/
 ├── schemas/
 ├── tests/
 ├── tools/

@@ -86,8 +86,8 @@ A arquitetura, os módulos compartilhados, a navegação e o empacotamento estã
 2. `PROJECT_CONSTITUTION.md`
 3. `ROADMAP_ARCHITECTURE.md`
 4. `REPOSITORY_BLUEPRINT.md`
-5. `docs/architecture/ECOSYSTEM_MODULES.md`
-6. `docs/ui/NAVIGATION_CONTRACT.md`
-7. `docs/ui/ARTWORK_CATALOG.md`
+5. `documentation/architecture/ECOSYSTEM_MODULES.md`
+6. `documentation/ui/NAVIGATION_CONTRACT.md`
+7. `documentation/ui/ARTWORK_CATALOG.md`
 8. `SECURITY_AND_ENV_POLICY.md`
 9. `SKILLS_INDEX.md`

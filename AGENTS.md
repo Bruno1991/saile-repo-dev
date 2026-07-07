@@ -21,11 +21,11 @@ Itens condicionais ou futuros não devem ser criados sem ADR e prova técnica:
 1. `PROJECT_CONSTITUTION.md`
 2. `ROADMAP_ARCHITECTURE.md`
 3. `REPOSITORY_BLUEPRINT.md`
-4. `docs/architecture/ECOSYSTEM_MODULES.md`
-5. `docs/ui/NAVIGATION_CONTRACT.md`
-6. `docs/ui/ARTWORK_CATALOG.md`
+4. `documentation/architecture/ECOSYSTEM_MODULES.md`
+5. `documentation/ui/NAVIGATION_CONTRACT.md`
+6. `documentation/ui/ARTWORK_CATALOG.md`
 7. `SECURITY_AND_ENV_POLICY.md`
-8. ADRs em `docs/decisions/`
+8. ADRs em `documentation/decisions/`
 9. Skills aplicáveis em `.agents/skills/`
 
 ## Fronteiras

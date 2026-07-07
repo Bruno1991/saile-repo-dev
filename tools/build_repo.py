@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ADDONS_DIR = ROOT / "addons"
-SITE_DIR = ROOT / "site"
+SITE_DIR = ROOT / "docs"
 ZIPS_DIR = SITE_DIR / "zips"
 EXCLUDED_NAMES = {"__pycache__", ".pytest_cache", ".DS_Store", "Thumbs.db"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".db", ".sqlite", ".log"}
