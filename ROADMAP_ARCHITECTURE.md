@@ -1,95 +1,87 @@
 # Arquitetura derivada do roadmap
 
-## Visão geral
+## Visão
 
 ```mermaid
 flowchart LR
-    SR[repository.srepo / sRepo] --> STV[plugin.video.stv / sTv]
-    SR --> SFY[plugin.audio.sfy / sFy]
+  REPO[repository.srepo] --> ART[resource.images.saile]
+  REPO --> CORE[script.module.saile.core]
+  REPO --> STV[plugin.video.stv]
+  REPO --> SFY[plugin.audio.sfy]
+  STV --> CORE
+  STV --> ART
+  SFY --> CORE
+  SFY --> ART
 
-    subgraph TV[sTv]
-      XCFG[Configuração Xtream] --> XAPI[Cliente Xtream]
-      XAPI --> XCAT[Catálogo normalizado]
-      XCAT --> XDB[(SQLite sTv)]
-      XDB --> THOME[Home sTv]
-      THOME --> LIVE[TV ao vivo]
-      THOME --> VOD[VOD]
-      THOME --> SERIES[Séries]
-      THOME --> TFAV[Favoritos]
-      THOME --> TSEARCH[Busca]
-      THOME --> CONT[Continuar assistindo]
-      VOD --> TMDB[TMDB: capa e sinopse]
-      SERIES --> TMDB
-    end
-
-    subgraph MUSIC[sFy]
-      YSRC[Fontes de descoberta] --> MCAT[Catálogo musical]
-      MCAT --> MDB[(SQLite sFy)]
-      MDB --> MHOME[Home sFy]
-      MHOME --> BR[Top Brasil]
-      MHOME --> WORLD[Top Mundo]
-      MHOME --> CATS[Categorias]
-      MHOME --> PL[Minhas playlists]
-      MHOME --> MFAV[Favoritos]
-      MHOME --> MSEARCH[Busca]
-      MSEARCH --> YTDLP[yt-dlp Python API]
-      BR --> YTDLP
-      WORLD --> YTDLP
-      PL --> YTDLP
-      YTDLP --> AUDIO[URL temporária de áudio]
-      AUDIO --> KPLAYER[Player Kodi]
-    end
+  STV --> X[Xtream]
+  STV --> T[TMDB]
+  STV --> DB1[(SQLite sTv)]
+  SFY --> Y[yt-dlp após prova técnica]
+  SFY --> DB2[(SQLite sFy)]
 ```
 
-## Tradução dos blocos do desenho
+## Navegação sTv
 
-| Bloco do roadmap | Responsável | Implementação arquitetural |
-|---|---|---|
-| provedor/login/senha | sTv | `resources/settings.xml` + serviço de configuração; nunca `.env` runtime |
-| dados Xtream | sTv | cliente HTTP isolado e adaptadores de payload |
-| conteúdo sTv | sTv | modelos normalizados + SQLite |
-| canais/filmes/séries indexados | sTv | tabelas de catálogo e geração de sincronização |
-| favoritos | sTv | tabelas de estado do usuário independentes do catálogo |
-| continuar assistindo | sTv | tabela de progresso de VOD/episódio |
-| séries / TV ao vivo / VOD | sTv | rotas, serviços e renderizadores distintos |
-| top Brasil / top mundo / categorias | sFy | fontes de descoberta cacheadas e configuráveis |
-| minhas playlists | sFy | playlists locais com referências de faixa |
-| capas, álbuns, singles, metadata | sFy | metadata normalizada e artwork cacheado |
-| yt-dlp | sFy | resolvedor de busca/formato/URL temporária, sem UI |
-| SQLite sincroniza rede local | ambos | fase posterior; export/sync manual por addon, nunca arquivo SQLite compartilhado |
-| sRepo | repositório | build, índice, checksum, GitHub Pages e atualizações |
-| ícones, fanarts e capas fallback | todos | assets locais genéricos em `artwork/generic/`, copiados para cada add-on e substituíveis depois |
+```text
+sTv
+├── TV ao Vivo
+│   ├── Buscar
+│   ├── Favoritos
+│   └── categorias/canais dinâmicos
+├── VOD
+│   ├── Buscar
+│   ├── Favoritos
+│   └── categorias/filmes dinâmicos
+├── Séries
+│   ├── Buscar
+│   ├── Favoritos
+│   └── categorias/séries dinâmicas
+└── Sincronizar Dados
+```
+
+## Navegação sFy
+
+```text
+sFy
+├── Buscar
+├── Minhas Playlists
+├── Sincronizar Dados
+└── resultados e conteúdo dinâmico
+```
 
 ## Fluxo sTv
 
-1. O usuário configura um provedor Xtream no settings do sTv.
-2. O serviço valida o host e autenticação.
-3. A sincronização baixa categorias e catálogos em etapas.
-4. O SQLite recebe UPSERTs e preserva favoritos/progresso.
-5. A UI navega principalmente no cache local.
-6. Na reprodução, a URL Xtream é construída/resolvida no último momento.
-7. Para VOD e séries, TMDB pode enriquecer artwork e sinopse sem alterar a identidade do item.
+1. Usuário configura host, usuário e senha Xtream no Kodi.
+2. Cliente valida autenticação e normaliza payloads.
+3. Sincronização manual do catálogo executa UPSERT em SQLite.
+4. Home e categorias navegam prioritariamente pelo cache local.
+5. Buscar e Favoritos aparecem sempre antes do conteúdo de cada seção.
+6. URL de reprodução é construída no último momento.
+7. TMDB enriquece VOD/séries, sem fornecer mídia.
 
 ## Fluxo sFy
 
-1. A home lê charts, categorias, playlists e favoritos do cache/local.
-2. A busca produz candidatos normalizados.
-3. Ao escolher uma faixa, o serviço usa `yt_dlp.YoutubeDL.extract_info`.
-4. O seletor escolhe um formato de áudio compatível.
-5. A URL temporária é entregue ao player Kodi.
-6. Somente IDs e metadata são persistidos; a URL temporária expira e é resolvida novamente.
+1. A home sempre começa por Buscar, Minhas Playlists e Sincronizar Dados.
+2. Resultados de busca exibem thumbnails dinâmicos da fonte.
+3. O yt-dlp resolve a URL temporária apenas no momento da reprodução.
+4. URLs temporárias não são persistidas.
+5. Playlists, faixas conhecidas e histórico ficam no SQLite do perfil.
+6. O módulo yt-dlp separado só será criado depois da prova técnica em dispositivos reais.
+
+## Artwork
+
+`resource.images.saile` contém exatamente nove artes fixas de menu/pop-up. Cada add-on mantém sua identidade (`icon.png` e `fanart.jpg`). Capas e fanarts de conteúdo continuam dinâmicas, fornecidas por Xtream, TMDB ou fonte musical e cacheadas pelo Kodi.
 
 ## Sincronização LAN
 
-O desenho original inclui sincronização SQLite em rede local. Para evitar corrupção e acoplamento, a implementação correta não compartilha o arquivo `.db` por SMB nem abre o mesmo banco a partir de dispositivos diferentes. A fase futura deve usar uma operação manual acionada pelo usuário, trocar registros serializados, aplicar resolução de conflitos e manter um banco independente por dispositivo e addon.
+O item `Sincronizar Dados` existe nas duas homes, mas a operação é sempre explícita. A implementação troca registros versionados e sanitizados entre dispositivos na mesma rede; não compartilha `.db` e não sincroniza catálogo, cache ou segredos.
 
-## Fluxo de artwork e fallback
+## Fases
 
-1. O scaffolding copia os assets descritos em `artwork/artwork-manifest.json`.
-2. O add-on sempre possui `icon.png` e `fanart.jpg` locais.
-3. A UI tenta artwork específico do item, validado e cacheado.
-4. sTv usa TMDB ou Xtream quando disponível e recorre ao pôster/fanart genérico quando necessário.
-5. sFy usa metadata da fonte quando disponível e recorre às capas genéricas de álbum, artista e fanart.
-6. A substituição visual futura mantém os nomes dos arquivos ou atualiza todas as referências e testes.
-
-O catálogo completo está em `docs/ui/ARTWORK_CATALOG.md`.
+1. Módulos compartilhados, contratos de navegação e build.
+2. MVP sTv: autenticação, catálogo e reprodução.
+3. Favoritos, busca, TMDB e migrações do sTv.
+4. Prova técnica yt-dlp multiplataforma.
+5. MVP sFy: busca, resolução, playlists e reprodução.
+6. Sincronização LAN manual.
+7. Recursos futuros: serviço, beta channel e PVR avançado.

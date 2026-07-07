@@ -39,16 +39,6 @@ CREATE TABLE IF NOT EXISTS playlist_items (
     UNIQUE (playlist_id, source, source_track_id)
 );
 
-CREATE TABLE IF NOT EXISTS favorites (
-    source TEXT NOT NULL,
-    source_track_id TEXT NOT NULL,
-    title_snapshot TEXT NOT NULL,
-    artist_snapshot TEXT,
-    thumbnail_snapshot TEXT,
-    created_at TEXT NOT NULL,
-    PRIMARY KEY (source, source_track_id)
-);
-
 CREATE TABLE IF NOT EXISTS play_history (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     source TEXT NOT NULL,
@@ -66,4 +56,5 @@ CREATE TABLE IF NOT EXISTS discovery_cache (
     expires_at TEXT NOT NULL
 );
 
--- Não armazenar aqui URLs de formato assinadas/temporárias resolvidas pelo yt-dlp.
+-- O sFy usa Minhas Playlists em vez de um recurso fixo de Favoritos.
+-- Não armazenar URLs de formato assinadas/temporárias resolvidas pelo yt-dlp.

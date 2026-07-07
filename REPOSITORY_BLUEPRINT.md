@@ -1,109 +1,81 @@
 # Blueprint do repositório
 
 ```text
-srepo/
-├── .agents/
-│   └── skills/                         # instruções do agente, nunca produção
-├── .github/
-│   └── workflows/
+saile-repo-dev/
+├── .agents/skills/                      # instruções; nunca produção
+├── .github/workflows/
 ├── addons/
 │   ├── repository.srepo/
-│   │   ├── addon.xml
-│   │   ├── icon.png
-│   │   └── fanart.jpg
+│   ├── resource.images.saile/
+│   │   └── resources/media/
+│   │       ├── common/
+│   │       ├── sfy/
+│   │       └── stv/
+│   ├── script.module.saile.core/
+│   │   └── lib/saile_core/
 │   ├── plugin.video.stv/
-│   │   ├── addon.xml
-│   │   ├── default.py
-│   │   ├── icon.png
-│   │   ├── fanart.jpg
-│   │   └── resources/
-│   │       ├── settings.xml
-│   │       ├── language/
-│   │       ├── media/
-│   │       └── lib/
-│   │           ├── app/
-│   │           ├── domain/
-│   │           ├── infrastructure/
-│   │           ├── providers/xtream/
-│   │           ├── metadata/tmdb/
-│   │           ├── persistence/
-│   │           └── ui/
+│   │   └── resources/lib/stv/
 │   └── plugin.audio.sfy/
-│       ├── addon.xml
-│       ├── default.py
-│       ├── icon.png
-│       ├── fanart.jpg
-│       └── resources/
-│           ├── settings.xml
-│           ├── language/
-│           ├── media/
-│           └── lib/
-│               ├── app/
-│               ├── domain/
-│               ├── infrastructure/
-│               ├── providers/ytdlp/
-│               ├── persistence/
-│               └── ui/
-├── artwork/
-│   ├── artwork-manifest.json           # mapa de cópia dos assets temporários
-│   └── generic/
-│       ├── repository.srepo/
-│       ├── plugin.video.stv/
-│       │   └── resources/media/
-│       └── plugin.audio.sfy/
-│           └── resources/media/
+│       └── resources/lib/sfy/
+├── artwork/generic/                     # fontes temporárias para bootstrap
 ├── docs/
 ├── schemas/
 ├── tests/
-│   ├── stv/
-│   ├── sfy/
-│   ├── repository/
-│   └── fixtures/
 ├── tools/
-│   ├── build_repo.py
-│   ├── validate_addons.py
-│   ├── validate_zips.py
-│   └── secret_scan.py
-├── dist/                               # gerado; ignorado ou publicado por workflow
-│   ├── repository.srepo/
-│   ├── plugin.video.stv/
-│   ├── plugin.audio.sfy/
-│   ├── addons.xml
-│   ├── addons.xml.md5
-│   └── SHA256SUMS
-├── site/                               # raiz estática do GitHub Pages
-│   ├── .nojekyll
-│   ├── index.html
-│   └── zips/
+├── site/                                # gerado pelo build
 ├── .env.example
 ├── .gitignore
 ├── AGENTS.md
 └── README.md
 ```
 
-## Regra de dependência
+## Grafo de dependências
 
 ```mermaid
 flowchart TD
-  UI --> APP[Application services]
-  APP --> DOMAIN[Domain models/policies]
-  APP --> PORTS[Ports/interfaces]
-  INFRA[HTTP, SQLite, Kodi adapters] --> PORTS
-  PROVIDERS[Xtream / yt-dlp / TMDB] --> PORTS
-  UI --> KODI[Kodi APIs]
+  REPO[repository.srepo]
+  ART[resource.images.saile]
+  CORE[script.module.saile.core]
+  STV[plugin.video.stv]
+  SFY[plugin.audio.sfy]
+
+  CORE --> ART
+  STV --> CORE
+  STV --> ART
+  SFY --> CORE
+  SFY --> ART
+  REPO -. distribui .-> ART
+  REPO -. distribui .-> CORE
+  REPO -. distribui .-> STV
+  REPO -. distribui .-> SFY
 ```
 
-Domínio não importa `xbmc`, `xbmcgui`, `xbmcplugin`, `sqlite3`, `urllib` ou `yt_dlp`. Isso permite testes fora do Kodi. A camada de infraestrutura implementa portas simples e traduz erros externos para exceções do projeto.
+Não existem dependências de sTv para sFy, nem de sFy para sTv.
 
-## Bootstrap de artwork
+## Conteúdo permitido no core
 
-Ao criar `addons/repository.srepo`, `addons/plugin.video.stv` ou `addons/plugin.audio.sfy`, o agente deve ler `artwork/artwork-manifest.json` e copiar os assets genéricos para os destinos declarados. O runtime nunca aponta para `artwork/generic/`; essa pasta é uma fonte de scaffolding e documentação.
+- caminhos portáveis;
+- artwork compartilhado;
+- notificações;
+- erros padronizados;
+- logging sanitizado;
+- helpers HTTP/JSON genéricos;
+- capacidades do dispositivo;
+- utilitários SQLite sem schema de domínio.
 
-Regras:
+## Conteúdo proibido no core
 
-- `icon.png` e `fanart.jpg` são obrigatórios nos três add-ons;
-- os ícones internos ficam em `resources/media/`;
-- sTv possui fallbacks de pôster e fanart;
-- sFy possui fallbacks de álbum, artista e fanart;
-- a ausência de um asset obrigatório interrompe o build;
-- a arte final pode substituir o arquivo genérico sem alterar a arquitetura.
+- endpoints Xtream;
+- matching TMDB;
+- categorias de TV, filmes ou séries;
+- busca musical e playlists;
+- seleção de formatos yt-dlp;
+- rotas específicas das homes.
+
+## Add-ons futuros condicionais
+
+```text
+script.module.saile.ytdlp   após prova técnica multiplataforma
+service.saile.monitor       após necessidade funcional comprovada
+repository.srepo.beta       após existir processo de release estável
+```

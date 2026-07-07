@@ -1,29 +1,43 @@
-# Constituição de engenharia
+# Constituição de engenharia do ecossistema SAILE
 
 ## Artigo 1 — Local-first
 
-sTv e sFy executam integralmente dentro do ambiente Kodi do usuário. Serviços externos são apenas provedores de dados ou mídia configurados pelo usuário. O sistema não depende de servidor próprio, banco remoto, fila remota ou autenticação central.
+sTv e sFy executam no dispositivo do usuário dentro do Kodi. Serviços externos são provedores de dados ou mídia; não existe backend próprio obrigatório, banco remoto central, fila remota ou autenticação SAILE.
 
-## Artigo 2 — Três add-ons, três responsabilidades
+## Artigo 2 — Responsabilidades dos add-ons ativos
 
 - `repository.srepo`: descoberta, instalação e atualização.
-- `plugin.video.stv`: domínio IPTV/Xtream e vídeo.
-- `plugin.audio.sfy`: domínio música/yt-dlp e áudio.
+- `resource.images.saile`: artes fixas compartilhadas e somente elas.
+- `script.module.saile.core`: infraestrutura comum estável, sem regras de domínio.
+- `plugin.video.stv`: Xtream, TV ao vivo, VOD, séries, favoritos, busca, TMDB e reprodução de vídeo.
+- `plugin.audio.sfy`: busca musical, playlists locais, resolução de áudio e reprodução.
 
-Nenhum plugin importa módulos internos do outro. Código realmente reutilizável deve ser pequeno, versionado e empacotado como dependência Kodi própria somente após ADR; copiar um utilitário simples é preferível a criar acoplamento prematuro.
+Nenhum plugin importa código interno do outro. Dependências comuns são explícitas e versionadas.
 
-## Artigo 3 — Persistência
+## Artigo 3 — Navegação contratual
 
-Cada plugin usa seu próprio SQLite no perfil do addon. Catálogo atualizável, estado do usuário e cache são tabelas separadas. Migrações são versionadas, transacionais e testadas. Sincronização LAN é opcional, manual e não faz parte do caminho crítico da V1.
+A ordem dos atalhos definida em `docs/ui/NAVIGATION_CONTRACT.md` é requisito funcional coberto por teste. Provedores, ordenação alfabética e configurações não podem reorganizar os atalhos fixos.
 
-## Artigo 4 — Segurança
+## Artigo 4 — Persistência
 
-`.env` é ferramenta de desenvolvimento. GitHub PAT é exclusivamente de build/administração e nunca entra no runtime. Credenciais Xtream vêm das configurações do Kodi. Um token TMDB usado por cliente local público deve ser dedicado e tratável como recuperável, pois não pode ser mantido secretamente em software distribuído ao usuário.
+Cada plugin usa SQLite próprio em `special://profile/addon_data/<addon-id>/`. Catálogo, cache e estado do usuário são separados. Migrações são versionadas, transacionais e testadas. Atualizações do add-on não apagam dados.
 
-## Artigo 5 — Experiência Kodi
+## Artigo 5 — Sincronização LAN
 
-A UI usa componentes públicos do Kodi, assets PNG, metadados e navegação por controle remoto. O comportamento precisa funcionar no skin padrão e degradar corretamente quando metadata, imagem ou serviço externo falhar.
+A sincronização é manual, opcional e acionada pelo usuário. Cada dispositivo mantém banco independente. O protocolo troca registros sanitizados, nunca arquivos SQLite ou segredos.
 
-## Artigo 6 — Evidência
+## Artigo 6 — Segurança
 
-Nenhuma tarefa é concluída apenas por plausibilidade. A conclusão exige evidência proporcional: testes, parse de XML, `PRAGMA quick_check`, inspeção de ZIP, checksum, instalação limpa ou reprodução validada.
+`.env` é ferramenta local. GitHub PAT pertence apenas ao fluxo administrativo. Credenciais Xtream vêm das configurações do Kodi. Qualquer chave distribuída em software cliente deve ser considerada recuperável e possuir escopo mínimo.
+
+## Artigo 7 — Experiência Kodi
+
+A UI usa APIs públicas do Kodi, navegação por controle remoto e artwork real. Falhas de rede, metadados ou imagens degradam com mensagens seguras, sem derrubar a navegação.
+
+## Artigo 8 — Dependências condicionais
+
+O yt-dlp deve passar por prova técnica em Windows, Linux, Android TV e Fire TV antes de ser extraído para `script.module.saile.ytdlp`. Serviços em segundo plano e integrações PVR são adiados até necessidade comprovada.
+
+## Artigo 9 — Evidência
+
+Nenhuma tarefa é concluída por plausibilidade. A conclusão exige evidência proporcional: testes, parse XML, inspeção do ZIP, checksum, migração, instalação limpa ou reprodução em Kodi real.

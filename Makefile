@@ -1,4 +1,7 @@
-.PHONY: bootstrap validate test build clean tree
+.PHONY: migrate bootstrap validate test build clean tree
+
+migrate:
+	python tools/migrate_v2_shared_artwork.py
 
 bootstrap:
 	python tools/bootstrap_artwork.py
@@ -8,7 +11,6 @@ validate:
 	python tools/secret_scan.py
 	python -m compileall -q addons tools tests
 
-# Uses unittest so the base repository has no mandatory third-party dependency.
 test:
 	python -m unittest discover -s tests -p "test_*.py" -v
 

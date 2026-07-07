@@ -1,10 +1,13 @@
-# ADR-0001 — Separar sRepo, sTv e sFy
+# ADR 0001 — Separar repositório e plugins
 
 ## Status
-Aceito
 
-## Decisão
-O sistema será composto por `repository.srepo`, `plugin.video.stv` e `plugin.audio.sfy`. Os plugins não importam código de produção um do outro.
+Superado em parte pelos ADRs 0007 e 0008.
 
-## Consequências
-Atualizações e falhas ficam isoladas. Pode existir pequena duplicação de utilitários, aceita para evitar acoplamento e problemas de empacotamento.
+## Decisão original
+
+Separar `repository.srepo`, `plugin.video.stv` e `plugin.audio.sfy`, impedindo importação direta entre os plugins.
+
+## Evolução
+
+A separação permanece, mas o ecossistema agora inclui `resource.images.saile` e `script.module.saile.core` como dependências compartilhadas explícitas e versionadas.

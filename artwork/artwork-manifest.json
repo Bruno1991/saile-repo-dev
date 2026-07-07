@@ -1,7 +1,9 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "status": "temporary-generic-artwork",
-  "replacement_rule": "Replace files in addon destinations keeping filename and compatible proportions.",
+  "shared_resource_addon": "resource.images.saile",
+  "fixed_shared_asset_count": 9,
+  "replacement_rule": "Replace files keeping the canonical filename and compatible dimensions.",
   "assets": [
     {
       "source": "artwork/generic/repository.srepo/icon.png",
@@ -32,118 +34,6 @@
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.video.stv/resources/media/live_tv.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/live_tv.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/vod.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/vod.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/series.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/series.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/search.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/search.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/favorites.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/favorites.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/continue_watching.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/continue_watching.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/indexed_channels.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/indexed_channels.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/indexed_movies.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/indexed_movies.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/indexed_series.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/indexed_series.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/provider.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/provider.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/sync.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/sync.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/settings.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/settings.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/refresh.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/refresh.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/error.png",
-      "addon_id": "plugin.video.stv",
-      "role": "menu_icon",
-      "destination": "addons/plugin.video.stv/resources/media/error.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/placeholder_poster.png",
-      "addon_id": "plugin.video.stv",
-      "role": "fallback_poster",
-      "destination": "addons/plugin.video.stv/resources/media/placeholder_poster.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.video.stv/resources/media/placeholder_fanart.jpg",
-      "addon_id": "plugin.video.stv",
-      "role": "fallback_fanart",
-      "destination": "addons/plugin.video.stv/resources/media/placeholder_fanart.jpg",
-      "temporary": true
-    },
-    {
       "source": "artwork/generic/plugin.audio.sfy/icon.png",
       "addon_id": "plugin.audio.sfy",
       "role": "addon_icon",
@@ -158,115 +48,103 @@
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/top_brazil.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/top_brazil.png",
+      "source": "artwork/generic/resource.images.saile/icon.png",
+      "addon_id": "resource.images.saile",
+      "role": "addon_icon",
+      "destination": "addons/resource.images.saile/icon.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/top_world.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/top_world.png",
+      "source": "artwork/generic/resource.images.saile/fanart.jpg",
+      "addon_id": "resource.images.saile",
+      "role": "addon_fanart",
+      "destination": "addons/resource.images.saile/fanart.jpg",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/categories.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/categories.png",
+      "source": "artwork/generic/script.module.saile.core/icon.png",
+      "addon_id": "script.module.saile.core",
+      "role": "addon_icon",
+      "destination": "addons/script.module.saile.core/icon.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/playlists.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/playlists.png",
+      "source": "artwork/generic/script.module.saile.core/fanart.jpg",
+      "addon_id": "script.module.saile.core",
+      "role": "addon_fanart",
+      "destination": "addons/script.module.saile.core/fanart.jpg",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/albums.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/albums.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/common/search.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "common",
+      "destination": "addons/resource.images.saile/resources/media/common/search.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/singles.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/singles.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/common/erro.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "common",
+      "destination": "addons/resource.images.saile/resources/media/common/erro.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/artists.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/artists.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/common/check.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "common",
+      "destination": "addons/resource.images.saile/resources/media/common/check.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/search.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/search.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/common/sync.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "common",
+      "destination": "addons/resource.images.saile/resources/media/common/sync.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/favorites.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/favorites.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/sfy/minhas_playlists.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "sfy",
+      "destination": "addons/resource.images.saile/resources/media/sfy/minhas_playlists.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/history.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/history.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/stv/live.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "stv",
+      "destination": "addons/resource.images.saile/resources/media/stv/live.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/settings.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/settings.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/stv/vod.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "stv",
+      "destination": "addons/resource.images.saile/resources/media/stv/vod.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/refresh.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/refresh.png",
+      "source": "artwork/generic/resource.images.saile/resources/media/stv/series.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "stv",
+      "destination": "addons/resource.images.saile/resources/media/stv/series.png",
       "temporary": true
     },
     {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/error.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "menu_icon",
-      "destination": "addons/plugin.audio.sfy/resources/media/error.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/placeholder_album.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "fallback_album",
-      "destination": "addons/plugin.audio.sfy/resources/media/placeholder_album.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/placeholder_artist.png",
-      "addon_id": "plugin.audio.sfy",
-      "role": "fallback_artist",
-      "destination": "addons/plugin.audio.sfy/resources/media/placeholder_artist.png",
-      "temporary": true
-    },
-    {
-      "source": "artwork/generic/plugin.audio.sfy/resources/media/placeholder_fanart.jpg",
-      "addon_id": "plugin.audio.sfy",
-      "role": "fallback_fanart",
-      "destination": "addons/plugin.audio.sfy/resources/media/placeholder_fanart.jpg",
+      "source": "artwork/generic/resource.images.saile/resources/media/stv/favoritos.png",
+      "addon_id": "resource.images.saile",
+      "role": "shared_ui_asset",
+      "scope": "stv",
+      "destination": "addons/resource.images.saile/resources/media/stv/favoritos.png",
       "temporary": true
     }
   ]

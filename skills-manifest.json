@@ -1,9 +1,11 @@
 {
-  "project": "sRepo / sTv / sFy",
-  "version": "1.1.0",
-  "skill_count": 100,
+  "project": "sRepo / SAILE ecosystem",
+  "version": "2.0.0",
+  "skill_count": 105,
   "canonical_addon_ids": [
     "repository.srepo",
+    "resource.images.saile",
+    "script.module.saile.core",
     "plugin.video.stv",
     "plugin.audio.sfy"
   ],
@@ -329,6 +331,14 @@
       "mission": "Manter APIs usadas dentro da versão alvo e detectar diferenças sem gambiarras."
     },
     {
+      "id": "03.11",
+      "slug": "shared-python-module",
+      "title": "Módulo Python compartilhado",
+      "category": "kodi-core",
+      "path": ".agents/skills/03-kodi-core/shared-python-module/SKILL.md",
+      "mission": "Extrair somente infraestrutura estável para script.module.saile.core sem mover regras de negócio."
+    },
+    {
       "id": "04.01",
       "slug": "skin-independent-ui",
       "title": "UI independente de skin",
@@ -407,6 +417,14 @@
       "category": "kodi-ui",
       "path": ".agents/skills/04-kodi-ui-playback/performance-rendering/SKILL.md",
       "mission": "Evitar travamentos ao listar catálogos grandes."
+    },
+    {
+      "id": "04.11",
+      "slug": "shared-artwork-resource",
+      "title": "Recurso de imagens compartilhado",
+      "category": "kodi-ui",
+      "path": ".agents/skills/04-kodi-ui-playback/shared-artwork-resource/SKILL.md",
+      "mission": "Manter ícones fixos em resource.images.saile e conteúdo remoto fora do pacote."
     },
     {
       "id": "05.01",
@@ -489,6 +507,14 @@
       "mission": "Distinguir indisponibilidade temporária, credencial inválida e payload quebrado."
     },
     {
+      "id": "05.11",
+      "slug": "stv-navigation-contract",
+      "title": "Contrato de navegação sTv",
+      "category": "stv",
+      "path": ".agents/skills/05-stv-xtream/stv-navigation-contract/SKILL.md",
+      "mission": "Preservar a home e a ordem fixa Buscar/Favoritos em cada seção do sTv."
+    },
+    {
       "id": "06.01",
       "slug": "yt-dlp-embedding",
       "title": "Integração Python do yt-dlp",
@@ -539,10 +565,10 @@
     {
       "id": "06.07",
       "slug": "favorites-history",
-      "title": "Favoritos e histórico sFy",
+      "title": "Playlists e histórico sFy",
       "category": "sfy",
       "path": ".agents/skills/06-sfy-music/favorites-history/SKILL.md",
-      "mission": "Persistir músicas favoritas e reproduções recentes com limites de retenção."
+      "mission": "Persistir músicas em playlists locais e reproduções recentes, sem um domínio fixo de Favoritos."
     },
     {
       "id": "06.08",
@@ -555,10 +581,10 @@
     {
       "id": "06.09",
       "slug": "spotify-like-navigation",
-      "title": "Navegação inspirada em Spotify",
+      "title": "Navegação musical do sFy",
       "category": "sfy",
       "path": ".agents/skills/06-sfy-music/spotify-like-navigation/SKILL.md",
-      "mission": "Criar home com tops, categorias, playlists, favoritos e busca usando componentes Kodi."
+      "mission": "Preservar a home Buscar, Minhas Playlists e Sincronizar Dados antes de conteúdo dinâmico."
     },
     {
       "id": "06.10",
@@ -567,6 +593,14 @@
       "category": "sfy",
       "path": ".agents/skills/06-sfy-music/sfy-cache-resilience/SKILL.md",
       "mission": "Cachear resultados e metadados sem armazenar URLs temporárias expiradas."
+    },
+    {
+      "id": "06.11",
+      "slug": "sfy-navigation-contract",
+      "title": "Contrato de navegação sFy",
+      "category": "sfy",
+      "path": ".agents/skills/06-sfy-music/sfy-navigation-contract/SKILL.md",
+      "mission": "Preservar Buscar, Minhas Playlists e Sincronizar Dados no topo da home do sFy."
     },
     {
       "id": "07.01",
@@ -807,13 +841,21 @@
       "category": "quality",
       "path": ".agents/skills/09-quality-security/incident-diagnostics/SKILL.md",
       "mission": "Coletar evidências úteis sem pedir ou expor credenciais do usuário."
+    },
+    {
+      "id": "09.11",
+      "slug": "manual-lan-sync",
+      "title": "Sincronização LAN manual",
+      "category": "quality",
+      "path": ".agents/skills/09-quality-security/manual-lan-sync/SKILL.md",
+      "mission": "Sincronizar registros entre dispositivos somente por ação explícita, sem compartilhar SQLite ou segredos."
     }
   ],
   "artwork_pack": {
-    "status": "temporary-generic-artwork",
     "manifest": "artwork/artwork-manifest.json",
     "catalog": "docs/ui/ARTWORK_CATALOG.md",
-    "asset_count": 38,
-    "rule": "Copy assets to addon destinations during scaffolding; replace later without breaking filenames or references."
+    "shared_addon": "resource.images.saile",
+    "fixed_shared_assets": 9,
+    "temporary": true
   }
 }

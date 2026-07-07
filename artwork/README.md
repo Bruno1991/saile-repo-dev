@@ -1,31 +1,8 @@
-# Pacote de artes genéricas
+# Artwork genérico temporário
 
-Este diretório contém artes temporárias prontas para evitar ícones ausentes durante o desenvolvimento de `repository.srepo`, `plugin.video.stv` e `plugin.audio.sfy`.
+Esta pasta é a fonte de bootstrap. O runtime nunca aponta diretamente para ela.
 
-## Regra de uso
-
-1. Copie cada arquivo para o destino indicado em `artwork-manifest.json`.
-2. Não renomeie os arquivos usados pelo código ou pelo `addon.xml` sem atualizar todas as referências.
-3. As artes são placeholders e devem ser substituídas pela identidade visual final.
-4. Ao substituir, preserve proporção, formato e finalidade:
-   - `icon.png`: quadrado, PNG;
-   - `fanart.jpg`: 16:9, JPG;
-   - ícones de menu: quadrados, PNG;
-   - pôster: proporção vertical;
-   - capa de álbum/artista: quadrada.
-5. O build não pode publicar um add-on sem `icon.png` e `fanart.jpg`.
-
-## Estrutura
-
-```text
-artwork/
-├── artwork-manifest.json
-└── generic/
-    ├── repository.srepo/
-    ├── plugin.video.stv/
-    │   └── resources/media/
-    └── plugin.audio.sfy/
-        └── resources/media/
-```
-
-Consulte `docs/ui/ARTWORK_CATALOG.md` para o catálogo completo e as regras de fallback.
+- `repository.srepo`, `plugin.video.stv`, `plugin.audio.sfy`, `resource.images.saile` e `script.module.saile.core` possuem `icon.png` e `fanart.jpg` genéricos.
+- Os nove ícones fixos estão em `artwork/generic/resource.images.saile/resources/media/`.
+- `python tools/bootstrap_artwork.py` copia cada arquivo para o destino descrito em `artwork/artwork-manifest.json`.
+- Artes finais podem substituir os arquivos mantendo nomes e proporções.

@@ -1,10 +1,9 @@
-# ADR-0006 — Sincronização LAN manual e adiada
+# ADR 0006 — Sincronização LAN manual e adiada
 
 ## Status
-Aceito como direção futura
+
+Aceito; item de navegação presente, implementação funcional na V2.
 
 ## Decisão
-A V1 não depende de sincronização LAN. Se implementada, será iniciada manualmente pelo usuário, por addon, com troca de registros e resolução de conflitos.
 
-## Consequências
-Nunca montar/abrir o mesmo SQLite simultaneamente por rede.
+sTv e sFy exibem `Sincronizar Dados`, mas nenhuma sincronização ocorre sem ação do usuário. A futura implementação troca registros e nunca compartilha o arquivo SQLite.

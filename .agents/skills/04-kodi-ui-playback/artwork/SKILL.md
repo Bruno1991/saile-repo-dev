@@ -34,14 +34,14 @@ Ative esta skill quando a tarefa envolver **artwork e fallbacks** ou quando a mu
 3. **Definir fallback do addon**: produza uma decisão concreta, registre o arquivo/componente afetado e defina como verificar o resultado.
 4. **Não baixar durante cada render**: produza uma decisão concreta, registre o arquivo/componente afetado e defina como verificar o resultado.
 5. **Limpar cache por ttl**: produza uma decisão concreta, registre o arquivo/componente afetado e defina como verificar o resultado.
-6. **Aplicar pacote genérico**: leia `artwork/artwork-manifest.json`, copie assets ausentes para `addons/<addon-id>/` e valide dimensões/formato.
+6. **Aplicar pacote genérico**: leia `artwork/artwork-manifest.json`, copie assets ausentes para o add-on de destino definido no manifesto e valide dimensões/formato.
 7. **Bloquear arte ausente**: trate `icon.png`, `fanart.jpg` e fallbacks declarados como requisito de build.
 
 ## Regras específicas do projeto
 
 - A interface deve funcionar no skin Estuary e em skins de terceiros sem depender de propriedades privadas.
 - Não usar emojis como ícones; usar PNGs do projeto via `setArt` e fallback seguro.
-- O pacote `artwork/generic/` é a fonte oficial de placeholders temporários; o runtime usa somente as cópias dentro do add-on.
+- O pacote `artwork/generic/` é a fonte oficial de placeholders temporários; o runtime usa os nove assets fixos instalados por `resource.images.saile`; cada add-on mantém apenas seu `icon.png` e `fanart.jpg` próprios.
 - Consulte `docs/ui/ARTWORK_CATALOG.md` para nomes, dimensões, destinos e ordem de fallback.
 - Operações lentas exibem progresso cancelável; trabalho pesado não roda repetidamente durante renderização de cada item.
 - Reprodução usa URL resolvida no último momento e não persiste URLs temporárias como se fossem permanentes.

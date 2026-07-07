@@ -31,32 +31,8 @@ class XtreamClient:
         }
         return self.http.get_json(f"{self.host}/player_api.php?{urlencode(query)}")
 
-    def get_live_categories(self) -> list[dict[str, object]]:
-        res = self.request("get_live_categories")
-        return res if isinstance(res, list) else []
-
-    def get_live_streams(self) -> list[dict[str, object]]:
-        res = self.request("get_live_streams")
-        return res if isinstance(res, list) else []
-
-    def get_vod_categories(self) -> list[dict[str, object]]:
-        res = self.request("get_vod_categories")
-        return res if isinstance(res, list) else []
-
-    def get_vod_streams(self) -> list[dict[str, object]]:
-        res = self.request("get_vod_streams")
-        return res if isinstance(res, list) else []
-
-    def get_series_categories(self) -> list[dict[str, object]]:
-        res = self.request("get_series_categories")
-        return res if isinstance(res, list) else []
-
-    def get_series(self) -> list[dict[str, object]]:
-        res = self.request("get_series")
-        return res if isinstance(res, list) else []
-
     def stream_url(self, media_type: str, stream_id: str, extension: str = "") -> str:
         roots = {"live": "live", "vod": "movie", "series": "series"}
-        root = roots.get(media_type, "live")
+        root = roots[media_type]
         ext = extension.lstrip(".") or ("ts" if media_type == "live" else "mp4")
         return f"{self.host}/{root}/{self.username}/{self.password}/{stream_id}.{ext}"

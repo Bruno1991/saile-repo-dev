@@ -1,17 +1,19 @@
 # Matriz de rastreabilidade
 
-| Capacidade | Addon | Skills principais | Persistência | Fase |
+| Capacidade | Componente | Persistência | Fase | Evidência mínima |
 |---|---|---|---|---|
-| Provedor Xtream, login e senha | sTv | xtream-configuration, settings-xml, env-secrets | settings Kodi | V1 |
-| TV ao vivo | sTv | live-tv, video-playback, xtream-client | categories, live_streams | V1 |
-| VOD | sTv | vod, movie-matching, images-hd | vod_items, metadata_cache, playback_progress | V1 |
-| Séries | sTv | series, tv-matching, continue-watching | series, seasons, episodes, playback_progress | V1 |
-| Busca/favoritos sTv | sTv | stv-search, stv-favorites, fts-search | favorites, FTS/fallback | V1 |
-| Top Brasil/Mundo | sFy | charts, sfy-cache-resilience | charts_cache | V1 |
-| Categorias | sFy | categories, spotify-like-navigation | music_categories | V1 |
-| Minhas playlists | sFy | playlists, favorites-history | playlists, playlist_items | V1 |
-| Busca e reprodução musical | sFy | sfy-search, yt-dlp-embedding, stream-resolution, audio-playback | search_cache, tracks | V1 |
-| Capas e metadata | sFy | music-metadata, artwork | tracks/artwork cache | V1 |
-| TMDB HD e sinopse | sTv | tmdb-client, movie-matching, tv-matching, images-hd | metadata_cache | V1 |
-| Repositório e updates | sRepo | repository-addon, zip-packaging, addons-xml, checksums, github-pages | artefatos estáticos | V1 |
-| Sincronização LAN manual | sTv/sFy | local-first-constitution, schema-versioning, security-review | journal de mudanças/export | V2 opcional |
+| Distribuição/updates | `repository.srepo` | artefatos estáticos | V1 | ZIP, addons.xml, checksum |
+| Nove artes fixas | `resource.images.saile` | arquivos locais | V1 | manifesto + teste de existência |
+| Infra comum | `script.module.saile.core` | nenhuma de domínio | V1 | teste de dependências/import |
+| Home sTv | `plugin.video.stv` | nenhuma | V1 | ordem coberta por teste |
+| Buscar/Favoritos por seção | `plugin.video.stv` | favorites/FTS | V1 | ordem + filtro por seção |
+| Xtream | `plugin.video.stv` | catálogo/cache | V1 | fixtures sanitizadas + Kodi real |
+| TMDB | `plugin.video.stv` | metadata cache | V1 | matching e fallback |
+| Home sFy | `plugin.audio.sfy` | nenhuma | V1 | ordem coberta por teste |
+| Minhas Playlists | `plugin.audio.sfy` | playlists/playlist_tracks | V1 | CRUD e preservação em migração |
+| yt-dlp | sFy, inicialmente interno | tracks/cache | prova técnica | reprodução em Windows/Linux/Android/Fire TV |
+| `script.module.saile.ytdlp` | módulo futuro | nenhuma | condicionado | ADR após prova técnica |
+| Sincronização LAN manual | sTv/sFy | journal/export | V2 | ação explícita + conflito testado |
+| Diagnóstico seguro | core/plugins | pacote sanitizado | V2 | teste de redaction |
+| Serviço de monitoramento | futuro | a definir | futuro | necessidade comprovada |
+| PVR avançado | futuro | M3U/XMLTV local | futuro | ADR e teste multiplataforma |

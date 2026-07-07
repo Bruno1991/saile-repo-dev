@@ -1,34 +1,31 @@
-# Política de `.env`, APIs e segredos
+# Política de segurança, `.env` e dados locais
 
-## Classificação
+## `.env`
 
-| Valor | Onde pode existir | Pode ir para Git? | Pode ir no ZIP? |
-|---|---|---:|---:|
-| GitHub PAT | `.env` local ou GitHub Secret | não | não |
-| `GITHUB_TOKEN` de Actions | contexto do workflow | não | não |
-| TMDB bearer token dedicado | `.env` local; estratégia runtime documentada | não como segredo real | somente se o risco for aceito e a credencial for dedicada |
-| Xtream host/usuário/senha | settings do usuário no Kodi | não | não |
-| cookies do yt-dlp | armazenamento local do usuário, opcional | não | não |
-| URLs temporárias de mídia | memória/cache curtíssimo | não | não |
+O `.env` existe apenas na estação de desenvolvimento. Ele não é copiado para add-ons, ZIPs ou GitHub Pages. O runtime Kodi não pode depender dele.
 
-## Limitação inevitável do cliente local
+## Credenciais
 
-Um segredo usado diretamente por software distribuído ao usuário pode ser extraído. Como o projeto não terá backend próprio, o agente não deve fingir que um token TMDB embutido permanece secreto. A opção preferida é permitir token do usuário. Caso o projeto forneça um token padrão, ele deve ser dedicado, de baixo impacto, monitorado e substituível.
+- GitHub PAT: somente administração/build local; preferir GitHub Actions Secrets.
+- Xtream: informado pelo usuário nas configurações do sTv.
+- TMDB: configuração dedicada de escopo mínimo; qualquer valor distribuído no cliente é recuperável.
+- Cookies/tokens de fonte musical: não publicar, não logar e não sincronizar.
 
-## GitHub
+## Sincronização LAN
 
-O PAT de administração serve apenas para operações locais autorizadas. Em CI, preferir o `GITHUB_TOKEN` automático com permissões mínimas (`contents: read`, `pages: write`, `id-token: write`) e ambientes protegidos. Nenhum addon precisa falar com a API GitHub para funcionar; ele acessa somente os arquivos estáticos do repositório.
+É proibido transmitir:
 
-## `.env.example`
+- host, usuário ou senha Xtream;
+- token TMDB;
+- cookies;
+- URLs temporárias de mídia;
+- conteúdo do `.env`;
+- arquivo SQLite completo.
 
-O arquivo de exemplo contém nomes e comentários, nunca valores reais:
+## Logs e diagnóstico
 
-```dotenv
-TMDB_BEARER_TOKEN=
-GITHUB_PAT=
-SREPO_PAGES_BASE_URL=
-```
+Sanitizar query strings, headers, usernames, paths pessoais e payloads externos. Pacotes de diagnóstico incluem somente versões, capacidades, schemas e logs redigidos.
 
-## Redação de logs
+## Build
 
-Mascarar chaves e query params como `username`, `password`, `api_key`, `token`, `sig`, `expire`, `authorization` e cookies. Não registrar resposta integral de endpoints de autenticação.
+O build falha se encontrar `.env`, `.git`, `.db`, `.sqlite`, cookies, logs, `__pycache__`, `.pyc` ou padrões conhecidos de segredo dentro dos add-ons/ZIPs.

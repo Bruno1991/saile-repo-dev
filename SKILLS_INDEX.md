@@ -1,4 +1,4 @@
-# Índice das 100 skills
+# Índice das 105 skills
 
 | ID | Categoria | Skill | Missão |
 |---|---|---|---|
@@ -42,6 +42,7 @@
 | 03.08 | kodi-core | [Integração de logs Kodi](.agents/skills/03-kodi-core/kodi-logging/SKILL.md) | Encapsular xbmc.log com prefixo, níveis e sanitização. |
 | 03.09 | kodi-core | [Serviço opcional](.agents/skills/03-kodi-core/service-addon/SKILL.md) | Decidir quando tarefas em segundo plano justificam service.py sem manter daemon desnecessário. |
 | 03.10 | kodi-core | [Compatibilidade Kodi](.agents/skills/03-kodi-core/compatibility/SKILL.md) | Manter APIs usadas dentro da versão alvo e detectar diferenças sem gambiarras. |
+| 03.11 | kodi-core | [Módulo Python compartilhado](.agents/skills/03-kodi-core/shared-python-module/SKILL.md) | Extrair somente infraestrutura estável para script.module.saile.core sem mover regras de negócio. |
 | 04.01 | kodi-ui | [UI independente de skin](.agents/skills/04-kodi-ui-playback/skin-independent-ui/SKILL.md) | Criar experiência consistente usando recursos públicos do Kodi. |
 | 04.02 | kodi-ui | [Artwork e fallbacks](.agents/skills/04-kodi-ui-playback/artwork/SKILL.md) | Selecionar thumb, icon, poster, fanart e fallback sem imagens quebradas. |
 | 04.03 | kodi-ui | [Menus de contexto](.agents/skills/04-kodi-ui-playback/context-menus/SKILL.md) | Adicionar favorito, remover, marcar visto e atualizar sem poluir navegação. |
@@ -52,6 +53,7 @@
 | 04.08 | kodi-ui | [Reprodução de vídeo](.agents/skills/04-kodi-ui-playback/video-playback/SKILL.md) | Configurar live, filmes e episódios com propriedades adequadas. |
 | 04.09 | kodi-ui | [Continuar assistindo](.agents/skills/04-kodi-ui-playback/continue-watching/SKILL.md) | Capturar e restaurar progresso sem sobrescrever estado concluído incorretamente. |
 | 04.10 | kodi-ui | [Desempenho de renderização](.agents/skills/04-kodi-ui-playback/performance-rendering/SKILL.md) | Evitar travamentos ao listar catálogos grandes. |
+| 04.11 | kodi-ui | [Recurso de imagens compartilhado](.agents/skills/04-kodi-ui-playback/shared-artwork-resource/SKILL.md) | Manter ícones fixos em resource.images.saile e conteúdo remoto fora do pacote. |
 | 05.01 | stv | [Configuração Xtream](.agents/skills/05-stv-xtream/xtream-configuration/SKILL.md) | Ler e validar host, login e senha do sTv sem expor credenciais. |
 | 05.02 | stv | [Cliente Xtream](.agents/skills/05-stv-xtream/xtream-client/SKILL.md) | Centralizar chamadas player_api.php e respostas do provider. |
 | 05.03 | stv | [Sincronização de catálogo](.agents/skills/05-stv-xtream/xtream-catalog-sync/SKILL.md) | Atualizar categorias, live, VOD e séries em etapas transacionais. |
@@ -62,16 +64,18 @@
 | 05.08 | stv | [Favoritos sTv](.agents/skills/05-stv-xtream/stv-favorites/SKILL.md) | Gerenciar favoritos de canais, filmes e séries sem depender do catálogo atual. |
 | 05.09 | stv | [Progresso sTv](.agents/skills/05-stv-xtream/stv-continue-watching/SKILL.md) | Manter continuar assistindo para VOD e episódios, nunca para live simples. |
 | 05.10 | stv | [Resiliência do provider](.agents/skills/05-stv-xtream/stv-provider-resilience/SKILL.md) | Distinguir indisponibilidade temporária, credencial inválida e payload quebrado. |
+| 05.11 | stv | [Contrato de navegação sTv](.agents/skills/05-stv-xtream/stv-navigation-contract/SKILL.md) | Preservar a home e a ordem fixa Buscar/Favoritos em cada seção do sTv. |
 | 06.01 | sfy | [Integração Python do yt-dlp](.agents/skills/06-sfy-music/yt-dlp-embedding/SKILL.md) | Usar `yt_dlp.YoutubeDL` por API Python com opções mínimas e logger adaptado. |
 | 06.02 | sfy | [Resolução de stream musical](.agents/skills/06-sfy-music/stream-resolution/SKILL.md) | Selecionar URL temporária de áudio adequada para o player Kodi. |
 | 06.03 | sfy | [Busca musical](.agents/skills/06-sfy-music/sfy-search/SKILL.md) | Pesquisar faixas, artistas, álbuns e playlists com resultados normalizados. |
 | 06.04 | sfy | [Tops Brasil e Mundo](.agents/skills/06-sfy-music/charts/SKILL.md) | Representar rankings como fontes configuráveis e cacheáveis, não hardcode espalhado. |
 | 06.05 | sfy | [Categorias musicais](.agents/skills/06-sfy-music/categories/SKILL.md) | Mapear gêneros e moods a consultas ou playlists de origem documentada. |
 | 06.06 | sfy | [Minhas playlists](.agents/skills/06-sfy-music/playlists/SKILL.md) | Criar playlists locais compostas por referências normalizadas de faixa. |
-| 06.07 | sfy | [Favoritos e histórico sFy](.agents/skills/06-sfy-music/favorites-history/SKILL.md) | Persistir músicas favoritas e reproduções recentes com limites de retenção. |
+| 06.07 | sfy | [Playlists e histórico sFy](.agents/skills/06-sfy-music/favorites-history/SKILL.md) | Persistir músicas em playlists locais e reproduções recentes, sem um domínio fixo de Favoritos. |
 | 06.08 | sfy | [Metadados musicais](.agents/skills/06-sfy-music/music-metadata/SKILL.md) | Preencher título, artista, álbum, duração, thumb e origem sem inventar dados. |
-| 06.09 | sfy | [Navegação inspirada em Spotify](.agents/skills/06-sfy-music/spotify-like-navigation/SKILL.md) | Criar home com tops, categorias, playlists, favoritos e busca usando componentes Kodi. |
+| 06.09 | sfy | [Navegação musical do sFy](.agents/skills/06-sfy-music/spotify-like-navigation/SKILL.md) | Preservar a home Buscar, Minhas Playlists e Sincronizar Dados antes de conteúdo dinâmico. |
 | 06.10 | sfy | [Cache e resiliência sFy](.agents/skills/06-sfy-music/sfy-cache-resilience/SKILL.md) | Cachear resultados e metadados sem armazenar URLs temporárias expiradas. |
+| 06.11 | sfy | [Contrato de navegação sFy](.agents/skills/06-sfy-music/sfy-navigation-contract/SKILL.md) | Preservar Buscar, Minhas Playlists e Sincronizar Dados no topo da home do sFy. |
 | 07.01 | metadata | [Autenticação TMDB](.agents/skills/07-metadata-search/tmdb-auth/SKILL.md) | Carregar token de desenvolvimento com segurança e definir estratégia de runtime local. |
 | 07.02 | metadata | [Cliente TMDB](.agents/skills/07-metadata-search/tmdb-client/SKILL.md) | Centralizar autenticação, idioma, região, timeout, cache e erros. |
 | 07.03 | metadata | [Correspondência de filmes](.agents/skills/07-metadata-search/movie-matching/SKILL.md) | Encontrar filme por título e ano com score de confiança. |
@@ -102,3 +106,4 @@
 | 09.08 | quality | [Orçamento de desempenho](.agents/skills/09-quality-security/performance-budget/SKILL.md) | Definir limites para home, listagem, busca, sync e abertura do banco. |
 | 09.09 | quality | [Revisão de segurança](.agents/skills/09-quality-security/security-review/SKILL.md) | Revisar entrada, URLs, arquivos, logs, dependências e publicação. |
 | 09.10 | quality | [Diagnóstico de incidentes](.agents/skills/09-quality-security/incident-diagnostics/SKILL.md) | Coletar evidências úteis sem pedir ou expor credenciais do usuário. |
+| 09.11 | quality | [Sincronização LAN manual](.agents/skills/09-quality-security/manual-lan-sync/SKILL.md) | Sincronizar registros entre dispositivos somente por ação explícita, sem compartilhar SQLite ou segredos. |

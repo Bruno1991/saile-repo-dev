@@ -1,66 +1,85 @@
 from __future__ import annotations
 
+from stv.navigation_contract import HOME_ENTRIES, SECTION_FIXED_ENTRIES, VALID_SECTIONS
 from stv.routing import Request
 
 
-def run(argv: list[str]) -> None:
-    """Kodi entrypoint. Kodi-only imports stay inside the runtime boundary."""
-    import xbmcaddon
-    import xbmcgui
-    import xbmcplugin
+def _icon(scope: str, filename: str) -> str:
+    from saile_core.artwork import artwork_path
 
+    return artwork_path(scope, filename)
+
+
+def _show_home(request: Request, fanart: str) -> None:
     from stv.ui.directory import add_folder, finish_directory
+
+    for label, action, section, scope, filename in HOME_ENTRIES:
+        url = request.url(action=action, section=section) if section else request.url(action=action)
+        add_folder(request.handle, label, url, _icon(scope, filename), fanart)
+    finish_directory(request.handle, "videos")
+
+
+def _show_section(request: Request, section: str, fanart: str) -> None:
+    from stv.ui.directory import add_folder, finish_directory
+
+    # 1. Fixed navigation items
+    for label, action, scope, filename in SECTION_FIXED_ENTRIES:
+        add_folder(
+            request.handle,
+            label,
+            request.url(action=action, section=section),
+            _icon(scope, filename),
+            fanart,
+        )
+        
+    # 2. Categorias e itens dinâmicos (Hooks preparados para o SQLite/Xtream)
+    # Por hora adicionamos stubs simulando categorias do banco
+    dynamic_categories = [
+        {"label": f"Categoria 1 ({section})", "action": "category", "id": "1"},
+        {"label": f"Categoria 2 ({section})", "action": "category", "id": "2"},
+    ]
+    for cat in dynamic_categories:
+        add_folder(
+            request.handle,
+            cat["label"],
+            request.url(action=cat["action"], section=section, category_id=cat["id"]),
+            _icon("common", "check.png"),  # Placeholder artwork
+            fanart,
+        )
+
+    finish_directory(request.handle, "videos")
+
+
+def run(argv: list[str]) -> None:
+    """Entrypoint estrutural com o contrato oficial de navegação do sTv."""
+    import xbmcaddon
+
+    from saile_core.notifications import notify_info
 
     request = Request.from_argv(argv)
     addon = xbmcaddon.Addon()
-    media = addon.getAddonInfo("path") + "/resources/media/"
+    fanart = addon.getAddonInfo("fanart")
 
-    # This bootstrap is intentionally small: it proves installation, routing and artwork.
-    # Feature implementation belongs in app/providers/persistence modules.
-    if request.action == "open_settings":
-        addon.openSettings()
+    if request.action in {"", "home"}:
+        _show_home(request, fanart)
         return
 
-    from stv.ui.views import render_categories, render_items, action_play, action_sync, get_db
-
-    if request.action in ("home", ""):
-        get_db().initialize()
-        entries = (
-            ("TV ao vivo", "live", "live_tv.png"),
-            ("Filmes (VOD)", "vod", "vod.png"),
-            ("Séries", "series", "series.png"),
-            ("Busca", "search", "search.png"),
-            ("Favoritos", "favorites", "favorites.png"),
-            ("Continuar assistindo", "continue", "continue_watching.png"),
-            ("Sincronizar catálogo Xtream", "sync", "sync.png"),
-            ("Sincronizar aparelhos (LAN)", "sync_lan", "sync.png"),
-            ("Configurações", "open_settings", "settings.png"),
-        )
-        for label, action, icon in entries:
-            add_folder(request.handle, label, request.url(action=action), media + icon, addon.getAddonInfo("fanart"))
-        finish_directory(request.handle, "videos")
-        return
+    if request.action == "section":
+        section = request.params.get("section", "")
+        if section in VALID_SECTIONS:
+            _show_section(request, section, fanart)
+            return
 
     if request.action == "sync":
-        action_sync()
+        notify_info("sTv", "Sincronização LAN manual ainda não implementada")
+        _show_home(request, fanart)
         return
 
-    if request.action == "sync_lan":
-        from stv.ui.views import action_sync_lan
-        action_sync_lan()
-        return
+    if request.action in {"search", "favorites"}:
+        notify_info("sTv", "Rota estrutural ainda não implementada")
+        section = request.params.get("section", "")
+        if section in VALID_SECTIONS:
+            _show_section(request, section, fanart)
+            return
 
-    if request.action in ("live", "vod"):
-        render_categories(request, request.action)
-        return
-
-    if request.action in ("list_live", "list_vod"):
-        media_type = "live" if request.action == "list_live" else "vod"
-        render_items(request, media_type, request.params.get("category_id", ""))
-        return
-
-    if request.action == "play":
-        action_play(request)
-        return
-
-    xbmcgui.Dialog().notification("sTv", "Rota estrutural ainda não implementada")
+    _show_home(request, fanart)

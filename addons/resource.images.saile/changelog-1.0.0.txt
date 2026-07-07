@@ -1,0 +1,5 @@
+1.0.0
+- Pacote inicial de artes compartilhadas.
+- Common: search, erro, check e sync.
+- sFy: minhas_playlists.
+- sTv: live, vod, series e favoritos.

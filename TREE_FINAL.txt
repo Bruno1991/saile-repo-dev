@@ -1,4 +1,4 @@
-saile-repo-dev-organizado/
+saile_repo_v2/
 ├── .agents/
 │   └── skills/
 │       ├── 00-governance/
@@ -83,6 +83,8 @@ saile-repo-dev-organizado/
 │       │   │   └── SKILL.md
 │       │   ├── settings-xml/
 │       │   │   └── SKILL.md
+│       │   ├── shared-python-module/
+│       │   │   └── SKILL.md
 │       │   └── special-paths/
 │       │       └── SKILL.md
 │       ├── 04-kodi-ui-playback/
@@ -102,6 +104,8 @@ saile-repo-dev-organizado/
 │       │   │   └── SKILL.md
 │       │   ├── search-dialogs/
 │       │   │   └── SKILL.md
+│       │   ├── shared-artwork-resource/
+│       │   │   └── SKILL.md
 │       │   ├── skin-independent-ui/
 │       │   │   └── SKILL.md
 │       │   └── video-playback/
@@ -114,6 +118,8 @@ saile-repo-dev-organizado/
 │       │   ├── stv-continue-watching/
 │       │   │   └── SKILL.md
 │       │   ├── stv-favorites/
+│       │   │   └── SKILL.md
+│       │   ├── stv-navigation-contract/
 │       │   │   └── SKILL.md
 │       │   ├── stv-provider-resilience/
 │       │   │   └── SKILL.md
@@ -139,6 +145,8 @@ saile-repo-dev-organizado/
 │       │   ├── playlists/
 │       │   │   └── SKILL.md
 │       │   ├── sfy-cache-resilience/
+│       │   │   └── SKILL.md
+│       │   ├── sfy-navigation-contract/
 │       │   │   └── SKILL.md
 │       │   ├── sfy-search/
 │       │   │   └── SKILL.md
@@ -201,6 +209,8 @@ saile-repo-dev-organizado/
 │           │   └── SKILL.md
 │           ├── kodi-stubs/
 │           │   └── SKILL.md
+│           ├── manual-lan-sync/
+│           │   └── SKILL.md
 │           ├── manual-test-matrix/
 │           │   └── SKILL.md
 │           ├── performance-budget/
@@ -247,30 +257,15 @@ saile-repo-dev-organizado/
 │   │   │   │   │   │   └── directory.py
 │   │   │   │   │   ├── __init__.py
 │   │   │   │   │   ├── bootstrap.py
+│   │   │   │   │   ├── navigation_contract.py
 │   │   │   │   │   └── routing.py
 │   │   │   │   └── vendor/
 │   │   │   │       ├── .gitkeep
 │   │   │   │       └── README.md
-│   │   │   ├── media/
-│   │   │   │   ├── albums.png
-│   │   │   │   ├── artists.png
-│   │   │   │   ├── categories.png
-│   │   │   │   ├── error.png
-│   │   │   │   ├── favorites.png
-│   │   │   │   ├── history.png
-│   │   │   │   ├── placeholder_album.png
-│   │   │   │   ├── placeholder_artist.png
-│   │   │   │   ├── placeholder_fanart.jpg
-│   │   │   │   ├── playlists.png
-│   │   │   │   ├── refresh.png
-│   │   │   │   ├── search.png
-│   │   │   │   ├── settings.png
-│   │   │   │   ├── singles.png
-│   │   │   │   ├── top_brazil.png
-│   │   │   │   └── top_world.png
 │   │   │   └── settings.xml
 │   │   ├── addon.xml
 │   │   ├── changelog-0.1.0.txt
+│   │   ├── changelog-0.2.0.txt
 │   │   ├── default.py
 │   │   ├── fanart.jpg
 │   │   └── icon.png
@@ -308,31 +303,49 @@ saile-repo-dev-organizado/
 │   │   │   │       │   └── directory.py
 │   │   │   │       ├── __init__.py
 │   │   │   │       ├── bootstrap.py
+│   │   │   │       ├── navigation_contract.py
 │   │   │   │       └── routing.py
-│   │   │   ├── media/
-│   │   │   │   ├── continue_watching.png
-│   │   │   │   ├── error.png
-│   │   │   │   ├── favorites.png
-│   │   │   │   ├── indexed_channels.png
-│   │   │   │   ├── indexed_movies.png
-│   │   │   │   ├── indexed_series.png
-│   │   │   │   ├── live_tv.png
-│   │   │   │   ├── placeholder_fanart.jpg
-│   │   │   │   ├── placeholder_poster.png
-│   │   │   │   ├── provider.png
-│   │   │   │   ├── refresh.png
-│   │   │   │   ├── search.png
-│   │   │   │   ├── series.png
-│   │   │   │   ├── settings.png
-│   │   │   │   ├── sync.png
-│   │   │   │   └── vod.png
 │   │   │   └── settings.xml
 │   │   ├── addon.xml
 │   │   ├── changelog-0.1.0.txt
+│   │   ├── changelog-0.2.0.txt
 │   │   ├── default.py
 │   │   ├── fanart.jpg
 │   │   └── icon.png
-│   └── repository.srepo/
+│   ├── repository.srepo/
+│   │   ├── addon.xml
+│   │   ├── changelog-1.0.0.txt
+│   │   ├── changelog-1.1.0.txt
+│   │   ├── fanart.jpg
+│   │   └── icon.png
+│   ├── resource.images.saile/
+│   │   ├── resources/
+│   │   │   └── media/
+│   │   │       ├── common/
+│   │   │       │   ├── check.png
+│   │   │       │   ├── erro.png
+│   │   │       │   ├── search.png
+│   │   │       │   └── sync.png
+│   │   │       ├── sfy/
+│   │   │       │   └── minhas_playlists.png
+│   │   │       └── stv/
+│   │   │           ├── favoritos.png
+│   │   │           ├── live.png
+│   │   │           ├── series.png
+│   │   │           └── vod.png
+│   │   ├── addon.xml
+│   │   ├── changelog-1.0.0.txt
+│   │   ├── fanart.jpg
+│   │   └── icon.png
+│   └── script.module.saile.core/
+│       ├── lib/
+│       │   └── saile_core/
+│       │       ├── __init__.py
+│       │       ├── artwork.py
+│       │       ├── capabilities.py
+│       │       ├── errors.py
+│       │       ├── notifications.py
+│       │       └── paths.py
 │       ├── addon.xml
 │       ├── changelog-1.0.0.txt
 │       ├── fanart.jpg
@@ -341,47 +354,33 @@ saile-repo-dev-organizado/
 │   ├── generic/
 │   │   ├── plugin.audio.sfy/
 │   │   │   ├── resources/
-│   │   │   │   └── media/
-│   │   │   │       ├── albums.png
-│   │   │   │       ├── artists.png
-│   │   │   │       ├── categories.png
-│   │   │   │       ├── error.png
-│   │   │   │       ├── favorites.png
-│   │   │   │       ├── history.png
-│   │   │   │       ├── placeholder_album.png
-│   │   │   │       ├── placeholder_artist.png
-│   │   │   │       ├── placeholder_fanart.jpg
-│   │   │   │       ├── playlists.png
-│   │   │   │       ├── refresh.png
-│   │   │   │       ├── search.png
-│   │   │   │       ├── settings.png
-│   │   │   │       ├── singles.png
-│   │   │   │       ├── top_brazil.png
-│   │   │   │       └── top_world.png
 │   │   │   ├── fanart.jpg
 │   │   │   └── icon.png
 │   │   ├── plugin.video.stv/
 │   │   │   ├── resources/
-│   │   │   │   └── media/
-│   │   │   │       ├── continue_watching.png
-│   │   │   │       ├── error.png
-│   │   │   │       ├── favorites.png
-│   │   │   │       ├── indexed_channels.png
-│   │   │   │       ├── indexed_movies.png
-│   │   │   │       ├── indexed_series.png
-│   │   │   │       ├── live_tv.png
-│   │   │   │       ├── placeholder_fanart.jpg
-│   │   │   │       ├── placeholder_poster.png
-│   │   │   │       ├── provider.png
-│   │   │   │       ├── refresh.png
-│   │   │   │       ├── search.png
-│   │   │   │       ├── series.png
-│   │   │   │       ├── settings.png
-│   │   │   │       ├── sync.png
-│   │   │   │       └── vod.png
 │   │   │   ├── fanart.jpg
 │   │   │   └── icon.png
-│   │   └── repository.srepo/
+│   │   ├── repository.srepo/
+│   │   │   ├── fanart.jpg
+│   │   │   └── icon.png
+│   │   ├── resource.images.saile/
+│   │   │   ├── resources/
+│   │   │   │   └── media/
+│   │   │   │       ├── common/
+│   │   │   │       │   ├── check.png
+│   │   │   │       │   ├── erro.png
+│   │   │   │       │   ├── search.png
+│   │   │   │       │   └── sync.png
+│   │   │   │       ├── sfy/
+│   │   │   │       │   └── minhas_playlists.png
+│   │   │   │       └── stv/
+│   │   │   │           ├── favoritos.png
+│   │   │   │           ├── live.png
+│   │   │   │           ├── series.png
+│   │   │   │           └── vod.png
+│   │   │   ├── fanart.jpg
+│   │   │   └── icon.png
+│   │   └── script.module.saile.core/
 │   │       ├── fanart.jpg
 │   │       └── icon.png
 │   ├── artwork-manifest.json
@@ -389,22 +388,50 @@ saile-repo-dev-organizado/
 ├── docs/
 │   ├── architecture/
 │   │   ├── .gitkeep
-│   │   └── REPOSITORY_LAYOUT.md
+│   │   ├── CACHE_POLICY.md
+│   │   ├── CAPABILITY_DETECTION.md
+│   │   ├── DATABASE_MIGRATIONS.md
+│   │   ├── ECOSYSTEM_MODULES.md
+│   │   ├── ERROR_CODES.md
+│   │   ├── PLAYBACK_PROTOCOL_STRATEGY.md
+│   │   ├── PROVIDER_CONTRACTS.md
+│   │   ├── REPOSITORY_LAYOUT.md
+│   │   ├── STORAGE_POLICY.md
+│   │   └── YTDLP_PROOF_OF_CONCEPT.md
 │   ├── decisions/
 │   │   ├── 0001-three-addon-boundaries.md
 │   │   ├── 0002-local-first-no-backend.md
 │   │   ├── 0003-separate-sqlite-databases.md
 │   │   ├── 0004-ytdlp-resolver-not-downloader.md
 │   │   ├── 0005-github-pages-static-repository.md
-│   │   └── 0006-manual-lan-sync-deferred.md
+│   │   ├── 0006-manual-lan-sync-deferred.md
+│   │   ├── 0007-shared-artwork-resource.md
+│   │   ├── 0008-shared-core-module.md
+│   │   ├── 0009-ytdlp-module-after-poc.md
+│   │   ├── 0010-navigation-contract.md
+│   │   ├── 0011-manual-lan-sync.md
+│   │   └── 0012-defer-service-pvr-beta.md
+│   ├── legal/
+│   │   ├── ACCEPTABLE_USE.md
+│   │   ├── CONTENT_RESPONSIBILITY.md
+│   │   ├── PRIVACY.md
+│   │   ├── THIRD_PARTY_NOTICES.md
+│   │   └── THIRD_PARTY_SERVICES.md
 │   ├── operations/
 │   │   ├── ADOPTION_GUIDE.md
+│   │   ├── AGENT_START_PROMPT.md
+│   │   ├── DIAGNOSTICS_AND_MAINTENANCE.md
 │   │   ├── FIRST_RUN.md
-│   │   └── INSTALL_IN_ROOT.md
+│   │   ├── INSTALL_IN_ROOT.md
+│   │   ├── MIGRATION_V2.md
+│   │   └── RELEASE_AND_ROLLBACK.md
 │   ├── roadmap/
 │   │   └── ROADMAP_ORIGINAL.png
+│   ├── sync/
+│   │   └── LAN_SYNC_MANUAL.md
 │   └── ui/
-│       └── ARTWORK_CATALOG.md
+│       ├── ARTWORK_CATALOG.md
+│       └── NAVIGATION_CONTRACT.md
 ├── examples/
 │   ├── kodi_router_pattern.py
 │   ├── sqlite_transaction_pattern.py
@@ -417,28 +444,40 @@ saile-repo-dev-organizado/
 ├── site/
 │   ├── zips/
 │   │   ├── plugin.audio.sfy/
-│   │   │   ├── changelog-0.1.0.txt
+│   │   │   ├── changelog-0.2.0.txt
 │   │   │   ├── fanart.jpg
 │   │   │   ├── icon.png
-│   │   │   ├── plugin.audio.sfy-0.1.0.zip
-│   │   │   └── plugin.audio.sfy-0.1.0.zip.sha256
+│   │   │   ├── plugin.audio.sfy-0.2.0.zip
+│   │   │   └── plugin.audio.sfy-0.2.0.zip.sha256
 │   │   ├── plugin.video.stv/
-│   │   │   ├── changelog-0.1.0.txt
+│   │   │   ├── changelog-0.2.0.txt
 │   │   │   ├── fanart.jpg
 │   │   │   ├── icon.png
-│   │   │   ├── plugin.video.stv-0.1.0.zip
-│   │   │   └── plugin.video.stv-0.1.0.zip.sha256
-│   │   └── repository.srepo/
+│   │   │   ├── plugin.video.stv-0.2.0.zip
+│   │   │   └── plugin.video.stv-0.2.0.zip.sha256
+│   │   ├── repository.srepo/
+│   │   │   ├── changelog-1.1.0.txt
+│   │   │   ├── fanart.jpg
+│   │   │   ├── icon.png
+│   │   │   ├── repository.srepo-1.1.0.zip
+│   │   │   └── repository.srepo-1.1.0.zip.sha256
+│   │   ├── resource.images.saile/
+│   │   │   ├── changelog-1.0.0.txt
+│   │   │   ├── fanart.jpg
+│   │   │   ├── icon.png
+│   │   │   ├── resource.images.saile-1.0.0.zip
+│   │   │   └── resource.images.saile-1.0.0.zip.sha256
+│   │   └── script.module.saile.core/
 │   │       ├── changelog-1.0.0.txt
 │   │       ├── fanart.jpg
 │   │       ├── icon.png
-│   │       ├── repository.srepo-1.0.0.zip
-│   │       └── repository.srepo-1.0.0.zip.sha256
+│   │       ├── script.module.saile.core-1.0.0.zip
+│   │       └── script.module.saile.core-1.0.0.zip.sha256
 │   ├── .nojekyll
 │   ├── addons.xml
 │   ├── addons.xml.md5
 │   ├── index.html
-│   ├── repository.srepo-1.0.0.zip
+│   ├── repository.srepo-1.1.0.zip
 │   └── SHA256SUMS
 ├── templates/
 │   ├── ADR_TEMPLATE.md
@@ -455,12 +494,16 @@ saile-repo-dev-organizado/
 │   │   └── .gitkeep
 │   ├── stv/
 │   │   └── .gitkeep
+│   ├── test_artwork_manifest.py
 │   ├── test_databases.py
+│   ├── test_dependency_graph.py
+│   ├── test_navigation_contract.py
 │   └── test_routing.py
 ├── tools/
 │   ├── bootstrap_artwork.py
 │   ├── build_repo.py
 │   ├── clean_build.py
+│   ├── migrate_v2_shared_artwork.py
 │   ├── print_tree.py
 │   ├── secret_scan.py
 │   ├── validate_addons.py
@@ -473,6 +516,7 @@ saile-repo-dev-organizado/
 ├── Makefile
 ├── OFFICIAL_REFERENCE_MAP.md
 ├── PACKAGE_INVENTORY.md
+├── PACKAGE_RELEASE_NOTES.md
 ├── PROJECT_CONSTITUTION.md
 ├── pyproject.toml
 ├── README.md
@@ -481,6 +525,4 @@ saile-repo-dev-organizado/
 ├── ROADMAP_TRACEABILITY_MATRIX.md
 ├── SECURITY_AND_ENV_POLICY.md
 ├── skills-manifest.json
-├── SKILLS_INDEX.md
-├── STRUCTURE_MANIFEST.json
-└── TREE_FINAL.txt
+└── SKILLS_INDEX.md

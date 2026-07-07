@@ -1,0 +1,5 @@
+0.2.0
+- Home fixa: TV ao Vivo, VOD, Séries e Sincronizar Dados.
+- Buscar e Favoritos ficam no topo de cada seção de mídia.
+- Artes de menu migradas para resource.images.saile.
+- Infraestrutura comum consumida por script.module.saile.core.
