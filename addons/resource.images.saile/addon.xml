@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="resource.images.saile" name="SAILE Artwork Resources" version="1.0.0" provider-name="Saile">
-  <requires>
-    <import addon="kodi.resource" version="1.0.0" />
-  </requires>
+<addon id="resource.images.saile" name="SAILE Artwork Resources" version="1.0.1" provider-name="Saile">
   <extension point="kodi.resource.images" compile="false" />
   <extension point="xbmc.addon.metadata">
     <summary lang="pt_BR">Artes compartilhadas do ecossistema SAILE.</summary>
@@ -10,7 +7,8 @@
     <platform>all</platform>
     <license>GPL-3.0-or-later</license>
     <source>https://github.com/Bruno1991/saile-repo-dev</source>
-    <news>1.0.0 - Pacote inicial de artes compartilhadas.</news>
+    <news>1.0.1 - Corrige a dependência inválida kodi.resource que impedia instalação.
+1.0.0 - Pacote inicial de artes compartilhadas.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>

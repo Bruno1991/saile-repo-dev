@@ -7,21 +7,17 @@ _ALLOWED_SCOPES = frozenset({"common", "sfy", "stv"})
 
 
 def _resource_root() -> str:
-    import xbmcaddon
-    import xbmcvfs
-
-    addon_path = xbmcaddon.Addon(ARTWORK_ADDON_ID).getAddonInfo("path")
-    return xbmcvfs.translatePath(os.path.join(addon_path, "resources", "media"))
+    return "resource://resource.images.saile/media"
 
 
 def artwork_path(scope: str, filename: str) -> str:
-    """Retorna um asset compartilhado e bloqueia travessia de diretório."""
+    """Retorna um asset compartilhado usando o protocolo resource do Kodi."""
     if scope not in _ALLOWED_SCOPES:
         raise ValueError(f"Escopo de artwork inválido: {scope}")
     clean_name = os.path.basename(filename)
     if clean_name != filename or not clean_name:
         raise ValueError("Nome de artwork inválido")
-    return os.path.join(_resource_root(), scope, clean_name)
+    return f"{_resource_root()}/{scope}/{clean_name}"
 
 
 def common_art(filename: str) -> str:

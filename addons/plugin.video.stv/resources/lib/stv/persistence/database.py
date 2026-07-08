@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS categories (
     media_type TEXT NOT NULL,
     category_id TEXT NOT NULL,
     name TEXT NOT NULL,
+    parent_id TEXT NOT NULL DEFAULT '0',
+    generation_id INTEGER NOT NULL DEFAULT 0,
     updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (media_type, category_id)
 );
@@ -26,6 +28,7 @@ CREATE TABLE IF NOT EXISTS media_items (
     plot TEXT NOT NULL DEFAULT '',
     extension TEXT NOT NULL DEFAULT '',
     payload_json TEXT NOT NULL DEFAULT '{}',
+    generation_id INTEGER NOT NULL DEFAULT 0,
     updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (media_type, item_id)
 );
