@@ -10,6 +10,7 @@ EXPECTED = {
     "repository.srepo",
     "resource.images.saile",
     "script.module.saile.core",
+    "script.module.saile.ytdlp",
     "plugin.video.stv",
     "plugin.audio.sfy",
 }

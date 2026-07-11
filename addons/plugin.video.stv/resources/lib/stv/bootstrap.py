@@ -53,28 +53,88 @@ def _show_section(request: Request, app: AppContainer, section: str, fanart: str
 
 def _show_category(request: Request, app: AppContainer, section: str, category_id: str, fanart: str) -> None:
     from stv.ui.directory import add_folder, finish_directory
-    import xbmcgui
 
     ensure_streams_loaded(app, section, category_id)
     items = app.catalog.get_media_items(section, category_id)
     for item in items:
-        # We use play action
         url = request.url(action="play", section=section, stream_id=item.item_id, extension=item.extension)
-        # Use item.icon if valid, otherwise fallback
         icon_url = item.icon if item.icon.startswith("http") else _icon("common", "check.png")
-        # In a real app we would use add_item (with isFolder=False) for playables, 
-        # but add_folder with a play action can also work if we don't set isFolder=True.
-        # Actually `add_folder` hardcodes isFolder=True in stv.ui.directory probably. 
-        # Let's import add_item if we need it. Let's see what is inside stv.ui.directory.
+        fav_action = request.url(action="toggle_fav", section=section, stream_id=item.item_id)
+        enrich_action = request.url(action="enrich", section=section, stream_id=item.item_id, title=item.name)
+        context_menu = [
+            ("Adicionar/Remover Favoritos", f"RunPlugin({fav_action})"),
+            ("Atualizar Metadados (TMDB)", f"RunPlugin({enrich_action})")
+        ]
+        
         add_folder(
             request.handle,
             item.name,
             url,
             icon_url,
             item.fanart or fanart,
-            is_folder=False
+            is_folder=False,
+            context_menu=context_menu
         )
 
+    finish_directory(request.handle, "videos")
+
+
+def _show_search(request: Request, app: AppContainer, section: str, fanart: str) -> None:
+    import xbmc
+    from stv.ui.directory import add_folder, finish_directory
+    
+    keyboard = xbmc.Keyboard("", "Buscar...")
+    keyboard.doModal()
+    if keyboard.isConfirmed() and keyboard.getText():
+        query = keyboard.getText()
+        items = app.catalog.search_media(section, query)
+        for item in items:
+            url = request.url(action="play", section=section, stream_id=item.item_id, extension=item.extension)
+            icon_url = item.icon if item.icon.startswith("http") else _icon("common", "check.png")
+            fav_action = request.url(action="toggle_fav", section=section, stream_id=item.item_id)
+            enrich_action = request.url(action="enrich", section=section, stream_id=item.item_id, title=item.name)
+            context_menu = [
+                ("Adicionar/Remover Favoritos", f"RunPlugin({fav_action})"),
+                ("Atualizar Metadados (TMDB)", f"RunPlugin({enrich_action})")
+            ]
+            
+            add_folder(
+                request.handle,
+                item.name,
+                url,
+                icon_url,
+                item.fanart or fanart,
+                is_folder=False,
+                context_menu=context_menu
+            )
+            
+    finish_directory(request.handle, "videos")
+
+
+def _show_favorites(request: Request, app: AppContainer, section: str, fanart: str) -> None:
+    from stv.ui.directory import add_folder, finish_directory
+    
+    items = app.catalog.get_favorites(section)
+    for item in items:
+        url = request.url(action="play", section=section, stream_id=item.item_id, extension=item.extension)
+        icon_url = item.icon if item.icon.startswith("http") else _icon("common", "check.png")
+        fav_action = request.url(action="toggle_fav", section=section, stream_id=item.item_id)
+        enrich_action = request.url(action="enrich", section=section, stream_id=item.item_id, title=item.name)
+        context_menu = [
+            ("Adicionar/Remover Favoritos", f"RunPlugin({fav_action})"),
+            ("Atualizar Metadados (TMDB)", f"RunPlugin({enrich_action})")
+        ]
+        
+        add_folder(
+            request.handle,
+            item.name,
+            url,
+            icon_url,
+            item.fanart or fanart,
+            is_folder=False,
+            context_menu=context_menu
+        )
+        
     finish_directory(request.handle, "videos")
 
 
@@ -100,6 +160,8 @@ def run(argv: list[str]) -> None:
         "xtream_host": addon.getSetting("xtream_host"),
         "xtream_username": addon.getSetting("xtream_username"),
         "xtream_password": addon.getSetting("xtream_password"),
+        "tmdb_bearer_token": addon.getSetting("tmdb_bearer_token"),
+        "tmdb_language": addon.getSetting("tmdb_language"),
         "profile_path": __import__("xbmcvfs").translatePath(addon.getAddonInfo("profile")),
     }
     app = AppContainer(settings)
@@ -134,11 +196,43 @@ def run(argv: list[str]) -> None:
         _show_home(request, fanart)
         return
 
-    if request.action in {"search", "favorites"}:
-        notify_info("sTv", "Rota estrutural ainda não implementada")
+    if request.action == "search":
         section = request.params.get("section", "")
         if section in VALID_SECTIONS:
-            _show_section(request, app, section, fanart)
+            _show_search(request, app, section, fanart)
+            return
+
+    if request.action == "favorites":
+        section = request.params.get("section", "")
+        if section in VALID_SECTIONS:
+            _show_favorites(request, app, section, fanart)
+            return
+
+    if request.action == "toggle_fav":
+        section = request.params.get("section", "")
+        stream_id = request.params.get("stream_id", "")
+        if section in VALID_SECTIONS and stream_id:
+            import xbmc
+            from saile_core.notifications import notify_success
+            added = app.catalog.toggle_favorite(section, stream_id)
+            msg = "Adicionado aos Favoritos" if added else "Removido dos Favoritos"
+            notify_success("sTv", msg)
+            xbmc.executebuiltin("Container.Refresh")
+            return
+
+    if request.action == "enrich":
+        section = request.params.get("section", "")
+        stream_id = request.params.get("stream_id", "")
+        title = request.params.get("title", "")
+        if section in {"vod", "series"} and stream_id and title:
+            import xbmc
+            from saile_core.notifications import notify_success, notify_error
+            success = app.catalog.enrich_item(app.tmdb, section, stream_id, title)
+            if success:
+                notify_success("TMDB", "Metadados atualizados")
+                xbmc.executebuiltin("Container.Refresh")
+            else:
+                notify_error("TMDB", "Nenhum metadado encontrado")
             return
 
     _show_home(request, fanart)

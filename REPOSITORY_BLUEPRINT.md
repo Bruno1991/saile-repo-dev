@@ -13,6 +13,8 @@ saile-repo-dev/
 │   │       └── stv/
 │   ├── script.module.saile.core/
 │   │   └── lib/saile_core/
+│   ├── script.module.saile.ytdlp/
+│   │   └── lib/saile_ytdlp/
 │   ├── plugin.video.stv/
 │   │   └── resources/lib/stv/
 │   └── plugin.audio.sfy/
@@ -36,6 +38,7 @@ flowchart TD
   REPO[repository.srepo]
   ART[resource.images.saile]
   CORE[script.module.saile.core]
+  YTDLP[script.module.saile.ytdlp]
   STV[plugin.video.stv]
   SFY[plugin.audio.sfy]
 
@@ -44,10 +47,12 @@ flowchart TD
   STV --> ART
   SFY --> CORE
   SFY --> ART
+  SFY --> YTDLP
   REPO -. distribui .-> ART
   REPO -. distribui .-> CORE
   REPO -. distribui .-> STV
   REPO -. distribui .-> SFY
+  REPO -. distribui .-> YTDLP
 ```
 
 Não existem dependências de sTv para sFy, nem de sFy para sTv.
@@ -75,7 +80,6 @@ Não existem dependências de sTv para sFy, nem de sFy para sTv.
 ## Add-ons futuros condicionais
 
 ```text
-script.module.saile.ytdlp   após prova técnica multiplataforma
 service.saile.monitor       após necessidade funcional comprovada
 repository.srepo.beta       após existir processo de release estável
 ```

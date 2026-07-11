@@ -1,33 +1,45 @@
-"""Application services for search, local playlists, history and playback resolution."""
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Iterator
+import os
 
-from sfy.providers.ytdlp.resolver import YtDlpResolver
-
-
-@dataclass(frozen=True)
-class ChartPlaylist:
-    title: str
-    url: str
-    thumbnail: str
+from sfy.persistence.database import Database
+from sfy.persistence.repository import MusicRepository
+from sfy.domain.catalog import CatalogOrchestrator
 
 
-class ChartsService:
-    def __init__(self, resolver: YtDlpResolver | None = None) -> None:
-        self.resolver = resolver or YtDlpResolver()
+class AppContainer:
+    """Dependency injection container for sFy."""
 
-    def get_home_charts(self) -> Iterator[ChartPlaylist]:
-        # Em uma implementação real, os URLs viriam do yt-dlp ou de constantes confirmadas.
-        # Estamos criando as entradas dinâmicas para provar o contrato de navegação.
-        yield ChartPlaylist(
-            title="Top Brasil",
-            url="https://music.youtube.com/playlist?list=PL4fGSI1pccIONp_hX-gQZep5d5oE7b0s7",
-            thumbnail="https://lh3.googleusercontent.com/vH-qP0yM3_b4wWj_vXfXhN7p_Uv-qQfM6w"
-        )
-        yield ChartPlaylist(
-            title="Top Mundo",
-            url="https://music.youtube.com/playlist?list=PL4fGSI1pccIPo3p3E5f7zM8j_5y7xJ-oG",
-            thumbnail="https://lh3.googleusercontent.com/mO_T-jKjQ_"
-        )
+    def __init__(self, settings: dict[str, str]) -> None:
+        self.settings = settings
+        self._database: Database | None = None
+        self._repo: MusicRepository | None = None
+        self._catalog: CatalogOrchestrator | None = None
+        self._ytm = None
+
+    @property
+    def database(self) -> Database:
+        if self._database is None:
+            db_path = os.path.join(self.settings.get("profile_path", ""), "sfy.db")
+            self._database = Database(db_path)
+            self._database.initialize()
+        return self._database
+
+    @property
+    def repo(self) -> MusicRepository:
+        if self._repo is None:
+            self._repo = MusicRepository(self.database)
+        return self._repo
+
+    @property
+    def catalog(self) -> CatalogOrchestrator:
+        if self._catalog is None:
+            self._catalog = CatalogOrchestrator(self.repo)
+        return self._catalog
+
+    @property
+    def ytm(self) -> 'YtmClient':
+        if self._ytm is None:
+            from saile_ytdlp.client import YtmClient
+            self._ytm = YtmClient()
+        return self._ytm

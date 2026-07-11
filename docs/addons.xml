@@ -5,6 +5,7 @@
       <import addon="xbmc.python" version="3.0.0" />
       <import addon="resource.images.saile" version="1.0.0" />
       <import addon="script.module.saile.core" version="1.0.0" />
+      <import addon="script.module.saile.ytdlp" version="1.0.0" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
       <provides>audio</provides>
@@ -99,6 +100,23 @@
       <license>GPL-3.0-or-later</license>
       <source>https://github.com/Bruno1991/saile-repo-dev</source>
       <news>1.0.0 - Módulo compartilhado inicial.</news>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="script.module.saile.ytdlp" name="Saile YT-DLP Provider" version="1.0.0" provider-name="Saile">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0" />
+      <import addon="script.module.requests" version="2.22.0" />
+      <import addon="script.module.yt-dlp" version="2024.0.0" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="pt_BR">Wrapper compartilhado para ytmusicapi e yt-dlp</summary>
+      <description lang="pt_BR">Resolve links do YouTube Music.</description>
+      <platform>all</platform>
       <assets>
         <icon>icon.png</icon>
         <fanart>fanart.jpg</fanart>

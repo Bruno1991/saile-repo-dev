@@ -97,3 +97,28 @@ class CatalogOrchestrator:
             
         finally:
             dialog.close()
+
+    def enrich_item(self, tmdb_client, media_type: str, item_id: str, title: str) -> bool:
+        """Busca metadados estendidos no TMDB para um item específico e salva no SQLite."""
+        if media_type == "vod":
+            data = tmdb_client.search_movie(title)
+        elif media_type == "series":
+            data = tmdb_client.search_tv(title)
+        else:
+            return False
+            
+        if not data:
+            return False
+            
+        plot = data.get("overview")
+        backdrop_path = data.get("backdrop_path")
+        poster_path = data.get("poster_path")
+        
+        fanart = None
+        if backdrop_path:
+            fanart = f"https://image.tmdb.org/t/p/w1280{backdrop_path}"
+        elif poster_path:
+            fanart = f"https://image.tmdb.org/t/p/w500{poster_path}"
+            
+        self.repository.enrich_media_item(media_type, item_id, plot=plot, fanart=fanart)
+        return True

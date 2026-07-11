@@ -4,6 +4,7 @@
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="resource.images.saile" version="1.0.0" />
     <import addon="script.module.saile.core" version="1.0.0" />
+    <import addon="script.module.saile.ytdlp" version="1.0.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>audio</provides>

@@ -28,6 +28,26 @@ class CatalogRepository:
         with self.db.connect() as connection:
             connection.executemany(sql, data)
 
+    def enrich_media_item(self, media_type: str, item_id: str, plot: str | None = None, fanart: str | None = None) -> None:
+        updates = []
+        params = []
+        if plot:
+            updates.append("plot = ?")
+            params.append(plot)
+        if fanart:
+            updates.append("fanart = ?")
+            params.append(fanart)
+            
+        if not updates:
+            return
+            
+        updates.append("updated_at = CURRENT_TIMESTAMP")
+        sql = f"UPDATE media_items SET {', '.join(updates)} WHERE media_type = ? AND item_id = ?"
+        params.extend([media_type, item_id])
+        
+        with self.db.connect() as connection:
+            connection.execute(sql, params)
+
     def upsert_media_items(self, items: Sequence[MediaItem]) -> None:
         sql = """
         INSERT INTO media_items (
@@ -85,6 +105,62 @@ class CatalogRepository:
             )
             for row in rows
         ]
+
+    def search_media(self, media_type: str, query: str) -> list[MediaItem]:
+        sql = "SELECT * FROM media_items WHERE media_type = ? AND name LIKE ? ORDER BY name COLLATE NOCASE"
+        with self.db.connect() as connection:
+            rows = connection.execute(sql, (media_type, f"%{query}%")).fetchall()
+        
+        return [
+            MediaItem(
+                media_type=row["media_type"],
+                item_id=row["item_id"],
+                name=row["name"],
+                category_id=row["category_id"],
+                icon=row["icon"],
+                fanart=row["fanart"],
+                plot=row["plot"],
+                extension=row["extension"],
+                generation_id=row["generation_id"],
+            )
+            for row in rows
+        ]
+
+    def get_favorites(self, media_type: str) -> list[MediaItem]:
+        sql = """
+        SELECT m.* FROM media_items m
+        JOIN favorites f ON m.media_type = f.media_type AND m.item_id = f.item_id
+        WHERE m.media_type = ?
+        ORDER BY f.created_at DESC
+        """
+        with self.db.connect() as connection:
+            rows = connection.execute(sql, (media_type,)).fetchall()
+        
+        return [
+            MediaItem(
+                media_type=row["media_type"],
+                item_id=row["item_id"],
+                name=row["name"],
+                category_id=row["category_id"],
+                icon=row["icon"],
+                fanart=row["fanart"],
+                plot=row["plot"],
+                extension=row["extension"],
+                generation_id=row["generation_id"],
+            )
+            for row in rows
+        ]
+
+    def toggle_favorite(self, media_type: str, item_id: str) -> bool:
+        check_sql = "SELECT 1 FROM favorites WHERE media_type = ? AND item_id = ?"
+        with self.db.connect() as connection:
+            exists = connection.execute(check_sql, (media_type, item_id)).fetchone()
+            if exists:
+                connection.execute("DELETE FROM favorites WHERE media_type = ? AND item_id = ?", (media_type, item_id))
+                return False
+            else:
+                connection.execute("INSERT INTO favorites (media_type, item_id) VALUES (?, ?)", (media_type, item_id))
+                return True
 
     def clean_obsolete_categories(self, media_type: str, current_generation: int) -> int:
         sql = "DELETE FROM categories WHERE media_type = ? AND generation_id < ?"

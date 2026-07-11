@@ -11,7 +11,9 @@ def add_folder(handle: int, label: str, url: str, icon: str = "", fanart: str = 
 
 
 def finish_directory(handle: int, content: str) -> None:
+    import xbmc
     import xbmcplugin
 
     xbmcplugin.setContent(handle, content)
     xbmcplugin.endOfDirectory(handle, succeeded=True, cacheToDisc=False)
+    xbmc.executebuiltin("Container.SetViewMode(54)")

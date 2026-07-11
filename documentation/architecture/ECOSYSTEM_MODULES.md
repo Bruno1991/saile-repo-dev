@@ -22,11 +22,11 @@ Domínio completo de IPTV: configuração Xtream, catálogo, busca, favoritos, r
 
 Domínio musical: busca, playlists locais, resolução e reprodução, com SQLite próprio.
 
-## Condicionais
-
 ### `script.module.saile.ytdlp`
 
-Só deve ser extraído quando o protótipo do sFy estiver funcional em Windows, Linux, Android TV e Fire TV. A atualização independente é desejável, mas não justifica criar um módulo não validado.
+Módulo de sistema sem interface para abrigar pacotes como `ytmusicapi` e injetar a dependência global do ecossistema do Kodi `script.module.yt-dlp`. Usado pelo sFy para resolver os links de stream.
+
+## Condicionais
 
 ### `service.saile.monitor`
 
