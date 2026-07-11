@@ -97,3 +97,36 @@ class CatalogRepository:
         with self.db.connect() as connection:
             cursor = connection.execute(sql, (media_type, current_generation))
             return cursor.rowcount
+
+    def update_playback_progress(self, media_type: str, item_id: str, position: float, total: float) -> None:
+        sql = """
+        INSERT INTO playback_progress (media_type, item_id, position, total, updated_at)
+        VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)
+        ON CONFLICT (media_type, item_id) DO UPDATE SET
+            position = excluded.position,
+            total = excluded.total,
+            updated_at = CURRENT_TIMESTAMP
+        """
+        with self.db.connect() as connection:
+            connection.execute(sql, (media_type, item_id, position, total))
+
+    def get_playback_progress(self, media_type: str, item_id: str) -> dict | None:
+        sql = "SELECT position, total FROM playback_progress WHERE media_type = ? AND item_id = ?"
+        with self.db.connect() as connection:
+            row = connection.execute(sql, (media_type, item_id)).fetchone()
+            if row:
+                return {"position": row["position"], "total": row["total"]}
+            return None
+
+    def is_cache_valid(self, media_type: str, ttl_hours: int = 12) -> bool:
+        sql = "SELECT max(updated_at) as last_update FROM categories WHERE media_type = ?"
+        with self.db.connect() as connection:
+            row = connection.execute(sql, (media_type,)).fetchone()
+            if not row or not row["last_update"]:
+                return False
+            
+            check_sql = "SELECT (julianday('now') - julianday(?)) * 24 as diff_hours"
+            diff_row = connection.execute(check_sql, (row["last_update"],)).fetchone()
+            if diff_row and diff_row["diff_hours"] <= ttl_hours:
+                return True
+            return False

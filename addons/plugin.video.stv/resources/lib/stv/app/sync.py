@@ -69,33 +69,58 @@ def _get_actions(section: str) -> tuple[str, str]:
     }
     return mapping.get(section, ("", ""))
 
-def ensure_categories_loaded(app: AppContainer, section: str) -> None:
-    categories = app.catalog.get_categories(section)
-    if categories:
-        return  # Já carregado
-
-    cat_action, _ = _get_actions(section)
-    if not cat_action:
+def ensure_section_loaded(app: AppContainer, section: str) -> None:
+    # Using TTL check to see if section is valid
+    if app.catalog.is_cache_valid(section, ttl_hours=12):
         return
 
-    generation_id = int(time.time())
-    data = app.xtream.request(cat_action)
-    parsed = _parse_categories(section, generation_id, data)
-    if parsed:
-        app.catalog.upsert_categories(parsed)
-        # Note: we do not clean obsolete here yet, because we only do full sync of categories once per session/cache expiry.
+    cat_action, stream_action = _get_actions(section)
+    if not cat_action or not stream_action:
+        return
+
+    import xbmcgui
+    dialog = xbmcgui.DialogProgress()
+    dialog.create("sTv", f"Atualizando catálogo de {section.upper()}...")
+    
+    try:
+        generation_id = int(time.time())
+        
+        dialog.update(20, "Baixando categorias do servidor...")
+        raw_cats = app.xtream.request(cat_action)
+        if dialog.iscanceled(): return
+        
+        dialog.update(40, "Baixando mídias do servidor...")
+        raw_streams = app.xtream.request(stream_action)
+        if dialog.iscanceled(): return
+        
+        dialog.update(60, "Salvando categorias localmente...")
+        parsed_cats = _parse_categories(section, generation_id, raw_cats)
+        if parsed_cats:
+            app.catalog.upsert_categories(parsed_cats)
+            
+        if dialog.iscanceled(): return
+        
+        dialog.update(80, "Salvando mídias localmente...")
+        parsed_streams = _parse_streams(section, generation_id, raw_streams)
+        if parsed_streams:
+            chunk_size = 500
+            for i in range(0, len(parsed_streams), chunk_size):
+                app.catalog.upsert_media_items(parsed_streams[i:i+chunk_size])
+                
+        dialog.update(95, "Limpando cache antigo...")
+        app.catalog.clean_obsolete_categories(section, generation_id)
+        app.catalog.clean_obsolete_items(section, generation_id)
+        
+        dialog.update(100, "Concluído!")
+        time.sleep(0.5)
+    finally:
+        dialog.close()
+
+
+def ensure_categories_loaded(app: AppContainer, section: str) -> None:
+    ensure_section_loaded(app, section)
+
 
 def ensure_streams_loaded(app: AppContainer, section: str, category_id: str) -> None:
-    items = app.catalog.get_media_items(section, category_id)
-    if items:
-        return  # Já carregado
-
-    _, stream_action = _get_actions(section)
-    if not stream_action:
-        return
-
-    generation_id = int(time.time())
-    data = app.xtream.request(stream_action, category_id=category_id)
-    parsed = _parse_streams(section, generation_id, data)
-    if parsed:
-        app.catalog.upsert_media_items(parsed)
+    # We no longer load per category, ensure_section_loaded handles everything
+    ensure_section_loaded(app, section)

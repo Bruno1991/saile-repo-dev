@@ -79,10 +79,10 @@ def _show_category(request: Request, app: AppContainer, section: str, category_i
 
 
 def _play_item(app: AppContainer, section: str, stream_id: str, extension: str) -> None:
-    import xbmc
+    from stv.ui.player import play_video
     
     url = app.xtream.stream_url(section, stream_id, extension)
-    xbmc.Player().play(url)
+    play_video(app, section, stream_id, url)
 
 
 def run(argv: list[str]) -> None:
